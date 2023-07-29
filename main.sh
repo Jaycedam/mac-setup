@@ -11,4 +11,4 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 # Brew Apps
 echo "Installing apps..."
-brew install romkatv/powerlevel10k/powerlevel10k zsh-syntax-highlighting
+brew install visual-studio-code postgres-unofficial iina adguard transmission brave-browser utm gimp insomnia handbrake romkatv/powerlevel10k/powerlevel10k zsh-syntax-highlighting
