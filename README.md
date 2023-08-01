@@ -12,4 +12,4 @@ sh main.sh
 
 ## Update configs
 
-The `backup.sh` script updates the config backup with the current ones.
+The `backup.sh` script currently backs up config files (.zshrc, .zprofile) and user installed Fonts. Run <code>sh backup.sh</code> to update the backup that `main.sh` restores.
