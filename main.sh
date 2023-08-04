@@ -5,7 +5,7 @@ echo "Installing brew..."
 # Restore backups
 echo "Restoring config files..."
 cp ./configs/.zshrc ./configs/.zprofile ~
-cp -a ./fonts/. ~/Library/Fonts
+cp ./configs/com.amethyst.Amethyst.plist  ~/Library/Preferences
 
 eval $(/opt/homebrew/bin/brew shellenv)
 
@@ -14,10 +14,12 @@ echo "Getting zsh themes..."
 mkdir .zsh-themes
 cd .zsh-themes
 git clone https://github.com/dracula/zsh.git
+mv zsh dracula
 cd
 
 # Brew Apps
+echo "Adding brew taps..."
+brew homebrew/cask-fonts
 echo "Installing apps..."
-brew install visual-studio-code postgres-unofficial iina adguard transmission brave-browser utm gimp insomnia handbrake zsh-syntax-highlighting zsh-autosuggestions
-
+brew install visual-studio-code postgres-unofficial iina adguard transmission brave-browser utm gimp insomnia zsh-syntax-highlighting zsh-autosuggestions amethyst neofetch lulu node font-fira-code-nerd-font
 echo "Done."
