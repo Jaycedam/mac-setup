@@ -4,15 +4,19 @@ echo "Installing brew..."
 
 # Restore backups
 echo "Restoring config files..."
-cp ./configs/.zshrc .configs/.p10k.zsh ./configs/.zprofile ~
+cp -R .config ~
 # WM settings
 cp ./configs/com.amethyst.Amethyst.plist  ~/Library/Preferences
 
 eval $(/opt/homebrew/bin/brew shellenv)
 
 # Brew Apps
-echo "Adding brew taps..."
-brew homebrew/cask-fonts
 echo "Installing apps..."
-brew install visual-studio-code postgres-unofficial iina adguard transmission brave-browser utm gimp insomnia zsh-syntax-highlighting zsh-autosuggestions amethyst lulu node font-fira-code-nerd-font romkatv/powerlevel10k/powerlevel10k
-echo "Done." 
+brew bundle install --file Brewfile
+
+echo "Setting up fish shell..."
+# Adds fish shell to known shells
+sudo sh -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+# Sets default shell to fish
+chsh -s /opt/homebrew/bin/fish
+echo "Next steps: Change default font for Fira Code Mono and restart terminal. (Optional) Run fish_config."
