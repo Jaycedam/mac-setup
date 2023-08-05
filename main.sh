@@ -4,6 +4,7 @@ echo "Installing brew..."
 
 # Restore backups
 echo "Restoring config files..."
+cp ./configs/.zprofile ~
 cp -R .config ~
 # WM settings
 cp ./configs/com.amethyst.Amethyst.plist  ~/Library/Preferences
