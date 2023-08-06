@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 brew "fish"
+brew "neofetch"
 brew "node"
 cask "adguard"
 cask "amethyst"

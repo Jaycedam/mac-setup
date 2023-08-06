@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Brew install and setup
 echo "Installing brew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
