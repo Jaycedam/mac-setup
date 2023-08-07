@@ -13,6 +13,9 @@ cp ./configs/com.amethyst.Amethyst.plist  ~/Library/Preferences
 
 eval $(/opt/homebrew/bin/brew shellenv)
 
+# Disables brew telemetry
+brew analytics off
+
 # Brew Apps
 echo "Installing apps..."
 brew bundle install --file Brewfile
