@@ -10,4 +10,4 @@ source modules/preferences.sh
 # Changes default shell to fish shell (fish must be included in Brewfile)
 source modules/fish.sh
 
-echo "Next steps: Import theme.terminal in terminal.app, (Optional) Run fish_config."
+echo "Next steps: Restart terminal to update shell changes. (Optional) Import a theme into terminal.app."
