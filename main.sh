@@ -6,7 +6,6 @@ echo "Installing brew..."
 
 # Restore backups
 echo "Restoring config files..."
-cp ./configs/.zprofile ~
 cp -R .config ~
 # WM settings
 cp ./configs/com.amethyst.Amethyst.plist  ~/Library/Preferences
@@ -16,9 +15,9 @@ eval $(/opt/homebrew/bin/brew shellenv)
 # Disables brew telemetry
 brew analytics off
 
-# Brew Apps
+# Brew Apps installed from Brewfile
 echo "Installing apps..."
-brew bundle install --file Brewfile
+brew bundle install
 
 echo "Setting up fish shell..."
 # Adds fish shell to known shells
