@@ -8,5 +8,6 @@ alias install="brew install"
 alias uninstall="brew uninstall --zap"
 alias search="brew search"
 alias outdated="brew outdated"
+alias code="codium"
 
 neofetch
