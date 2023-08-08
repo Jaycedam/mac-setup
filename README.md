@@ -22,6 +22,7 @@ To update the backup to your current config files, run `sh backup.sh`. This will
 
 ## Todo
 - [ ] Add vscodium profile backup/restore
+- [ ] Update terminal profile within script
 - [ ] Add NONINTERACTIVE for brew installation
 - [ ] Update README with more info and screenshots
 - [ ] Add modification instructions to README
