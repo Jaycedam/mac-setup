@@ -26,5 +26,12 @@ defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf"
 # ------------------------------ Spaces ------------------------------
 # Disable rearrange Spaces automatically (useful for Amethyst WM)
 defaults write com.apple.dock "mru-spaces" -bool "false"
+# Groups windows by application on mission control
+defaults write com.apple.dock expose-group-apps -bool true
+
+# ----------------------------- Security -----------------------------
+# Enable firewall
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+
 
 killall Dock && killall Finder
