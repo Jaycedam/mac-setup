@@ -1,16 +1,18 @@
 <div align="center">
-    <img src="images/continuous.png" height="80" width="auto">
+    <img src="images/logo.png" height="80" width="auto">
     <h1 style="font-size: larger">MacOS automated setup</h1>
     <p style="font-size: small">Opinionated automation scripts to set up macOS.</p>
     <br>
 </div>
 
 
-This project installs [Homebrew](https://brew.sh), restores the backed up config files (amethyst preferences, neofetch and fish shell config). Then installs the Brew packages from the bundle `Brewfile`. It also changes the default shell to the [fish shell](https://fishshell.com) and changes the default preferences for macOS, check `modules/preferences.sh` to see the changes.
+This project restores the backed up .config files, installs [Homebrew](https://brew.sh) and the packages included on the bundle [Brewfile](Brewfile). Then changes some default preferences for macOS, check [modules/preferences.sh](modules/preferences.sh) to see the changes.  
+
+The default shell is set to the [fish shell](https://fishshell.com) for better OOB experience and autosuggestions, since zsh plugins rely on history.
 
 ## Instructions
 
-For the automated setup run in the terminal:
+For the automated setup just run:
 
 ```sh
 git clone https://github.com/Jaycedam/macos-setup.git
@@ -18,7 +20,21 @@ cd macos-setup
 bash main.sh
 ```
 
-To update the backup to your current config files, run `sh backup.sh`. This will update the files mentioned in the previous section. Since it uses brew bundle to back up the installed packages, you must have installed Homebrew.
+## Manual settings
+
+- Lock screen: Set required password after screen is off to **inmediatly** for security reasons.
+- Spaces: Create more Spaces and enable keyboard shortcuts, then assign apps to their dedicated space. This will offer a better tiling window manager experience.
+
+![Keyboard shortcuts](images/keyboard-shortcuts.png) 
+![Assign to desktop](images/spaces.png)
+
+- Safari: Enable hide my ip and telemetry in Privacy tab.
+
+## Backup your config
+
+To update the backup to your current config files, run `bash backup.sh`. This will backup the .config folder in your home directory, as well as your Amethyst settings. It also creates a Brew bundle with your installed packages, so you need Homebrew. Then running `main.sh` will restore your config files on a new setup. Since this is my personal config, if you don't install some listed packages you will need to remove its dependencies in the code to avoid issues.
+
+Todo.
 
 ## Todo
 - [ ] Add vscodium profile backup/restore
@@ -26,6 +42,7 @@ To update the backup to your current config files, run `sh backup.sh`. This will
 - [x] Add NONINTERACTIVE for brew installation
 - [ ] Update README with more info and screenshots
 - [ ] Add modification instructions to README
+- [ ] Automate manual settings post script
 
 ## Acknowledgments
 - [macOS defaults list](https://macos-defaults.com/)
