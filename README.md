@@ -6,7 +6,7 @@
 </div>
 
 
-This project restores the backed up .config files, installs [Homebrew](https://brew.sh) and the packages included on the bundle [Brewfile](Brewfile). Then changes some default preferences for macOS, check [modules/preferences.sh](modules/preferences.sh) to see the changes.  
+This project restores the backed up .config files, installs [Homebrew](https://brew.sh) and the packages included on the bundle [Brewfile](Brewfile). Then changes some default preferences for macOS, check [preferences.sh](modules/preferences.sh) to see the changes.  
 
 The default shell is set to the [fish shell](https://fishshell.com) for better OOB experience and autosuggestions, since zsh plugins rely on history.
 
@@ -28,7 +28,7 @@ bash main.sh
 ![Keyboard shortcuts](images/keyboard-shortcuts.png) 
 ![Assign to desktop](images/spaces.png)
 
-- Safari: Enable hide my ip and telemetry in Privacy tab.
+- Safari: Enable hide my ip and disable telemetry in Privacy tab.
 
 ## Backup your config
 
