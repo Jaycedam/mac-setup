@@ -12,4 +12,4 @@ brew analytics off
 
 # Brew Apps installed from Brewfile
 echo -e "${YELLOW}Installing apps...${RESET}"
-brew bundle install
+brew bundle install --file $BACKUP_DIR/Brewfile

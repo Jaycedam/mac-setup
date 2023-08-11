@@ -37,7 +37,6 @@ Todo.
 
 - [ ] Add vscodium profile backup/restore
 - [x] Update terminal profile within script (Migrated to kitty)
-- [x] Add NONINTERACTIVE for brew installation
 - [ ] Update README with more info and screenshots
 - [ ] Add modification instructions to README
 - [ ] Automate manual settings post script
