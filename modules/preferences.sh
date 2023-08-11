@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo -e "${ARROW}Changing macOS defaults..."
-# todo: Add echo for each setting, and verbose
 
 # ------------------------------ Dock ------------------------------
 # Position left
@@ -35,6 +34,5 @@ defaults write com.apple.dock expose-group-apps -bool true
 # ----------------------------- Security -----------------------------
 # Enable firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
-
 
 killall Dock && killall Finder
