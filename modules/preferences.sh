@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "${YELLOW}Changing macOS defaults...${RESET}"
+echo -e "${ARROW}Changing macOS defaults..."
 # todo: Add echo for each setting, and verbose
 
 # ------------------------------ Dock ------------------------------

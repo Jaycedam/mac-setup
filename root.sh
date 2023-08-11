@@ -10,6 +10,9 @@ CYAN='\033[36m'
 WHITE='\033[37m'
 RESET='\033[0m'
 
+# Indicator for new sections
+ARROW="${MAGENTA}==> ${RESET}"
+
 # Path Variables
 # Path for all backups
 BACKUP_DIR="./backup"

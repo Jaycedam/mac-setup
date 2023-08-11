@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "${YELLOW}Setting up fish shell...${RESET}"
+echo -e "${ARROW}Setting up fish shell..."
 # Adds fish shell to known shells
 sudo sh -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
 # Sets default shell to fish

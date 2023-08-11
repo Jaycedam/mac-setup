@@ -40,6 +40,8 @@ Todo.
 - [ ] Update README with more info and screenshots
 - [ ] Add modification instructions to README
 - [ ] Automate manual settings post script
+- [ ] Check if Brew is already installed
+- [ ] Add macOS preferences changes in README
 
 ## Acknowledgments
 
