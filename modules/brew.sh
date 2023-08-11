@@ -1,14 +1,16 @@
 #!/bin/bash
 
 # Brew install and setup
-echo "Installing brew..."
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo -e "${ARROW}Installing Homebrew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Enables brew in current env without saving to zprofile
 eval $(/opt/homebrew/bin/brew shellenv)
 
 # Disables brew telemetry
+echo -e "${ARROW}Disabling Homebrew telemetry..."
 brew analytics off
 
 # Brew Apps installed from Brewfile
-echo "Installing apps..."
-brew bundle install
+echo -e "${ARROW}Installing apps..."
+brew bundle install --file $BACKUP_DIR/Brewfile

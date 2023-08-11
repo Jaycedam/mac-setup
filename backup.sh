@@ -1,11 +1,17 @@
 #!/bin/bash
 
-# Backup current configs
-echo "If you're having issues, make sure your current directory is /macos-setup."
-echo "Backing up current config files..."
-cp ~/Library/Preferences/com.amethyst.Amethyst.plist ./backup
-cp -R ~/.config .
-# Backs up currently installed brew packages, -f overrides current file
-brew bundle dump -f
+# Variables and directory check 
+source root.sh
 
-echo "Done."
+echo -e "${ARROW}Backing up .config folder..."
+cp -R -p -v ~/.config $BACKUP_DIR
+
+# Backup current configs
+echo -e "${ARROW}Backing up Amethyst settings..."
+cp -v "$WM" $BACKUP_DIR
+
+# Backs up currently installed brew packages, -f overrides current file
+echo -e "${ARROW}Creating Brewfile..."
+brew bundle dump -v -f --file $BACKUP_DIR/Brewfile
+
+echo -e "${GREEN}Done!${RESET}"

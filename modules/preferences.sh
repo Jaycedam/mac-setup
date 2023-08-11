@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -e "${ARROW}Changing macOS defaults..."
+
 # ------------------------------ Dock ------------------------------
 # Position left
 defaults write com.apple.dock "orientation" -string "left"
@@ -32,6 +34,5 @@ defaults write com.apple.dock expose-group-apps -bool true
 # ----------------------------- Security -----------------------------
 # Enable firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
-
 
 killall Dock && killall Finder
