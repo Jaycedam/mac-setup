@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo -e "${YELLOW}Changing macOS defaults...${RESET}"
+# todo: Add echo for each setting, and verbose
+
 # ------------------------------ Dock ------------------------------
 # Position left
 defaults write com.apple.dock "orientation" -string "left"

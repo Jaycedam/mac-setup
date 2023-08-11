@@ -5,8 +5,7 @@
     <br>
 </div>
 
-
-This project restores the backed up .config files, installs [Homebrew](https://brew.sh) and the packages included on the bundle [Brewfile](Brewfile). Then changes some default preferences for macOS, check [preferences.sh](modules/preferences.sh) to see the changes.  
+This project restores the backed up .config files, installs [Homebrew](https://brew.sh) and the packages included on the bundle [Brewfile](Brewfile). Then changes some default preferences for macOS, check [preferences.sh](modules/preferences.sh) to see the changes.
 
 The default shell is set to the [fish shell](https://fishshell.com) for better OOB experience and autosuggestions, since zsh plugins rely on history.
 
@@ -15,9 +14,7 @@ The default shell is set to the [fish shell](https://fishshell.com) for better O
 For the automated setup just run:
 
 ```sh
-git clone https://github.com/Jaycedam/macos-setup.git
-cd macos-setup
-bash main.sh
+git clone https://github.com/Jaycedam/mac-setup.git && cd mac-setup && bash main.sh
 ```
 
 ## Manual settings
@@ -25,7 +22,7 @@ bash main.sh
 - Lock screen: Set required password after screen is off to **inmediatly** for security reasons.
 - Spaces: Create more Spaces and enable keyboard shortcuts, then assign apps to their dedicated space. This will offer a better tiling window manager experience.
 
-![Keyboard shortcuts](images/keyboard-shortcuts.png) 
+![Keyboard shortcuts](images/keyboard-shortcuts.png)
 ![Assign to desktop](images/spaces.png)
 
 - Safari: Enable hide my ip and disable telemetry in Privacy tab.
@@ -37,6 +34,7 @@ To update the backup to your current config files, run `bash backup.sh`. This wi
 Todo.
 
 ## Todo
+
 - [ ] Add vscodium profile backup/restore
 - [x] Update terminal profile within script (Migrated to kitty)
 - [x] Add NONINTERACTIVE for brew installation
@@ -45,6 +43,11 @@ Todo.
 - [ ] Automate manual settings post script
 
 ## Acknowledgments
+
 - [macOS defaults list](https://macos-defaults.com/)
 - [Brew docs](https://docs.brew.sh/Manpage)
 - [Project icon](https://www.flaticon.com/free-icon/continuous_8916345)
+
+```
+
+```
