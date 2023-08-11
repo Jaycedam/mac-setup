@@ -2,7 +2,7 @@
 
 # Brew install and setup
 echo "Installing brew..."
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Enables brew in current env without saving to zprofile
 eval $(/opt/homebrew/bin/brew shellenv)
