@@ -10,6 +10,7 @@ cp -v -i ${BACKUP_DIR}/com.amethyst.Amethyst.plist "$PREFERENCES_DIR"
 
 # VSCodium settings and extensions
 # Makes sure directory exist, if not, create it
+echo -e "${ARROW}Restoring VSCodium settings..."
 mkdir -p "$VSC_SETTINGS"
 # Copy settings.json
 cp "$SCRIPT_DIR/$BACKUP_DIR/settings.json" "$VSC_SETTINGS"
