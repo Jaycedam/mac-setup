@@ -26,6 +26,9 @@ SCRIPT_DIR=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
 # Path to Amethyst settings, WM = Window Manager
 WM="$PREFERENCES_DIR/com.amethyst.Amethyst.plist"
 
+# Path to VSCodium settings
+VSC_SETTINGS="$HOME/Library/Application Support/VSCodium/User"
+
 # Checks if current directory is correct, otherwise there will be issues with relative paths
 if [ $PWD != "$SCRIPT_DIR" ]; then
     echo -e "${RED}Error.${RESET} The script must be executed from the directory $SCRIPT_DIR"
