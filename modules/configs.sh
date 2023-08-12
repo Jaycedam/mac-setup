@@ -13,6 +13,8 @@ cp -v -i ${BACKUP_DIR}/com.amethyst.Amethyst.plist "$PREFERENCES_DIR"
 mkdir -p "$VSC_SETTINGS"
 # Copy settings.json
 cp "$SCRIPT_DIR/$BACKUP_DIR/settings.json" "$VSC_SETTINGS"
+# Disable gatekeeper for vscodium so it can install extensions without opening the app first
+xattr -r -d com.apple.quarantine /Applications/VSCodium.app
 # Install Extensions from the backup list vsc-extensions.txt
 cat "$SCRIPT_DIR/$BACKUP_DIR/vsc-extensions.txt" | xargs -L 1 codium --install-extension
 
