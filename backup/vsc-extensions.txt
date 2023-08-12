@@ -1,0 +1,5 @@
+bradlc.vscode-tailwindcss
+Catppuccin.catppuccin-vsc
+dsznajder.es7-react-js-snippets
+esbenp.prettier-vscode
+ms-python.python
