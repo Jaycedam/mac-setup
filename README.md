@@ -12,10 +12,9 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
 - Changes macOS default preferences. (see [preferences.sh](modules/preferences.sh) for changes.)
 - Set default shell to [Fish](https://fishshell.com) for better features.
 
+**Check the [wiki](https://github.com/Jaycedam/mac-setup/wiki) for detailed information.**
+
 ## Instructions
-
-**Check the [wiki](https://github.com/Jaycedam/mac-setup/wiki) before you start.**
-
 For the automated setup run:
 
 ```sh
