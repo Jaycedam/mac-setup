@@ -8,17 +8,13 @@
 Opinionated automation shell scripts to set up macOS. The script does the following:
 
 - Restores current backup.
-  - .config folder (in my case: fish, btop, kitty configs).
-  - Amethyst preferences.
 - Installs [Homebrew](https://brew.sh).
-- Changes macOS default preferences. (this list could be out of date, check [preferences.sh](modules/preferences.sh) to see all changes.)
-  - Dock: Position left, autohide, recents disabled
-  - Finder: Show file extensions, hidden files, path bar, list view, keep folders on top, search scope current folder.
-  - Spaces: Disable rearrange Spaces automatically, group by app in mission control.
-  - Security: Enables firewall.
+- Changes macOS default preferences. (see [preferences.sh](modules/preferences.sh) for changes.)
 - Set default shell to [Fish](https://fishshell.com) for better features.
 
 ## Instructions
+
+**Check the [wiki](https://github.com/Jaycedam/mac-setup/wiki) before you start.**
 
 For the automated setup run:
 
@@ -43,13 +39,9 @@ Some settings must be changed manually due to API limitation or lack of Apple do
 
 - Safari: Enable hide my ip and disable telemetry in Privacy tab.
 
-## Update backup
-
-To update the backup to your current config files, run `bash backup.sh`. This will backup the .config folder in your home directory, as well as your Amethyst settings. It also creates a Brew bundle with your installed packages, so you need Homebrew. Then running `main.sh` will restore your config files on a new setup. Since this is my personal config, if you don't install some listed packages you will need to remove its dependencies in the code to avoid issues.
-
 ## Todo
 
-- [ ] Add vscodium profile/extensions backup/restore
+- [x] Add vscodium profile/extensions backup/restore
 - [x] Update terminal profile within script (Migrated to kitty)
 - [ ] Automate manual settings post script
 - [ ] Check if Brew is already installed
