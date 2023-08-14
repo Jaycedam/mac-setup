@@ -1,5 +1,4 @@
 {
-  "editor.fontFamily": "FiraCode Nerd Font Mono",
   "editor.fontSize": 14,
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
@@ -11,27 +10,7 @@
   "editor.formatOnSave": true,
   "catppuccin.workbenchMode": "flat",
   "workbench.layoutControl.type": "menu",
-  "workbench.colorTheme": "Catppuccin Mocha",
-  "nebulaOni.update.restoreConfiguration": {
-    "themeSettings": {
-      "background": "Grey",
-      "main": "Bumblebee",
-      "highlight": "Ultra Violet",
-      "focusBorder": "ON",
-      "fontStyle": "Italic",
-      "comments": "Dark Violet",
-      "favorite": "OFF"
-    },
-    "favoriteSettings": {
-      "background": "Glacial Blue",
-      "main": "Sakura",
-      "highlight": "Ultra Violet",
-      "focusBorder": "ON",
-      "fontStyle": "Italic",
-      "comments": "Dark Magenta",
-      "favorite": "Nebula Oni (Pegasus)"
-    }
-  },
   "workbench.enableExperiments": false,
-  "update.showReleaseNotes": false
+  "update.showReleaseNotes": false,
+  "editor.fontFamily": "JetBrains Mono"
 }
