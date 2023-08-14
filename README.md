@@ -9,7 +9,7 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
 
 - Restores current backup.
 - Installs [Homebrew](https://brew.sh).
-- Changes macOS default preferences. (see [preferences.sh](modules/preferences.sh) for changes.)
+- Changes some macOS default preferences.
 - Set default shell to [Fish](https://fishshell.com) for better features and OOB experience.
 
 **Check the [wiki](https://github.com/Jaycedam/mac-setup/wiki) for more information.**
@@ -33,6 +33,7 @@ Some settings must be changed manually due to API limitation or lack of Apple do
 
 - Lock screen: Set required password after screen is off to **inmediatly** for security reasons.
 - Safari: Enable hide my ip and disable telemetry in Privacy tab.
+- Import theme.terminal from the backup folder into the default terminal.
 
 ## Todo
 
