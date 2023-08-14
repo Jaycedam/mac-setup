@@ -10,12 +10,13 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
 - Restores current backup.
 - Installs [Homebrew](https://brew.sh).
 - Changes macOS default preferences. (see [preferences.sh](modules/preferences.sh) for changes.)
-- Set default shell to [Fish](https://fishshell.com) for better features.
+- Set default shell to [Fish](https://fishshell.com) for better features and OOB experience.
 
-**Check the [wiki](https://github.com/Jaycedam/mac-setup/wiki) for detailed information.**
+**Check the [wiki](https://github.com/Jaycedam/mac-setup/wiki) for more information.**
 
 ## Instructions
-For the automated setup run:
+
+For the automated setup, run:
 
 ```sh
 git clone https://github.com/Jaycedam/mac-setup.git && cd mac-setup && bash main.sh
@@ -31,17 +32,11 @@ It will prompt you to install Xcode Command Line Tools if you don't have git.
 Some settings must be changed manually due to API limitation or lack of Apple documentation.
 
 - Lock screen: Set required password after screen is off to **inmediatly** for security reasons.
-- Spaces: Create more Spaces and enable keyboard shortcuts, then assign apps to their dedicated space. This will offer a better tiling window manager experience.
-
-![Keyboard shortcuts](images/keyboard-shortcuts.png)
-![Assign to desktop](images/spaces.png)
-
 - Safari: Enable hide my ip and disable telemetry in Privacy tab.
 
 ## Todo
 
 - [x] Add vscodium profile/extensions backup/restore
-- [x] Update terminal profile within script (Migrated to kitty)
 - [ ] Automate manual settings post script
 - [ ] Check if Brew is already installed
 - [x] Add macOS preferences changes in README
