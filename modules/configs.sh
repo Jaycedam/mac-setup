@@ -4,10 +4,6 @@
 echo -e "${ARROW}Restoring .config folder..."
 cp -R -v -i ${BACKUP_DIR}/.config $HOME
 
-# WM settings
-echo -e "${ARROW}Restoring Amethyst settings..."
-cp -v -i ${BACKUP_DIR}/com.amethyst.Amethyst.plist "$PREFERENCES_DIR"
-
 # VSCodium settings and extensions
 # Makes sure directory exist, if not, create it
 echo -e "${ARROW}Restoring VSCodium settings..."

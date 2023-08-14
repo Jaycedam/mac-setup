@@ -23,9 +23,6 @@ PREFERENCES_DIR="$HOME/Library/Preferences"
 # Path for current script
 SCRIPT_DIR=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
 
-# Path to Amethyst settings, WM = Window Manager
-WM="$PREFERENCES_DIR/com.amethyst.Amethyst.plist"
-
 # Path to VSCodium settings
 VSC_SETTINGS="$HOME/Library/Application Support/VSCodium/User"
 
