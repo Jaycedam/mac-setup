@@ -7,11 +7,16 @@
 
 Opinionated automation shell scripts to set up macOS. The script does the following:
 
-- Restores current backup.
 - Installs [Homebrew](https://brew.sh).
-- Changes some macOS default preferences.
-
-**Check the [wiki](https://github.com/Jaycedam/mac-setup/wiki) for more information.**
+- Restores current backup:
+  - dotfiles (.zprofile, .zshrc, .config folder)
+  - VSCodium settings.json and installed extensions.
+  - Installed packages by Homebrew on a [Brewfile](backup/Brewfile).
+- Changes some macOS default preferences:
+  - Dock: Position left, autohide, recents disabled
+  - Finder: Show file extensions, show hidden files, show path bar, list view default, keep folders on top, search scope to current folder.
+  - Spaces: Disable rearrange Spaces automatically, group by app in mission control.
+  - Security: Enables firewall.
 
 ## Instructions
 
@@ -33,6 +38,15 @@ Some settings must be changed manually due to API limitation or lack of Apple do
 - Lock screen: Set required password after screen is off to **inmediatly** for security reasons.
 - Safari: Enable hide my ip and disable telemetry in Privacy tab.
 - Import theme.terminal from the backup folder into the default terminal.
+- Change Keyboard Shortcut **Move focus to next window** to ⌘| to enable changing instances of the same app (necessary on Latam Keyboard), available on **Keyboard - Keyboard Shortcuts - Keyboard**.
+- Keyboard shortcuts to get better window managment without apps, add the following inside the **Keyboard - Keyboard Shortcuts - App Shortcuts** settings:
+  - Menu Title: Zoom (⌃⌥↩)
+  - Menu Title: Move Window to Left Side of Screen (⌃⌥←)
+  - Menu Title: Move Window to Right Side of Screen (⌃⌥→)
+
+## Update the backup:
+
+Just run `bash backup.sh` to update the backup files. It will create a backup of everything listed in the previous section. If you're going to modify the list of packages to install, make sure to remove its dependencies on the different script modules. You will need Homebrew to backup your current packages, or you can edit the Brewfile directly.
 
 ## Todo
 
