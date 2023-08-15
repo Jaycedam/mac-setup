@@ -3,13 +3,15 @@
 # Variables and directory check 
 source root.sh
 
-echo -e "${ARROW}Backing up .config folder..."
-cp -R -p -v ~/.config $BACKUP_DIR
+echo -e "${ARROW}Backing up dotfiles..."
+cp -v ~/.zshrc $BACKUP_DIR/dotfiles
+cp -v ~/.zprofile $BACKUP_DIR/dotfiles
+cp -R -p -v ~/.config $BACKUP_DIR/dotfiles
 
 # Backs up vscode settings and extensions
 echo -e "${ARROW}Backing up VSCodium profile and extensions..."
-cp -v "$VSC_SETTINGS/settings.json" "$BACKUP_DIR"
-codium --list-extensions > $BACKUP_DIR/vsc-extensions.txt
+cp -v "$VSC_SETTINGS/settings.json" "$BACKUP_DIR/vscode"
+codium --list-extensions > $BACKUP_DIR/vscode/vsc-extensions.txt
 
 # Backs up currently installed brew packages, -f overrides current file
 echo -e "${ARROW}Creating Brewfile..."

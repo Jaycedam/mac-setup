@@ -10,7 +10,6 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
 - Restores current backup.
 - Installs [Homebrew](https://brew.sh).
 - Changes some macOS default preferences.
-- Set default shell to [Fish](https://fishshell.com) for better features and OOB experience.
 
 **Check the [wiki](https://github.com/Jaycedam/mac-setup/wiki) for more information.**
 

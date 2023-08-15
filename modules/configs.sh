@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Restore .config folder backup
-echo -e "${ARROW}Restoring .config folder..."
-cp -R -v -i ${BACKUP_DIR}/.config $HOME
+echo -e "${ARROW}Restoring dotfiles..."
+cp -R -v -i ${BACKUP_DIR}/dotfiles $HOME
 
 # VSCodium settings and extensions
 # Makes sure directory exist, if not, create it
