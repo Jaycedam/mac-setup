@@ -4,7 +4,7 @@
 echo -e "${ARROW}Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Enables brew in current env without saving to zprofile
+# Enables brew in current env
 eval $(/opt/homebrew/bin/brew shellenv)
 
 # Disables brew telemetry
