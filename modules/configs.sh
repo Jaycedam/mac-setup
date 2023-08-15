@@ -9,7 +9,7 @@ cp -R -v -i ${BACKUP_DIR}/dotfiles $HOME
 echo -e "${ARROW}Restoring VSCodium settings..."
 mkdir -p "$VSC_SETTINGS"
 # Copy settings.json
-cp "$SCRIPT_DIR/$BACKUP_DIR/settings.json" "$VSC_SETTINGS"
+cp "$SCRIPT_DIR/$BACKUP_DIR/vscode/settings.json" "$VSC_SETTINGS"
 # Disable gatekeeper for vscodium so it can install extensions without opening the app first
 xattr -r -d com.apple.quarantine /Applications/VSCodium.app
 # Install Extensions from the backup list vsc-extensions.txt
