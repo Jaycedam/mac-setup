@@ -2,7 +2,7 @@
 
 # Restore .config folder backup
 echo -e "${ARROW}Restoring dotfiles..."
-cp -R -v -i ${BACKUP_DIR}/dotfiles $HOME
+cp -R -v -i ${BACKUP_DIR}/.config $HOME
 
 # WM settings
 echo -e "${ARROW}Restoring Amethyst settings..."
