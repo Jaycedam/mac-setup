@@ -1,4 +1,6 @@
 {
+  "workbench.colorTheme": "Cherry Midnight",
+  "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 14,
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
@@ -12,6 +14,7 @@
   "workbench.layoutControl.type": "menu",
   "workbench.enableExperiments": false,
   "update.showReleaseNotes": false,
-  "editor.fontFamily": "JetBrains Mono",
-  "workbench.colorTheme": "Cherry Midnight"
+  "workbench.activityBar.visible": false,
+  "window.commandCenter": true,
+  "workbench.statusBar.visible": false
 }
