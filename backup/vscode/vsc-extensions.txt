@@ -1,6 +1,5 @@
 bradlc.vscode-tailwindcss
-Catppuccin.catppuccin-vsc
-Catppuccin.catppuccin-vsc-icons
 dsznajder.es7-react-js-snippets
 esbenp.prettier-vscode
 ms-python.python
+nullxception.cherry-theme

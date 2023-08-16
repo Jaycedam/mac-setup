@@ -37,12 +37,7 @@ Some settings must be changed manually due to API limitation or lack of Apple do
 
 - Lock screen: Set required password after screen is off to **inmediatly** for security reasons.
 - Safari: Enable hide my ip and disable telemetry in Privacy tab.
-- Import theme.terminal from the backup folder into the default terminal.
 - Change Keyboard Shortcut **Move focus to next window** to ⌘| to enable changing instances of the same app (necessary on Latam Keyboard), available on **Keyboard - Keyboard Shortcuts - Keyboard**.
-- Keyboard shortcuts to get better window managment without apps, add the following inside the **Keyboard - Keyboard Shortcuts - App Shortcuts** settings:
-  - Menu Title: Zoom (⌃⌥↩)
-  - Menu Title: Move Window to Left Side of Screen (⌃⌥←)
-  - Menu Title: Move Window to Right Side of Screen (⌃⌥→)
 
 ## Update the backup:
 
@@ -55,7 +50,7 @@ Just run `bash backup.sh` to update the backup files. It will create a backup of
 - [ ] Check if Brew is already installed
 - [x] Add macOS preferences changes in README
 
-## Acknowledgments
+## Credit
 
 - [macOS defaults list](https://macos-defaults.com/)
 - [Brew docs](https://docs.brew.sh/Manpage)

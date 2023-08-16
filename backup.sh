@@ -8,6 +8,10 @@ cp -v ~/.zshrc $BACKUP_DIR/dotfiles
 cp -v ~/.zprofile $BACKUP_DIR/dotfiles
 cp -R -p -v ~/.config $BACKUP_DIR/dotfiles
 
+# Window manager settings
+echo -e "${ARROW}Backing up Amethyst settings..."
+cp -v "$WM" $BACKUP_DIR
+
 # Backs up vscode settings and extensions
 echo -e "${ARROW}Backing up VSCodium profile and extensions..."
 cp -v "$VSC_SETTINGS/settings.json" "$BACKUP_DIR/vscode"
