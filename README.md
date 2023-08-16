@@ -9,7 +9,7 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
 
 - Installs [Homebrew](https://brew.sh).
 - Restores current backup:
-  - dotfiles (.zprofile, .zshrc, .config folder)
+  - dotfiles (.config folder)
   - VSCodium settings.json and installed extensions.
   - Installed packages by Homebrew on a [Brewfile](backup/Brewfile).
 - Changes some macOS default preferences:
@@ -17,6 +17,7 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
   - Finder: Show file extensions, show hidden files, show path bar, list view default, keep folders on top, search scope to current folder.
   - Spaces: Disable rearrange Spaces automatically, group by app in mission control.
   - Security: Enables firewall.
+- Sets Fish as the default shell for better OOB experience and features.
 
 ## Instructions
 
