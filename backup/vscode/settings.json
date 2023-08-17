@@ -13,8 +13,5 @@
   "catppuccin.workbenchMode": "flat",
   "workbench.layoutControl.type": "menu",
   "workbench.enableExperiments": false,
-  "update.showReleaseNotes": false,
-  "workbench.activityBar.visible": false,
-  "window.commandCenter": true,
-  "workbench.statusBar.visible": false
+  "update.showReleaseNotes": false
 }
