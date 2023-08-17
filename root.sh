@@ -17,7 +17,7 @@ ARROW="${MAGENTA}==> ${RESET}"
 # Path for all backups
 BACKUP_DIR="./backup"
 
-# Path for macOS Prefrences
+# Path for macOS Preferences
 PREFERENCES_DIR="$HOME/Library/Preferences"
 
 # Path for current script
@@ -25,9 +25,6 @@ SCRIPT_DIR=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
 
 # Path to VSCodium settings
 VSC_SETTINGS="$HOME/Library/Application Support/VSCodium/User"
-
-# Path to Amethyst settings, WM = Window Manager
-WM="$PREFERENCES_DIR/com.amethyst.Amethyst.plist"
 
 # Checks if current directory is correct, otherwise there will be issues with relative paths
 if [ $PWD != "$SCRIPT_DIR" ]; then

@@ -3,12 +3,12 @@
 # Variables and directory check 
 source root.sh
 
+# Removes unused dotfiles
+echo -e "${ARROW}Removing previous backup..."
+rm -rf -v backup/.config/*
+
 echo -e "${ARROW}Backing up dotfiles..."
 cp -R -p -v ~/.config $BACKUP_DIR
-
-# Window manager settings
-echo -e "${ARROW}Backing up Amethyst settings..."
-cp -v "$WM" $BACKUP_DIR
 
 # Backs up vscode settings and extensions
 echo -e "${ARROW}Backing up VSCodium profile and extensions..."
