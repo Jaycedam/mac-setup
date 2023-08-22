@@ -44,13 +44,6 @@ Some settings must be changed manually due to API limitation or lack of Apple do
 
 Just run `bash backup.sh` to update the backup files. It will create a backup of everything listed in the previous section. If you're going to modify the list of packages to install, make sure to remove its dependencies on the different script modules. You will need Homebrew to backup your current packages, or you can edit the Brewfile directly.
 
-## Todo
-
-- [x] Add vscodium profile/extensions backup/restore
-- [ ] Automate manual settings post script
-- [ ] Check if Brew is already installed
-- [x] Add macOS preferences changes in README
-
 ## Credit
 
 - [macOS defaults list](https://macos-defaults.com/)
