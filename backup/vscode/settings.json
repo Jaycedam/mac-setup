@@ -1,17 +1,18 @@
 {
-  "workbench.colorTheme": "Cherry Midnight",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 14,
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
   "editor.minimap.enabled": false,
-  "workbench.sideBar.location": "right",
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "catppuccin.workbenchMode": "flat",
   "workbench.layoutControl.type": "menu",
   "workbench.enableExperiments": false,
-  "update.showReleaseNotes": false
+  "update.showReleaseNotes": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "git.confirmSync": false,
+  "workbench.sideBar.location": "right",
+  "tabnine.experimentalAutoImports": true
 }
