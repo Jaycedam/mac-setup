@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# Restore .config folder backup
+# RESTORE DOTFILES
 echo -e "${ARROW}Restoring dotfiles..."
-cp -R -v -i ${BACKUP_DIR}/.config $HOME
+cp -R -p -v -i ${BACKUP_DIR}/.config $HOME
+cp -v -i ${HOME}/.zprofile $HOME
+cp -v -i ${HOME}/.zshrc $HOME
+# END RESTORE DOTFILES
 
-
-# VSCodium settings and extensions
+# VSCODIUM SETTINGS AND EXTENSIONS
 # Makes sure directory exist, if not, create it
 echo -e "${ARROW}Restoring VSCodium settings..."
 mkdir -p "$VSC_SETTINGS"
@@ -19,3 +21,4 @@ cat "$SCRIPT_DIR/$BACKUP_DIR/vsc-extensions.txt" | xargs -L 1 codium --install-e
 # Developer folder for projects
 echo -e "${ARROW}Creating Developer folder..."
 mkdir -p $HOME/Developer
+# END VSCODIUM SETTINGS AND EXTENSIONS
