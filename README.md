@@ -17,6 +17,7 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
   - Finder: Show file extensions, show hidden files, show path bar, list view default, keep folders on top, search scope to current folder.
   - Spaces: Disable rearrange Spaces automatically, group by app in mission control.
   - Security: Enables firewall.
+- Sets Fish shell as default.
 
 ## Instructions
 
