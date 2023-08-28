@@ -9,8 +9,6 @@ rm -rf -v backup/.config/*
 
 echo -e "${ARROW}Backing up dotfiles..."
 cp -R -p -v ~/.config $BACKUP_DIR
-cp -v ~/.zprofile $BACKUP_DIR
-cp -v ~/.zshrc $BACKUP_DIR 
 
 # Backs up vscode settings and extensions
 echo -e "${ARROW}Backing up VSCodium profile and extensions..."
