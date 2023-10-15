@@ -14,5 +14,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "git.confirmSync": false,
   "workbench.sideBar.location": "right",
-  "tabnine.experimentalAutoImports": true
+  "tabnine.experimentalAutoImports": true,
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "catppuccin-macchiato"
 }

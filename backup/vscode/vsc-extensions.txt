@@ -1,6 +1,11 @@
 bradlc.vscode-tailwindcss
+Catppuccin.catppuccin-vsc
+Catppuccin.catppuccin-vsc-icons
 dsznajder.es7-react-js-snippets
 esbenp.prettier-vscode
 formulahendry.auto-rename-tag
 ms-python.python
+shd101wyy.markdown-preview-enhanced
 TabNine.tabnine-vscode
+unifiedjs.vscode-mdx
+yoavbls.pretty-ts-errors
