@@ -15,6 +15,6 @@
   "git.confirmSync": false,
   "workbench.sideBar.location": "right",
   "tabnine.experimentalAutoImports": true,
-  "workbench.colorTheme": "Catppuccin Macchiato",
-  "workbench.iconTheme": "catppuccin-macchiato"
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha"
 }
