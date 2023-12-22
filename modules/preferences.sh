@@ -4,7 +4,7 @@ echo -e "${ARROW}Changing macOS defaults..."
 
 # ------------------------------ Dock ------------------------------
 # Position left
-# defaults write com.apple.dock "orientation" -string "left"
+defaults write com.apple.dock "orientation" -string "left"
 # Autohide
 defaults write com.apple.dock "autohide" -bool "true"
 # Disable recents
