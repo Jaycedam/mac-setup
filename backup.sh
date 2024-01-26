@@ -5,7 +5,7 @@ source root.sh
 
 # Removes unused dotfiles
 echo -e "${ARROW}Removing previous backup..."
-rm -rf -v backup/.config/*
+rm -rf backup/.config/*
 
 echo -e "${ARROW}Backing up dotfiles..."
 cp -R -p -v ~/.config $BACKUP_DIR
