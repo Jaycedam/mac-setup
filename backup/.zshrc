@@ -1,8 +1,3 @@
-setopt autocd
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-eval "$(starship init zsh)"
-
 alias autoremove="brew autoremove"
 alias install="brew install"
 alias search="brew search"
@@ -25,4 +20,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export PATH=$PATH:/Users/jay/.spicetify
+

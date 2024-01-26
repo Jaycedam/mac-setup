@@ -17,5 +17,6 @@
   "workbench.sideBar.location": "right",
   "files.associations": {
     "*.mdx": "markdown"
-  }
+  },
+  "workbench.colorTheme": "GitHub Dark Default"
 }

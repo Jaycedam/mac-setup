@@ -2,6 +2,7 @@ bradlc.vscode-tailwindcss
 dsznajder.es7-react-js-snippets
 esbenp.prettier-vscode
 formulahendry.auto-rename-tag
+GitHub.github-vscode-theme
 ms-python.python
 rangav.vscode-thunder-client
 TabNine.tabnine-vscode
