@@ -1,9 +1,7 @@
 {
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrainsMono NFM",
   "editor.fontSize": 14,
   "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "editor.minimap.enabled": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -12,6 +10,12 @@
   "workbench.enableExperiments": false,
   "update.showReleaseNotes": false,
   "diffEditor.ignoreTrimWhitespace": false,
-  "git.confirmSync": false,
-  "workbench.sideBar.location": "right"
+  "tabnine.experimentalAutoImports": true,
+  "catppuccin.workbenchMode": "flat",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.sideBar.location": "right",
+  "files.associations": {
+    "*.mdx": "markdown"
+  }
 }

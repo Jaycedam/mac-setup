@@ -10,6 +10,7 @@ alias outdated="brew outdated"
 alias upgrade="brew upgrade"
 alias uninstall="brew uninstall --zap"
 alias code="codium"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -24,4 +25,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+export PATH=$PATH:/Users/jay/.spicetify

@@ -3,5 +3,6 @@ dsznajder.es7-react-js-snippets
 esbenp.prettier-vscode
 formulahendry.auto-rename-tag
 ms-python.python
+rangav.vscode-thunder-client
 TabNine.tabnine-vscode
-yoavbls.pretty-ts-errors
+YoavBls.pretty-ts-errors
