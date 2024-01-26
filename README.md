@@ -13,10 +13,11 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
   - VSCodium settings.json and installed extensions.
   - Installed packages by Homebrew on a [Brewfile](backup/Brewfile).
 - Changes some macOS default preferences:
-  - Dock: Position left, autohide, recents disabled
+  - Dock: Autohide, Recents disabled
   - Finder: Show file extensions, show hidden files, show path bar, list view default, keep folders on top, search scope to current folder.
   - Spaces: Disable rearrange Spaces automatically, group by app in mission control.
   - Security: Enables firewall.
+- Sets [Fish](https://fishshell.com) as default shell
 
 ## Instructions
 
