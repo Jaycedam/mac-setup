@@ -24,7 +24,7 @@ defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "true"
 defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf"
 
 # ------------------------------ Spaces ------------------------------
-# Disable rearrange Spaces automatically (useful for Amethyst WM)
+# Disable rearrange Spaces automatically
 defaults write com.apple.dock "mru-spaces" -bool "false"
 # Groups windows by application on mission control
 defaults write com.apple.dock expose-group-apps -bool true

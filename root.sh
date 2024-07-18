@@ -23,9 +23,6 @@ PREFERENCES_DIR="$HOME/Library/Preferences"
 # Path for current script
 SCRIPT_DIR=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
 
-# Path to VSCodium settings
-VSC_SETTINGS="$HOME/Library/Application Support/VSCodium/User"
-
 # Checks if current directory is correct, otherwise there will be issues with relative paths
 if [ $PWD != "$SCRIPT_DIR" ]; then
     echo -e "${RED}Error.${RESET} The script must be executed from the directory $SCRIPT_DIR"
