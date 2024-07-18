@@ -4,7 +4,6 @@ alias search="brew search"
 alias outdated="brew outdated"
 alias upgrade="brew upgrade"
 alias uninstall="brew uninstall --zap"
-alias code="codium"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -21,3 +20,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+eval "$(starship init zsh)"
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
