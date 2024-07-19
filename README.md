@@ -19,9 +19,9 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
 
 ## Instructions
 
-Example: For the automated setup, clone the repo and run the script.
+Clone the project, update the backup and sync your changes with your repo. Then just replace the URL for your own for the automated setup. 
 
-**DO NOT RUN THIS UNLESS YOU WANT MY BACKUP TO REWRITE YOUR FILES, THIS IS AN EXAMPLE OF HOW TO RUN THE SCRIPT AFTER YOU UPDATE THE BACKUP TO YOUR OWN AND WANT TO RESTORE. JUST REPLACE THE URL FOR YOUR OWN REPO.**
+**THIS IS JUST AN EXAMPLE, DO NOT RUN THIS. MAKE SURE TO UPDATE THE BACKUP AND THE URL FIRST.**
 
 ```sh
 git clone https://github.com/Jaycedam/mac-setup.git && cd mac-setup && bash main.sh
