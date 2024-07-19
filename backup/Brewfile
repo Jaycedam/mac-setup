@@ -1,5 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "libsql/sqld"
 tap "oven-sh/bun"
 tap "tursodatabase/tap"
