@@ -8,7 +8,7 @@ source root.sh
 source modules/brew.sh
 
 # Restores config files backed up
-source modules/configs.sh
+source modules/restore.sh
 
 # Changes defaults macOS preferences
 source modules/preferences.sh
