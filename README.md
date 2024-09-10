@@ -9,7 +9,7 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
 - Installs [Homebrew](https://brew.sh).
 - Restores current backup:
   - dotfiles (.config folder, .zshrc)
-  - Installed packages by Homebrew on a [Brewfile](backup/Brewfile).
+  - Installed packages by Homebrew on a [Brewfile](Brewfile).
 - Changes some macOS default preferences, see full list [here](modules/preferences.sh).
 
 ## Instructions
