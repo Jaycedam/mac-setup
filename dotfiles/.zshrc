@@ -58,5 +58,3 @@ source <(fzf --zsh)
 
 # Prompt
 eval "$(starship init zsh)"
-
-export PATH=$PATH:/Users/jay/.spicetify

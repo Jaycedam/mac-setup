@@ -3,16 +3,21 @@
 # Variables and directory check 
 source root.sh
 
-# Removes unused dotfiles
-echo -e "${ARROW}Removing previous backup..."
-rm -rf backup/.config/*
+# Add check if the files are already symlinked
+# Add warning and confirmation before deleting 
 
-echo -e "${ARROW}Backing up dotfiles..."
-cp -R -p -v ~/.config $BACKUP_DIR
-cp -v ~/.zshrc $BACKUP_DIR 
+# Removes unused dotfiles
+echo "${ARROW}Removing previous backup..."
+rm -rf $BACKUP_DIR/* 
+
+echo "${ARROW}Backing up dotfiles..."
+mv -v ~/.config $BACKUP_DIR
+mv -v ~/.zshrc $BACKUP_DIR
+
+source modules/restore.sh
 
 # Backs up currently installed brew packages, -f overrides current file
-echo -e "${ARROW}Creating Brewfile..."
-brew bundle dump -v -f --file $BACKUP_DIR/Brewfile
+echo "${ARROW}Creating Brewfile..."
+brew bundle dump -v -f --file Brewfile
 
-echo -e "${GREEN}Done!${RESET}"
+echo "${GREEN}Done!${RESET}"

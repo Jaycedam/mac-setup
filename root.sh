@@ -15,10 +15,7 @@ ARROW="${MAGENTA}==> ${RESET}"
 
 # Path Variables
 # Path for all backups
-BACKUP_DIR="./backup"
-
-# Path for macOS Preferences
-PREFERENCES_DIR="$HOME/Library/Preferences"
+BACKUP_DIR="$HOME/Developer/mac-setup/dotfiles" # it needs the full path for the symlink to work correctly
 
 # Path for current script
 SCRIPT_DIR=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
