@@ -20,7 +20,7 @@ Clone the project, update the backup and sync your changes with your repo. Then 
 
 ```sh
 mkdir ~/Developer
-git clone https://github.com/Jaycedam/mac-setup.git ~/Developer 
+git clone https://github.com/Jaycedam/mac-setup.git ~/Developer/mac-setup
 cd ~/Developer/mac-setup && sh main.sh
 ```
 
