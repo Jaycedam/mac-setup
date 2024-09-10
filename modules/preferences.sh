@@ -8,6 +8,7 @@ defaults write com.apple.dock "autohide-delay" -float "0" # Disable delay on mou
 defaults write com.apple.dock expose-group-apps -bool true # Groups windows by application on mission control
 defaults write com.apple.dock "mru-spaces" -bool false # Disable rearrange Spaces automatically
 defaults write com.apple.dock "show-recents" -bool false # Disable recents
+defaults write com.apple.dock static-only -bool true # only show open apps on dock
 
 # Finder
 defaults write com.apple.finder "AppleShowAllFiles" -bool true # Show hidden files
@@ -18,7 +19,6 @@ defaults write com.apple.finder "_FXSortFoldersFirst" -bool true # Keep folders 
 defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf" # Search scope current folder
 defaults write com.apple.finder "CreateDesktop" -bool true # Disable desktop icons
 defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool false # Disable drive icon on desktop
-
 
 # Security
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on # Enable firewall
