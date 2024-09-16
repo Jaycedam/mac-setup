@@ -1,14 +1,14 @@
 return {
-	"Mofiqul/dracula.nvim",
-	priority = 1000,
-	config = function()
-		local theme = require("dracula")
-		theme.setup({
-			transparent_bg = true,
-			italic_comment = true,
-
-			overrides = {},
-		})
-		vim.cmd([[colorscheme dracula]])
-	end,
+    "baliestri/aura-theme",
+    lazy = false,
+    priority = 1000,
+    config = function(plugin)
+        vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
+        vim.cmd([[colorscheme aura-dark]])
+        --
+        -- transparent background
+        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+    end
 }

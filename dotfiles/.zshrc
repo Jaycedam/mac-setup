@@ -49,6 +49,7 @@ alias uninstall="brew uninstall --zap"  # uninstall with zap to remove app lefto
 alias outdated="brew outdated"
 alias autoremove="brew autoremove"
 alias vim="nvim"
+alias v="nvim"
 alias so="source ~/.zshrc" # source zshrc to update changes
 
 # Plugins
