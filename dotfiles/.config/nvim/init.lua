@@ -1,7 +1,7 @@
 -- modules
 require("config.keymaps")
 require("config.options")
-require("config.statusbar")
+require("config.statusline")
 
 -- plugins
 require("config.lazy")
