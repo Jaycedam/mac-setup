@@ -1,12 +1,13 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
+local mux = wezterm.mux
 
 -- Font
 config.font_size = 16
 
 -- Window
---config.window_background_opacity = 0.9
+config.window_background_opacity = 0.8
 --config.macos_window_background_blur = 50 -- blur
 config.window_decorations = "RESIZE" -- removes title bar
 config.adjust_window_size_when_changing_font_size = false
@@ -29,6 +30,7 @@ config.tab_bar_at_bottom = true
 config.color_scheme = 'Aura (Gogh)'
 
 config.colors = {
+    --background = "black",
     tab_bar = {
         -- The color of the strip that goes along the top of the window
         -- (does not apply when fancy tab bar is in use)
@@ -61,5 +63,11 @@ config.colors = {
         },
     },
 }
+
+-- auto maximize on startup
+wezterm.on('gui-startup', function(cmd)
+    local tab, pane, window = mux.spawn_window(cmd or {})
+    window:gui_window():maximize()
+end)
 
 return config
