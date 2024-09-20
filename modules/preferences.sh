@@ -33,4 +33,7 @@ defaults write com.apple.AdLib.plist allowApplePersonalizedAdvertising -bool fal
 defaults write com.apple.AdLib.plist allowIdentifierForAdvertising -bool false
 defaults write com.apple.AdLib.plist personalizedAdsMigrated -bool false
 
+# Set hostname
+sudo scutil --set HostName jay-macbook
+
 killall Dock && killall Finder && killall SystemUIServer # Restart dock and finder to apply changes
