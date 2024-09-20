@@ -12,6 +12,13 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
   - Installed packages by Homebrew on a [Brewfile](Brewfile).
 - Changes some macOS default preferences, see full list [here](modules/preferences.sh).
 
+## Screenshots
+> [!NOTE]  
+> I don't update these often, so they can be out of date.
+
+### Wezterm and Neovim
+![Wezterm and Neovim](images/wezterm.webp)
+
 ## Instructions
 
 Clone the project, update the backup and sync your changes with your repo. Then just replace the URL for your own for the automated setup. 
@@ -19,18 +26,17 @@ Clone the project, update the backup and sync your changes with your repo. Then 
 > [!CAUTION]
 > This is just an example, do not run this unless you want all my dotfiles and preferences. Make sure to backup your current dotfiles before.
 
+Check dependencies:
+```sh
+git -v
+```
+
+Automatic setup:
 ```sh
 mkdir ~/Developer
 git clone https://github.com/Jaycedam/mac-setup.git ~/Developer/mac-setup
 cd ~/Developer/mac-setup && sh main.sh
 ```
-
-## Screenshots
-> [!NOTE]  
-> I don't update these often, so they can be out of date.
-
-### Wezterm and Neovim
-![Wezterm and Neovim](images/wezterm.webp)
 
 ## Update the backup:
 To update the backup to your own, just run 'backup.sh' from the project root directory. This will move your dotfiles (.zshrc and .config folder) to the project directory and create symlinks to your home folder. It will also back up all the brew packages into a Brewfile (homebrew must be already installed).
