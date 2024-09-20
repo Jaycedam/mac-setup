@@ -16,14 +16,15 @@ return {
             black = 'black',
             pink = "#f694ff",
             blue = '#82e2ff',
-            yellow = "#ffca85"
+            yellow = "#ffca85",
+            green = "#61ffca"
         }
 
         vim.api.nvim_set_hl(0, 'Status', { fg = "white", bg = colors.black })
         vim.api.nvim_set_hl(0, 'StatusMode', { fg = "black", bg = colors.pink, bold = true, })
         vim.api.nvim_set_hl(0, 'StatusModeSeparator', { fg = colors.pink, bg = colors.black })
         vim.api.nvim_set_hl(0, 'StatusFile', { fg = "white", bg = colors.black, })
-        vim.api.nvim_set_hl(0, 'StatusFileIcon', { fg = colors.blue, bg = colors.black })
+        vim.api.nvim_set_hl(0, 'StatusFileIcon', { fg = colors.green, bg = colors.black })
         vim.api.nvim_set_hl(0, 'StatusWarning', { fg = colors.yellow, bg = colors.black })
     end
 }
