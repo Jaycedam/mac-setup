@@ -29,6 +29,13 @@ It will prompt you to install Xcode Command Line Tools if you don't have git.
 :white_check_mark: Apple Sillicon on Ventura  
 :white_check_mark: Apple Sillicon on Sonoma
 
+## Screenshots
+> [!NOTE]  
+> I don't update these often, so they can be out of date.
+
+### Wezterm and Neovim
+![Wezterm and Neovim](images/wezterm.webp)
+
 ## Update the backup:
 To update the backup to your own, just run 'backup.sh' from the project root directory. This will move your dotfiles (.zshrc and .config folder) to the project directory and create symlinks to your home folder. It will also back up all the brew packages into a Brewfile (homebrew must be already installed).
 
