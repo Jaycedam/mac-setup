@@ -16,18 +16,14 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
 
 Clone the project, update the backup and sync your changes with your repo. Then just replace the URL for your own for the automated setup. 
 
-**THIS IS JUST AN EXAMPLE, DO NOT RUN THIS. MAKE SURE TO UPDATE THE BACKUP AND THE URL FIRST.**
+> [!CAUTION]
+> This is just an example, do not run this unless you want all my dotfiles and preferences. Make sure to backup your current dotfiles before.
 
 ```sh
 mkdir ~/Developer
 git clone https://github.com/Jaycedam/mac-setup.git ~/Developer/mac-setup
 cd ~/Developer/mac-setup && sh main.sh
 ```
-
-It will prompt you to install Xcode Command Line Tools if you don't have git.
-
-:white_check_mark: Apple Sillicon on Ventura  
-:white_check_mark: Apple Sillicon on Sonoma
 
 ## Screenshots
 > [!NOTE]  
