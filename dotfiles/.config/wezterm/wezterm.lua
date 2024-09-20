@@ -3,6 +3,8 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local mux = wezterm.mux
 
+local status = require("status") -- custom status (tabs and info)
+
 -- Font
 config.font_size = 16
 
@@ -30,7 +32,7 @@ config.tab_bar_at_bottom = true
 config.color_scheme = 'Aura (Gogh)'
 
 config.colors = {
-    --background = "black",
+    background = "black",
     tab_bar = {
         -- The color of the strip that goes along the top of the window
         -- (does not apply when fancy tab bar is in use)
