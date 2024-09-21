@@ -8,9 +8,9 @@ Opinionated automation shell scripts to set up macOS.
 
 - Installs [Homebrew](https://brew.sh).
 - Restores current backup:
-  - dotfiles (.config folder, .zshrc), by creating symlinks from the repo to the home folder.
-  - Installed packages by Homebrew on a [Brewfile](Brewfile).
-- Changes some macOS default preferences, see full list [here](modules/preferences.sh).
+  - symlink dotfiles from the repo to the home folder (.config folder, .zshrc).
+  - Installs packages listed in a [Brewfile](Brewfile) using Homebrew.
+- Changes some macOS default preferences, full list [here](modules/preferences.sh).
 - Creates a blank Firefox profile with [Betterfox's](https://github.com/yokoffing/BetterFox) user.js.
 
 ## Screenshots
@@ -41,13 +41,14 @@ cd ~/Developer/mac-setup && sh main.sh
 ```
 
 ## Update the backup:
-To update the backup to your own, just run 'backup.sh' from the project root directory. This will move your dotfiles (.zshrc and .config folder) to the project directory and create symlinks to your home folder. It will also back up all the brew packages into a Brewfile (homebrew must be already installed).
+To update the backup to your own, just run 'backup.sh' from the project root directory. This will move your dotfiles (.zshrc and .config folder) to the project directory and create symlinks to your home folder. It will also back up all the brew packages into a Brewfile (homebrew must already be installed).
 
 You only need to run this script once, now all your files will be managed in the mac-setup folder, so just update the remote branch to yours and push it to back it up.
 
 ## Manual settings
 
 Some settings must be changed manually due to API limitation or lack of Apple documentation. Check [this issue](https://github.com/Jaycedam/mac-setup/issues/13) for more details.
+
 ## Credit
 
 - [macOS defaults list](https://macos-defaults.com/)
