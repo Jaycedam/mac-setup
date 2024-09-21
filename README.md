@@ -8,14 +8,14 @@ Opinionated automation shell scripts to set up macOS.
 
 - Installs [Homebrew](https://brew.sh).
 - Restores current backup:
-  - symlink dotfiles from the repo to the home folder (.config folder, .zshrc).
+  - Symlinks dotfiles from the repo to the home folder (.config folder, .zshrc).
   - Installs packages listed in a [Brewfile](Brewfile) using Homebrew.
-- Changes some macOS default preferences, full list [here](modules/preferences.sh).
+- Changes some macOS default preferences; see full list [here](modules/preferences.sh).
 - Creates a blank Firefox profile with [Betterfox's](https://github.com/yokoffing/BetterFox) user.js.
 
 ## Screenshots
 > [!NOTE]  
-> I don't update these often, so they can be out of date.
+> I don't update these often, so they may be out of date.
 
 ### Wezterm and Neovim
 ![Wezterm and Neovim](images/wezterm.webp)
@@ -26,7 +26,7 @@ To make this work for you, clone the repo, follow the instructions to update the
 Make sure to replace the URL from the Automatic Setup section.
 
 > [!CAUTION]
-> This is just an example, do not run this unless you want all my dotfiles and preferences. Make sure to backup your current dotfiles before.
+> This is just an example, do not run this unless you want all my dotfiles and preferences. Make sure to backup your current dotfiles first.
 
 Check dependencies:
 ```sh
