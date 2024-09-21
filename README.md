@@ -4,7 +4,7 @@
     <br>
 </div>
 
-Opinionated automation shell scripts to set up macOS. The script does the following:
+Opinionated automation shell scripts to set up macOS.
 
 - Installs [Homebrew](https://brew.sh).
 - Restores current backup:
