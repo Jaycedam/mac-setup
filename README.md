@@ -8,7 +8,7 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
 
 - Installs [Homebrew](https://brew.sh).
 - Restores current backup:
-  - dotfiles (.config folder, .zshrc)
+  - dotfiles (.config folder, .zshrc), by creating symlinks from the repo to the home folder.
   - Installed packages by Homebrew on a [Brewfile](Brewfile).
 - Changes some macOS default preferences, see full list [here](modules/preferences.sh).
 - Creates a blank Firefox profile with [Betterfox's](https://github.com/yokoffing/BetterFox) user.js.
@@ -22,7 +22,8 @@ Opinionated automation shell scripts to set up macOS. The script does the follow
 
 ## Instructions
 
-Clone the project, update the backup and sync your changes with your repo. Then just replace the URL for your own in the automated setup section,
+To make this work for you, clone the repo, follow the instructions to update the backup then sync your changes with your repo.
+Make sure to replace the URL from the Automatic Setup section.
 
 > [!CAUTION]
 > This is just an example, do not run this unless you want all my dotfiles and preferences. Make sure to backup your current dotfiles before.
