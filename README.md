@@ -47,12 +47,7 @@ You only need to run this script once, now all your files will be managed in the
 
 ## Manual settings
 
-Some settings must be changed manually due to API limitation or lack of Apple documentation.
-
-- Lock screen: Set required password after screen is off to **inmediatly** for security reasons.
-- Safari: Enable hide my ip and disable telemetry in Privacy tab.
-- Change Keyboard Shortcut **Move focus to next window** to ⌘| to enable changing instances of the same app (necessary on Latam Keyboard), available on **Keyboard - Keyboard Shortcuts - Keyboard**.
-
+Some settings must be changed manually due to API limitation or lack of Apple documentation. Check [this issue](https://github.com/Jaycedam/mac-setup/issues/13) for more details.
 ## Credit
 
 - [macOS defaults list](https://macos-defaults.com/)
