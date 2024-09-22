@@ -3,18 +3,23 @@
 # Variables and directory check 
 source root.sh
 
-# Add check if the files are already symlinked
-# Add warning and confirmation before deleting 
-
-# Removes unused dotfiles
-echo "${ARROW}Removing previous backup..."
-rm -rf $BACKUP_DIR/* 
-
 echo "${ARROW}Backing up dotfiles..."
-mv -v ~/.config $BACKUP_DIR
-mv -v ~/.zshrc $BACKUP_DIR
+if [ -L ~/.config ]; then
+    echo "File already exists and is a symlink."
+else
+    # Create the symlink if it doesn't exist
+    mv -v ~/.config $BACKUP_DIR
+    ln -svf $BACKUP_DIR/.config $HOME
+fi
 
-source modules/restore.sh
+
+if [ -L ~/.zshrc ]; then
+    echo "File already exists and is a symlink."
+else
+    # Create the symlink if it doesn't exist
+    mv -v ~/.zshrc $BACKUP_DIR
+    ln -svf $BACKUP_DIR/.zshrc $HOME 
+fi
 
 # Backs up currently installed brew packages, -f overrides current file
 echo "${ARROW}Creating Brewfile..."
