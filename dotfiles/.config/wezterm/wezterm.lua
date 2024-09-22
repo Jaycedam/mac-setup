@@ -9,7 +9,7 @@ local status = require("status") -- custom status (tabs and info)
 config.font_size = 16
 
 -- Window
-config.window_background_opacity = 0.8
+--config.window_background_opacity = 0.8
 --config.macos_window_background_blur = 50 -- blur
 config.window_decorations = "RESIZE" -- removes title bar
 config.adjust_window_size_when_changing_font_size = false
@@ -32,18 +32,18 @@ config.tab_bar_at_bottom = true
 config.color_scheme = 'Aura (Gogh)'
 
 config.colors = {
-    background = "black",
+    --background = "black",
     tab_bar = {
         -- The color of the strip that goes along the top of the window
         -- (does not apply when fancy tab bar is in use)
-        background = 'transparent',
+        background = '#15141b',
 
         -- The active tab is the one that has focus in the window
         active_tab = {
             -- The color of the background area for the tab
-            bg_color = '#61ffca',
+            bg_color = '#15141b',
             -- The color of the text for the tab
-            fg_color = 'black',
+            fg_color = '#82e2ff',
 
             -- Specify whether you want "Half", "Normal" or "Bold" intensity for the
             -- label shown for this tab.
@@ -53,15 +53,15 @@ config.colors = {
 
         -- Inactive tabs are the tabs that do not have focus
         inactive_tab = {
-            bg_color = 'transparent',
+            bg_color = '#15141b',
             fg_color = 'white',
         },
 
         -- You can configure some alternate styling when the mouse pointer
         -- moves over inactive tabs
         inactive_tab_hover = {
-            bg_color = '#3b3052',
-            fg_color = '#909090',
+            bg_color = 'black',
+            fg_color = '#82e2ff',
         },
     },
 }
