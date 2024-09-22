@@ -41,9 +41,16 @@ cd ~/Developer/mac-setup && sh main.sh
 ```
 
 ## Update the backup:
-To update the backup to your own, just run 'backup.sh' from the project root directory. This will move your dotfiles (.zshrc and .config folder) to the project directory and create symlinks to your home folder. It will also back up all the brew packages into a Brewfile (homebrew must already be installed).
+Run these from the project directory.
 
-You only need to run this script once, now all your files will be managed in the mac-setup folder, so just update the remote branch to yours and push it to back it up.
+Delete previous backup:
+```sh
+rm -rf dotfiles/*
+```
+
+To update the backup to your own, just run 'backup.sh'. This will move your dotfiles (.zshrc and .config folder) to the project directory and create symlinks to your home folder. It will also back up all the brew packages into a Brewfile (homebrew must already be installed).
+
+Now all your dotfiles will be managed from the mac-setup folder, so you only need to run backup.sh again when you want to back up your new brew packages or if you modify the dotfiles list. 
 
 ## Manual settings
 
