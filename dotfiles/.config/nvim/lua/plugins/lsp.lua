@@ -15,8 +15,11 @@ return {
         -- language manager config
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "ts_ls", "astro", "bashls", "html" },
+            ensure_installed = { "lua_ls", "ts_ls", "astro", "bashls", "html", "marksman", "tailwindcss", "html", "cssls" },
         })
+        --[[
+    mdx-analyzer mdx_analyzer
+        ]] --
 
         -- compl config
         local cmp = require 'cmp'
@@ -63,6 +66,7 @@ return {
         lspconfig.astro.setup({ capabilities = capabilities })
         lspconfig.lua_ls.setup({ capabilities = capabilities })
         lspconfig.html.setup({ capabilities = capabilities })
+        lspconfig.marksman.setup({ capabilities = capabilities })
 
         vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
         vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })

@@ -5,7 +5,7 @@ return {
     config = function(plugin)
         vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
         vim.cmd([[colorscheme aura-dark]])
-        --
+
         -- transparent background
         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

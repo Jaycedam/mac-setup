@@ -28,14 +28,10 @@ wezterm.on('update-right-status', function(window, pane)
     window:set_right_status(wezterm.format {
         -- text
         { Foreground = { Color = '#ffca85' } },
-        { Text = '  ' },
-        { Foreground = { Color = 'white' } },
-        { Text = cwd .. ' ' },
+        { Text = '  ' .. cwd .. ' ' },
 
         -- text
         { Foreground = { Color = '#f694ff' } },
-        { Text = '  ' },
-        { Foreground = { Color = 'white' } },
-        { Text = hostname .. ' ' },
+        { Text = '  ' .. hostname .. ' ' },
     })
 end)
