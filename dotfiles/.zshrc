@@ -12,6 +12,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # Key Bindings
 bindkey -v                              # enable VIM mode
+KEYTIMEOUT=1                            # lower delay of ESC for vim mode
 bindkey "ç" fzf-cd-widget               # OPTION-C [fzf shortcut to change directory]
 bindkey '^[[A' history-search-backward  # UP ARROW [search history]
 bindkey '^[[B' history-search-forward   # DOWN ARROW [search history]
