@@ -36,4 +36,9 @@ defaults write com.apple.AdLib.plist personalizedAdsMigrated -bool false
 # Set hostname
 sudo scutil --set HostName jay-macbook
 
+# NSGlobalDomain
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false # disables "corrects spelling automatically"
+defaults write -g KeyRepeat -int 2 # key repeat rate: fast
+defaults write -g InitialKeyRepeat -int 15 # delay until repeat: short
+
 killall Dock && killall Finder && killall SystemUIServer # Restart dock and finder to apply changes
