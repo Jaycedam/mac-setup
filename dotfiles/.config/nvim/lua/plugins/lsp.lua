@@ -51,13 +51,27 @@ return {
 		-- lsp configuration
 		local lspconfig = require("lspconfig")
 
+		-- manually register mdx, for some reason it's not recognized by default
+		vim.filetype.add({
+			extension = {
+				mdx = "markdown.mdx",
+			},
+		})
+
 		lspconfig.ts_ls.setup({ capabilities = capabilities })
 		lspconfig.astro.setup({ capabilities = capabilities })
 		lspconfig.html.setup({ capabilities = capabilities })
 		lspconfig.eslint.setup({ capabilities = capabilities })
 		lspconfig.tailwindcss.setup({ capabilities = capabilities })
 		lspconfig.cssls.setup({ capabilities = capabilities })
-		lspconfig.marksman.setup({ capabilities = capabilities })
+		lspconfig.marksman.setup({
+			filetypes = { "markdown" },
+			capabilities = capabilities,
+		})
+		lspconfig.mdx_analyzer.setup({
+			filetypes = { "markdown.mdx", "mdx" },
+			capabilities = capabilities,
+		})
 		lspconfig.lua_ls.setup({ capabilities = capabilities })
 		lspconfig.gopls.setup({ capabilities = capabilities }) -- go
 		lspconfig.bashls.setup({ capabilities = capabilities })
