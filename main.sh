@@ -13,6 +13,9 @@ source modules/restore.sh
 # Changes defaults macOS preferences
 source modules/preferences.sh
 
+# LSP
+source modules/lsp.sh
+
 # Firefox: creates blank profile with Betterfox user.js for better privacy
 # https://github.com/yokoffing/BetterFox
 source modules/firefox.sh
