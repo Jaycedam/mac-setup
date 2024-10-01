@@ -50,7 +50,7 @@ rm -rf dotfiles/*
 ```
 Create new backup:
 ```sh
-backup.sh
+sh backup.sh
 ```
 
 This will move your dotfiles (.zshrc and .config folder) to the project directory and create symlinks to $HOME. It will also back up all the brew packages into a Brewfile (homebrew must already be installed). Now you'll manage all your dotfiles from the project directory. 
