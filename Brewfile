@@ -16,6 +16,7 @@ brew "lazygit"
 brew "lua-language-server"
 brew "luarocks"
 brew "marksman"
+brew "mas"
 brew "neovim"
 brew "prettier"
 brew "ripgrep"
@@ -32,7 +33,6 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "oven-sh/bun/bun"
 brew "tursodatabase/tap/turso"
-cask "aerospace"
 cask "affinity-designer"
 cask "affinity-photo"
 cask "android-platform-tools"
@@ -50,3 +50,8 @@ cask "utm"
 cask "vscodium"
 cask "wezterm"
 cask "whisky"
+mas "AdGuard for Safari", id: 1440147259
+mas "Bitwarden", id: 1352778147
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
