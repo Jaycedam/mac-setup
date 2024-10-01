@@ -22,7 +22,7 @@ Opinionated automation shell scripts to set up macOS.
 
 ## Instructions
 
-To make this work for you, clone the repo, follow the instructions to update the backup then sync your changes with your repo.
+To make this work for you, fork the project, follow the instructions to update the backup then sync your changes.
 Make sure to replace the URL from the Automatic Setup section.
 
 > [!CAUTION]
@@ -41,16 +41,21 @@ cd ~/Developer/mac-setup && sh main.sh
 ```
 
 ## Update the backup:
-Run these from the project directory.
+After you fork the project and have the project locally, run these commands from the project directory.
+The default path is ~/Developer/mac-setup, unless you modify it.
 
 Delete previous backup:
 ```sh
 rm -rf dotfiles/*
 ```
+Create new backup:
+```sh
+backup.sh
+```
 
-To update the backup to your own, just run 'backup.sh'. This will move your dotfiles (.zshrc and .config folder) to the project directory and create symlinks to your home folder. It will also back up all the brew packages into a Brewfile (homebrew must already be installed).
+This will move your dotfiles (.zshrc and .config folder) to the project directory and create symlinks to $HOME. It will also back up all the brew packages into a Brewfile (homebrew must already be installed). Now you'll manage all your dotfiles from the project directory. 
 
-Now all your dotfiles will be managed from the mac-setup folder, so you only need to run backup.sh again when you want to back up your new brew packages or if you modify the dotfiles list. 
+*You only need to run backup.sh again when you want to back up your new brew packages, or if you modify the script.*
 
 ## Manual settings
 
