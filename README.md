@@ -55,14 +55,15 @@ git clone https://github.com/USERNAME/mac-setup.git ~/Developer/mac-setup
 cd ~/Developer/mac-setup && rm -rf dotfiles/*
 ```
 
-3. Back up your dotfiles and Brew packages (you need to have Brew installed, or you can manually modify the Brewfile).
+3. Back up your dotfiles and Brew packages. This moves your dotfiles to the project directory, then creates symlinks to $HOME. It will also back up your Brew packages into a Brewfile:
 ```sh
 cd ~/Developer/mac-setup && sh backup.sh
 ```
 
-This will move your current dotfiles (.config/ and .zshrc) into the project directory, then create symlinks to $HOME. It will also back up all the brew packages into a Brewfile (Brew must already be installed, or you can manually edit the Brewfile). Now you'll manage all your dotfiles from the project directory. 
-
-*You only need to run backup.sh again when you want to back up your new brew packages or if you modify the dotfiles list.*
+> [!NOTE]
+> If you modify your Brew packages, just run **backup.sh** again to update the Brewfile.
+  
+4. Make sure to change the USERNAME from the url in the [automated setup](#automated-setup) section to yours. Then push the changes to your repo.
 
 ---
 
