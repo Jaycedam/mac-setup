@@ -20,7 +20,7 @@ I try to keep all my configs very minimal while maintaining all the features I n
 
 ## Automated setup
 > [!CAUTION]
-> This will ovewrite your dotfiles. Ff you want to use this project with your own backup [read this first](#how-to-use).
+> This will ovewrite your dotfiles. If you want to use this project with your own backup [read this first](#how-to-use).
 
 Check dependencies:
 ```sh
