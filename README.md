@@ -20,7 +20,7 @@ I try to keep all my configs very minimal while maintaining all the features I n
 
 ## Automated setup
 > [!CAUTION]
-> This will ovewrite your dotfiles. If you want to use this project with your own backup [read this first](#how-to-use).
+> This will overwrite your dotfiles. If you want to use this project with your own backup [read this first](#how-to-use).
 
 Check dependencies:
 ```sh
@@ -60,7 +60,7 @@ cd ~/Developer/mac-setup && rm -rf dotfiles/*
 cd ~/Developer/mac-setup && sh backup.sh
 ```
 
-> [!NOTE]
+> [!TIP]
 > If you modify your Brew packages, just run **backup.sh** again to update the Brewfile.
   
 4. Make sure to change the USERNAME from the url in the [automated setup](#automated-setup) section to yours. Then push the changes to your repo.
