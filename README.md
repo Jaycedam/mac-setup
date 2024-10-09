@@ -42,7 +42,7 @@ Some settings must be changed manually due to API limitation or lack of document
 ## How to use
 If you want to use this project with your own dotfiles and configs, just follow these instructions:
 
-> [!NOTE]
+> [!IMPORTANT]
 > The path **~/Developer/mac-setup** is expected by the script; it's used to generate symlinks and relative path operations.
 
 1. Fork the project then git clone (Replace **USERNAME** with yours):
@@ -61,7 +61,7 @@ cd ~/Developer/mac-setup && sh backup.sh
 ```
 
 > [!TIP]
-> If you modify your Brew packages, just run **backup.sh** again to update the Brewfile.
+> If you install new Brew packages, just run **backup.sh** again to update the Brewfile.
   
 4. Make sure to change the USERNAME from the url in the [automated setup](#automated-setup) section to yours. Then push the changes to your repo.
 
