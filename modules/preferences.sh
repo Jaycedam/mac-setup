@@ -20,6 +20,9 @@ defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf" # Search s
 defaults write com.apple.finder "CreateDesktop" -bool true # Disable desktop icons
 defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool false # Disable drive icon on desktop
 
+# WindowManager
+defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
+
 # Security
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on # Enable firewall
 
