@@ -25,9 +25,7 @@ wezterm.on("update-right-status", function(window, pane)
 
 	if cwd_uri then
 		local path = cwd_uri.file_path
-		for folder in path:gmatch("([^/]+)") do
-			cwd = folder -- Update currentFolder with the last matched folder
-		end
+		cwd = path:match("([^/]+)$") -- Get the last folder in the path
 	end
 
 	-- TODO: move blocks outside in separate functions

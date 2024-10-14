@@ -6,7 +6,7 @@ local mux = wezterm.mux
 local status = require("status")
 
 -- Font
-config.font_size = 15
+config.font_size = 16
 
 -- Window
 config.window_background_opacity = 0.9
