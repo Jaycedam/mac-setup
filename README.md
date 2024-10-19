@@ -6,7 +6,6 @@ Opinionated automation shell scripts to set up macOS.
   - Symlinks dotfiles from the repo to the home folder (.config/ and .zshrc).
   - Installs packages listed in a [Brewfile](Brewfile) using [brew](https://brew.sh) and [mas](https://github.com/mas-cli/mas) (for App Store apps).
 - Changes some macOS default preferences; see the full list [here](modules/preferences.sh).
-- Creates a blank Firefox profile with [Betterfox's](https://github.com/yokoffing/BetterFox) user.js.
 
 ## Screenshots
 
