@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Variables and directory check 
+# Variables and directory check
 source root.sh
 
 # Installs brew and packages from Brewfile
@@ -16,8 +16,7 @@ source modules/preferences.sh
 # LSP
 source modules/lsp.sh
 
-# Firefox: creates blank profile with Betterfox user.js for better privacy
-# https://github.com/yokoffing/BetterFox
-source modules/firefox.sh
+# Disable quarantine for specific apps, at your own risk
+source modules/quarantine.sh
 
 echo "Next steps: Restart terminal to update shell changes."
