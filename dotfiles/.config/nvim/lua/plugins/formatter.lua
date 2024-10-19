@@ -11,6 +11,7 @@ return {
 			lua = { "stylua" },
 			python = { "black" },
 			javascript = { "prettier" },
+			sh = { "shfmt" },
 			-- TODO: add the rest of ft
 		},
 		-- Set default options
