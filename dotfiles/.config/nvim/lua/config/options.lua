@@ -24,7 +24,7 @@ vim.opt.expandtab = true -- In Insert mode: Use the appropriate number of spaces
 
 -- Netwr file manager
 vim.g.netrw_banner = 0 -- gets rid of the banner for netrw
-vim.g.netrw_liststyle = 3 -- tree style view in netrw
+-- vim.g.netrw_liststyle = 3 -- tree style view in netrw
 
 vim.o.splitright = true
 vim.o.splitbelow = true

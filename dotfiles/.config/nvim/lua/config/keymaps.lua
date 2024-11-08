@@ -3,7 +3,7 @@
 vim.g.mapleader = " "
 local map = vim.keymap.set
 
-map("n", "<leader>e", ":25Lex<CR>", { desc = "File Explorer" }) -- vim file explorer
+map("n", "<leader>e", ":Ex<CR>", { desc = "File Explorer" }) -- vim file explorer
 
 -- easy split navigation
 map("n", "<C-h>", "<C-w>h") -- control+h switches to left split
