@@ -22,21 +22,12 @@ config.window_padding = {
 	bottom = 0, -- force 0 padding to avoid giant gap on bottom tab_bar
 }
 
--- Full screen on startup
-wezterm.on("gui-startup", function(cmd)
-	local tab, pane, window = mux.spawn_window(cmd or {})
-	local gui_window = window:gui_window()
-	gui_window:perform_action(wezterm.action.ToggleFullScreen, pane)
-end)
-
 -- Tabs
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
 config.tab_max_width = 30
--- config.tab_bar_at_bottom = true
 
 -- Theme
---config.color_scheme = "Dracula (Official)"
 config.color_scheme = "tokyonight_moon"
 
 local bg_color = "14151f"
