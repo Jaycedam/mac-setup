@@ -32,4 +32,9 @@ require("lazy").setup({
 	-- install = { colorscheme = { "habamax" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
+
+	defaults = {
+		-- Install the latest stable version of plugins that support Semver.
+		version = "*",
+	},
 })
