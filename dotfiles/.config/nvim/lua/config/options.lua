@@ -18,7 +18,6 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true -- In Insert mode: Use the appropriate number of spaces to insert a <Tab>.
 
 --vim.opt.showmode = false -- disable mode on the command section
--- TODO: title not resetting on exiting neovim
 vim.opt.title = true -- show title on window
 vim.opt.titlestring = " %t" -- show filename on window title
 
