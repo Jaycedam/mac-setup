@@ -5,12 +5,6 @@ local map = vim.keymap.set
 
 map("n", "<leader>e", ":Ex<CR>", { desc = "File Explorer" }) -- vim file explorer
 
--- easy split navigation
-map("n", "<C-h>", "<C-w>h") -- control+h switches to left split
-map("n", "<C-l>", "<C-w>l") -- control+l switches to right split
-map("n", "<C-j>", "<C-w>j") -- control+j switches to bottom split
-map("n", "<C-k>", "<C-w>k") -- control+k switches to top split
-
 -- buffer navigation
 map("n", "<C-}>", ":bnext <CR>") -- Tab goes to next buffer
 map("n", "<C-{>", ":bprevious <CR>") -- Shift+Tab goes to previous buffer
