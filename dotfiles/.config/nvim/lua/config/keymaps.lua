@@ -6,8 +6,8 @@ local map = vim.keymap.set
 map("n", "<leader>e", ":Ex<CR>", { desc = "File Explorer" }) -- vim file explorer
 
 -- buffer navigation
-map("n", "<C-}>", ":bnext <CR>") -- Tab goes to next buffer
-map("n", "<C-{>", ":bprevious <CR>") -- Shift+Tab goes to previous buffer
+map("n", "<leader>gn", ":bnext <CR>", { desc = "[G]o to next buffer" })
+map("n", "<leader>gp", ":bprevious <CR>", { desc = "[G]o to previous buffer" })
 
 -- moves selection up/down, without replacing text
 map("v", "J", ":m '>+1<CR>gv=gv")
