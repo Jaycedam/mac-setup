@@ -1,5 +1,5 @@
 # MacOS Automated Setup
-Opinionated automation shell scripts to set up macOS.
+Automation scripts to set up macOS for software development and privacy.
 
 - Installs [Homebrew](https://brew.sh).
 - Restores the current backup:
@@ -9,7 +9,7 @@ Opinionated automation shell scripts to set up macOS.
 
 ## Screenshots
 
-I try to keep all my configs very minimal while maintaining all the features I need.
+I try to keep my config very minimal while maintaining only the features I need.
 
 > [!NOTE]  
 > I don't update these often, so they may be out of date.
@@ -28,7 +28,6 @@ git -v
 
 Start:
 ```sh
-mkdir ~/Developer
 git clone https://github.com/Jaycedam/mac-setup.git ~/Developer/mac-setup
 cd ~/Developer/mac-setup && sh main.sh
 ```
@@ -38,7 +37,7 @@ Some settings must be changed manually due to API limitation or lack of document
 
 ---
 
-## How to use
+# How to use
 If you want to use this project with your own dotfiles and configs, just follow these instructions:
 
 > [!IMPORTANT]
