@@ -3,9 +3,10 @@ return {
 	-- optional for icon support
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		local actions = require("fzf-lua.actions")
 		require("fzf-lua").setup({
-			actions = { files = { ["ctrl-q"] = actions.file_sel_to_qf } },
+			files = {
+				actions = { ["ctrl-q"] = { fn = require("fzf-lua").actions.file_sel_to_qf } },
+			},
 		})
 
 		-- Keymaps

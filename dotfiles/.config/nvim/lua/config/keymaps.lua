@@ -9,6 +9,10 @@ map("n", "<c-k>", "<c-w><c-k>")
 map("n", "<c-l>", "<c-w><c-l>")
 map("n", "<c-h>", "<c-w><c-h>")
 
+-- quickfix list, todo: add toggle to open/close
+map("n", "]q", ":cnext<CR>", { desc = "[Q]uickfix next" })
+map("n", "[q", ":cprev<CR>", { desc = "[Q]uickfix next" })
+
 map("n", "<leader>e", ":Ex<CR>", { desc = "File Explorer" }) -- vim file explorer
 
 -- buffer navigation
