@@ -14,8 +14,8 @@ export PATH="/opt/homebrew/bin:$PATH"
 bindkey -v                              # enable VIM mode
 KEYTIMEOUT=1                            # lower delay of ESC for vim mode
 bindkey "ç" fzf-cd-widget               # OPTION-C [fzf shortcut to change directory]
-bindkey '^[[A' history-search-backward  # UP ARROW [search history]
-bindkey '^[[B' history-search-forward   # DOWN ARROW [search history]
+bindkey '^P' history-search-backward  # CTRL-P [search history as vim keybind]
+bindkey '^N' history-search-forward   # CTRL-N [search history as vim keybind]
 
 # Shell Completion
 if type brew &>/dev/null
@@ -27,7 +27,6 @@ then
 fi
 
 # FZF Customization 
-# Globals:
 export FZF_DEFAULT_OPTS="
 --height 90% 
 --layout reverse-list
