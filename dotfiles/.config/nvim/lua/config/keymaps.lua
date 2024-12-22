@@ -3,6 +3,12 @@
 vim.g.mapleader = " "
 local map = vim.keymap.set
 
+-- easier split navigation, stolen from tj
+map("n", "<c-j>", "<c-w><c-j>")
+map("n", "<c-k>", "<c-w><c-k>")
+map("n", "<c-l>", "<c-w><c-l>")
+map("n", "<c-h>", "<c-w><c-h>")
+
 map("n", "<leader>e", ":Ex<CR>", { desc = "File Explorer" }) -- vim file explorer
 
 -- buffer navigation
