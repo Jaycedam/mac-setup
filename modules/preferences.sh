@@ -22,9 +22,6 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false # Di
 # WindowManager
 defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
 
-# Security
-sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on # Enable firewall
-
 # Screencapture
 defaults write com.apple.screencapture location -string "~/Pictures"
 

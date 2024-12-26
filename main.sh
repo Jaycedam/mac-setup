@@ -16,7 +16,4 @@ source modules/preferences.sh
 # LSP
 source modules/lsp.sh
 
-# Disable quarantine for specific apps, at your own risk
-source modules/quarantine.sh
-
 echo "Next steps: Restart terminal to update shell changes."
