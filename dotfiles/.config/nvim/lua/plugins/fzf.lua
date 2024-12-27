@@ -3,9 +3,13 @@ return {
 	-- optional for icon support
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
+		local actions = require("fzf-lua.actions")
 		require("fzf-lua").setup({
-			files = {
-				actions = { ["ctrl-q"] = { fn = require("fzf-lua").actions.file_sel_to_qf } },
+			actions = {
+				files = {
+					true, -- inherit from defaults
+					["ctrl-q"] = actions.file_sel_to_qf,
+				},
 			},
 		})
 
