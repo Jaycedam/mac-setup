@@ -3,7 +3,7 @@
 # Variables and directory check
 source root.sh
 
-echo -e "${ARROW}Backing up dotfiles..."
+echo "${ARROW}Backing up dotfiles..."
 if [ -L ~/.config ]; then
     echo "File already exists and is a symlink."
 else
@@ -21,7 +21,7 @@ else
 fi
 
 # Backs up currently installed brew packages, -f overrides current file
-echo -e "${ARROW}Creating Brewfile..."
+echo "${ARROW}Creating Brewfile..."
 brew bundle dump -v -f --file Brewfile
 
-echo -e "${GREEN}Done!${RESET}"
+echo "${GREEN}Done!${RESET}"
