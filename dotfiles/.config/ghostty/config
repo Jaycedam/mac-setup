@@ -1,0 +1,15 @@
+theme = tokyonight-moon
+
+font-family = JetBrains Mono
+font-size = 14
+
+mouse-hide-while-typing
+macos-titlebar-style = tabs
+window-save-state = always
+
+# change to "center" when this issue about the quick terminal size is closed https://github.com/ghostty-org/ghostty/issues/2384
+quick-terminal-position = bottom
+
+# Keybinds
+# super+enter was originally fullscreen, but macOS has a native keybind for that "fn+f"
+keybind = super+enter=toggle_quick_terminal
