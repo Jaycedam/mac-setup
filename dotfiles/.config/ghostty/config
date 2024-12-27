@@ -1,8 +1,5 @@
 theme = tokyonight-moon
-
-font-family = JetBrains Mono
 font-size = 14
-
 mouse-hide-while-typing
 macos-titlebar-style = tabs
 window-save-state = always
