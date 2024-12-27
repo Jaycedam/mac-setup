@@ -18,8 +18,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true -- In Insert mode: Use the appropriate number of spaces to insert a <Tab>.
 
 --vim.opt.showmode = false -- disable mode on the command section
-vim.opt.title = true -- show title on window
-vim.opt.titlestring = " %t" -- show filename on window title
+-- vim.opt.title = true -- show title on window
+-- vim.opt.titlestring = "%t" -- show filename on window title
 
 -- Netwr file manager
 -- vim.g.netrw_banner = 0 -- gets rid of the banner for netrw
@@ -29,4 +29,4 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 --vim.opt.laststatus = 3    -- Global statusline
-vim.o.cmdheight = 0 -- Hides command section unless used, disabled until stable
+-- vim.o.cmdheight = 0 -- Hides command section unless used, disabled until stable
