@@ -65,8 +65,8 @@ export FZF_CTRL_R_OPTS="
 " # CTRL-R shortcut to search command history: CTRL-Y to copy the command into clipboard using pbcopy
 
 # Aliases
-alias ls="ls -l --color"
-alias lsa="ls -A -l --color"
+alias ls="ls -lhF --color"
+alias lsa="ls -lhAF --color"
 alias code="codium"
 alias search="brew search"
 alias install="brew install"
