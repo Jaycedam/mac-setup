@@ -8,10 +8,19 @@ return {
 	opts = {
 		-- Define your formatters
 		formatters_by_ft = {
+			javascript = { "prettier" },
+			typescript = { "prettier" },
+			typescriptreact = { "prettier" }, -- TSX
+			javascriptreact = { "prettier" }, -- JSX
+			css = { "prettier" },
+			scss = { "prettier" },
+			html = { "prettier" },
+			markdown = { "prettier" },
+			json = { "prettier" },
+			jsonc = { "prettier" },
+			sh = { "shfmt" },
 			lua = { "stylua" },
 			python = { "black" },
-			javascript = { "prettier" },
-			sh = { "shfmt" },
 			-- TODO: add the rest of ft
 		},
 		-- Set default options
@@ -24,6 +33,9 @@ return {
 		formatters = {
 			shfmt = {
 				prepend_args = { "-i", "2" },
+			},
+			prettier = {
+				append_args = { "--tab-width", "4" },
 			},
 		},
 	},
