@@ -22,7 +22,6 @@ return {
 
 		-- LSP keymaps
 		vim.keymap.set("n", "<leader>fr", require("fzf-lua").lsp_references, { desc = "Find references (LSP)" })
-		vim.keymap.set("n", "<leader>fd", require("fzf-lua").lsp_definitions, { desc = "Find definitions (LSP)" })
 		vim.keymap.set(
 			"n",
 			"<leader>fi",
@@ -33,7 +32,7 @@ return {
 			"n",
 			"<leader>fe",
 			require("fzf-lua").diagnostics_workspace,
-			{ desc = "Find diagnostics on workspace (LSP)" }
+			{ desc = "Find errors on workspace (LSP)" }
 		)
 		vim.keymap.set(
 			"n",
@@ -41,6 +40,6 @@ return {
 			require("fzf-lua").lsp_document_symbols,
 			{ desc = "Find document symbols (LSP)" }
 		)
-		vim.keymap.set("n", "<leader>ca", require("fzf-lua").lsp_code_actions, { desc = "[C]ode actions" })
+		vim.keymap.set("n", "<leader>ca", require("fzf-lua").lsp_code_actions, { desc = "Code actions" })
 	end,
 }
