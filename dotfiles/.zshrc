@@ -14,8 +14,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 # Key Bindings
 bindkey -v                              # enable VIM mode
 bindkey "ç" fzf-cd-widget               # OPTION-C [fzf shortcut to change directory]
-bindkey '^P' history-search-backward  # CTRL-P [search history as vim keybind]
-bindkey '^N' history-search-forward   # CTRL-N [search history as vim keybind]
+bindkey '^P' history-search-forward     # CTRL-P [search history as vim keybind]
+bindkey '^N' history-search-backward    # CTRL-N [search history as vim keybind]
+bindkey '^Y' autosuggest-accept         # CTRL-Y [accept suggestion as vim keybind]
 
 # Completion
 if type brew &>/dev/null
@@ -88,3 +89,5 @@ prompt pure # load pure
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source <(fzf --zsh)
+
+export PATH=$PATH:/Users/jay/.spicetify
