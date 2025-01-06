@@ -3,3 +3,5 @@ Brewfile.lock.json
 kitty.conf.bak
 btop.log
 dotfiles/.config/StardewValley
+dotfiles/.config/github-copilot
+dotfiles/.config/spicetify
