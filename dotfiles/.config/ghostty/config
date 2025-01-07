@@ -1,4 +1,6 @@
-theme = tokyonight-moon
+theme = tokyonight_moon
+background = #111111
+
 font-size = 14
 mouse-hide-while-typing
 macos-titlebar-style = tabs

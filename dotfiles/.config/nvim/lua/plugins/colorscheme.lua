@@ -13,6 +13,9 @@ return {
 				sidebars = "transparent", -- style for sidebars, see below
 				floats = "transparent", -- style for floating windows
 			},
+			on_colors = function(colors)
+				colors.bg_statusline = "black"
+			end,
 		})
 
 		vim.cmd([[colorscheme tokyonight]])
