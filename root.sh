@@ -20,9 +20,12 @@ BACKUP_DIR="$HOME/Developer/mac-setup/dotfiles" # it needs the full path for the
 # Path for current script
 SCRIPT_DIR=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
 
+# Saves current OS (eg: Darwin, Linux)
+OS="$(uname -s)"
+
 # Checks if current directory is correct, otherwise there will be issues with relative paths
 if [ $PWD != "$SCRIPT_DIR" ]; then
-    echo "${RED}Error.${RESET} The script must be executed from the directory $SCRIPT_DIR"
-    echo "To change the directory run 'cd $SCRIPT_DIR'"
+    echo -e "${RED}Error.${RESET} The script must be executed from the directory $SCRIPT_DIR"
+    echo -e "To change the directory run 'cd $SCRIPT_DIR'"
     exit 1
 fi

@@ -16,4 +16,5 @@ source modules/preferences.sh
 # LSP
 source modules/lsp.sh
 
-echo "Next steps: Restart terminal to update shell changes."
+
+echo -e "${ARROW} Next steps: run ${MAGENTA}source ~/.zshrc'${RESET} to see the shell changes."

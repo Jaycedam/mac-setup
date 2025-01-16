@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "${ARROW}Changing macOS defaults..."
+echo -e "${ARROW}Changing macOS defaults..."
 
 # Dock
 defaults write com.apple.dock autohide -bool true          # Autohide
