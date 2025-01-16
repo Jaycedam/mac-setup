@@ -21,6 +21,7 @@ return {
 				zsh = { "shfmt" },
 				lua = { "stylua" },
 				python = { "black" },
+				htmldjango = { "djlint" },
 				-- TODO: add the rest of ft
 			},
 			format_after_save = {

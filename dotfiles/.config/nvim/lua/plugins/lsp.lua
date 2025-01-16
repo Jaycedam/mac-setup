@@ -32,6 +32,7 @@ return {
 		lspconfig.gopls.setup({ capabilities = capabilities }) -- go
 		lspconfig.bashls.setup({ capabilities = capabilities })
 		lspconfig.taplo.setup({ capabilities = capabilities }) -- toml
+		lspconfig.pyright.setup({ capabilities = capabilities }) -- python
 
 		-- keymaps (the rest are in fzf.lua)
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
