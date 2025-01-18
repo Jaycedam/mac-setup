@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "${ARROW}Changing macOS defaults..."
+echo -e "${ARROW} Changing macOS defaults..."
 
 # Dock
 defaults write com.apple.dock autohide -bool true          # Autohide
@@ -14,7 +14,6 @@ defaults write com.apple.finder AppleShowAllFiles -bool true                # Sh
 defaults write com.apple.finder ShowPathbar -bool true                      # Show path bar
 defaults write com.apple.finder ShowStatusBar -bool true                    # Show status bar
 defaults write com.apple.finder FXPreferredViewStyle -string Nlsv           # List view
-defaults write com.apple.finder _FXSortFoldersFirst -bool true              # Keep folders on top
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"         # Search scope current folder
 defaults write com.apple.finder CreateDesktop -bool true                    # Disable desktop icons
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false # Disable drive icon on desktop
@@ -23,7 +22,7 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false # Di
 defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
 
 # Screencapture
-defaults write com.apple.screencapture location -string "~/Pictures"
+defaults write com.apple.screencapture location -string "~/Pictures/Screenshots"
 
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true # Show file extensions
 

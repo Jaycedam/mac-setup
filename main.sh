@@ -15,8 +15,11 @@ source modules/lsp.sh
 
 # Only run this on macOS
 if [ $OS = "Darwin" ]; then
-    # Changes defaults macOS preferences
-    source modules/preferences.sh
+    # Changes macOS defaults
+    source modules/darwin/defaults.sh
+# Only run this on Linux
+elif [ $OS = "Linux" ]; then
+    #
 fi
 
 echo -e "${ARROW} Next steps: run ${MAGENTA}source ~/.zshrc'${RESET} to see the shell changes."
