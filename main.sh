@@ -17,6 +17,7 @@ source modules/lsp.sh
 if [ $OS = "Darwin" ]; then
     # Changes macOS defaults
     source modules/darwin/defaults.sh
+    source modules/darwin/enviroment.sh
 # Only run this on Linux
 elif [ $OS = "Linux" ]; then
     #
