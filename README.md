@@ -6,7 +6,7 @@ Automation scripts to set up macOS for software development and privacy.
 - Restores the current backup:
     - Symlinks dotfiles from the repo to the home folder (.config/ and .zshrc).
     - Installs packages listed in a [Brewfile](Brewfile) using [brew](https://brew.sh) and [mas](https://github.com/mas-cli/mas) (for App Store apps).
-- Changes some macOS default preferences; see the full list [here](modules/preferences.sh).
+- Changes some macOS default preferences; see the full list [here](modules/darwin/defaults.sh).
 
 ## Screenshots
 
