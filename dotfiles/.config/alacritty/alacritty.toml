@@ -1,0 +1,17 @@
+[general]
+import = ["./theme.toml"]
+
+[window]
+decorations = "buttonless"
+startup_mode = "SimpleFullscreen"
+dynamic_padding = true
+
+[font]
+normal.family = "JetBrainsMonoNL Nerd Font"
+size = 15
+
+[env]
+TERM = "xterm-256color"
+
+[mouse]
+hide_when_typing = true

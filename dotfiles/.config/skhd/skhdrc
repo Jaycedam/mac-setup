@@ -1,0 +1,5 @@
+cmd - return : open -a "Alacritty"
+cmd - b : open -a "Brave Browser"
+cmd - m : open -a "Spotube"
+cmd - n : open -a "Notes"
+cmd - e : open -a "Mail"
