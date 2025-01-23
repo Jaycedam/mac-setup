@@ -2,7 +2,7 @@
 
 paths="$HOME/Developer"
 
-selection=$(fd . -t d "$paths" --max-depth 1 | fzf --border-label ' Session Manager ' --input-label ' Search Project ')
+selection=$(fd . -t d "$paths" --max-depth 1 | fzf --tmux 80% --border-label ' Session Manager ' --input-label ' Search Project ')
 
 # If no directory is selected, exit
 if [ -z "$selection" ]; then

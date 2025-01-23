@@ -4,7 +4,7 @@
 export FZF_DEFAULT_OPTS="
 --bind 'ctrl-y:accept'
 --highlight-line
---height 90% --tmux 90%,border-native
+--height 80% --tmux 80%
 --info=inline-right
 --layout=reverse-list
 --color=bg+:#2d3f76
