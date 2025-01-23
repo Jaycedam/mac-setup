@@ -3,9 +3,7 @@ return {
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
+			preset = "modern",
 		},
 		keys = {
 			{
@@ -18,10 +16,13 @@ return {
 		},
 	},
 	{
-		"echasnovski/mini.pairs",
-
+		"echasnovski/mini.nvim",
 		config = function()
 			require("mini.pairs").setup()
+			require("mini.icons").setup()
+			require("mini.files").setup()
+
+			vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "File Explorer" })
 		end,
 	},
 }
