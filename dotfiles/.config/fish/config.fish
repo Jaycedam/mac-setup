@@ -1,3 +1,5 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    # If not on tmux, attach or create main session
+    and not set -q TMUX
+    exec tmux new-session -A -s main
 end

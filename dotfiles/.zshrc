@@ -27,11 +27,11 @@ fi
 # FZF Customization
 export FZF_DEFAULT_OPTS="
 --bind 'ctrl-y:accept'
+--preview-window 'border-none'
 --highlight-line
---height 90%
+--height 80% --tmux 80%
 --info=inline-right
 --layout=reverse-list
---border=none
 --color=bg+:#2d3f76
 --color=border:#589ed7
 --color=fg:#c8d3f5
@@ -52,12 +52,14 @@ export FZF_DEFAULT_OPTS="
 # OPTION-C shortcut to change directory: exclude folders
 export FZF_ALT_C_OPTS="
 --walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash
+--border-label=' FZF Change Directory '
 "
 
 # CTRL-T shortcut to search files: exclude folders, preview with bat
 export FZF_CTRL_T_OPTS="
 --walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash
 --preview 'bat -n --color=always {}'
+--border-label=' FZF Files '
 "
 
 # CTRL-R shortcut to search command history: CTRL-Y to copy the command into clipboard using pbcopy
@@ -65,6 +67,7 @@ export FZF_CTRL_R_OPTS="
 --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
 --color header:bold
 --header 'Press CTRL-Y to copy command into clipboard'
+--border-label=' FZF Commands '
 "
 
 # Aliases
@@ -79,7 +82,14 @@ alias outdated="brew outdated"
 alias autoremove="brew autoremove"
 alias vim="nvim"
 alias v="nvim"
-alias so="source ~/.zshrc" # source zshrc to update changes
+alias so="source ~/.zshrc"           # source zshrc to update changes
+alias t="tmux new-session -A -s jay" # attach to the last tmux session, else create "main" session
+
+# Start tmux automatically
+# Attach or create "main" session
+if [[ -z "$TMUX" ]]; then
+    tmux new-session -A -s 'main'
+fi
 
 # Prompt https://github.com/sindresorhus/pure
 fpath+=("$(brew --prefix)/share/zsh/site-functions") # use system zsh

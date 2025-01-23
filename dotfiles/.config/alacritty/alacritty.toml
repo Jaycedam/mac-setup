@@ -3,8 +3,11 @@ import = ["./theme.toml"]
 
 [window]
 decorations = "buttonless"
-startup_mode = "SimpleFullscreen"
+padding.x = 2
 dynamic_padding = true
+# opacity = 0.9
+# blur = true
+startup_mode = "Fullscreen"
 
 [font]
 normal.family = "JetBrainsMonoNL Nerd Font"

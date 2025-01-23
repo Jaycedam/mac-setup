@@ -1,8 +1,8 @@
 theme = tokyonight_moon
 background = #111111
 
-font-size = 14
-mouse-hide-while-typing
+font-size = 15
+mouse-hide-while-typing = true
 macos-titlebar-style = tabs
 window-save-state = always
 window-new-tab-position = end
