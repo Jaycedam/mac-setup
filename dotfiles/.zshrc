@@ -4,7 +4,6 @@ KEYTIMEOUT=1 # lower delay of ESC to enter normal mode (vim mode)
 # History
 setopt hist_ignore_all_dups # ignore duplicate entries
 setopt hist_save_no_dups    # don't save duplicates
-setopt hist_ignore_space    # ignore commands that start with space
 setopt share_history        # share command history data between parallel sessions
 setopt hist_verify
 
@@ -13,7 +12,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # Key Bindings
 bindkey -v                           # enable VIM mode
-bindkey "ç" fzf-cd-widget            # OPTION-C [fzf shortcut to change directory]
+bindkey "^Z" fzf-cd-widget           # CTRL-Z [fzf shortcut to change directory]
 bindkey '^P' history-search-forward  # CTRL-P [search history as vim keybind]
 bindkey '^N' history-search-backward # CTRL-N [search history as vim keybind]
 bindkey '^Y' autosuggest-accept      # CTRL-Y [accept suggestion as vim keybind]
@@ -93,5 +92,3 @@ prompt pure                      # load pure
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source <(fzf --zsh)
-
-export PATH=$PATH:/Users/jay/.spicetify
