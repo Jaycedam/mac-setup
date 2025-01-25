@@ -15,9 +15,10 @@ I try to keep my config very minimal while maintaining only the features I need.
 > [!NOTE]  
 > I don't update these often, so they may be out of date.
 
-### Ghostty and Neovim
+### Terminal workflow
 
-![Wezterm and Neovim](images/ghostty.webp)
+Alacritty, tmux, fish shell, neovim and fzf utils.
+![Terminal](images/terminal.webp)
 
 ## Automated setup
 
