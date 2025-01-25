@@ -23,4 +23,4 @@ if [ $OS = "Darwin" ]; then
     source modules/darwin/enviroment.sh
 fi
 
-echo -e "${ARROW} Next steps: run ${MAGENTA}source ~/.zshrc${RESET} to see the shell changes."
+echo -e "${ARROW} Next steps: Log out for all changes to apply."
