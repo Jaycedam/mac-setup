@@ -13,6 +13,9 @@ source modules/restore.sh
 # LSP
 source modules/lsp.sh
 
+# Change default shell to Fish (fish needs to be in Brewfile)
+source modules/fish.sh
+
 # Only run this on macOS
 if [ $OS = "Darwin" ]; then
     # Changes macOS defaults
