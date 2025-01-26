@@ -9,10 +9,10 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-# after-startup-command = [
-#     'exec-and-forget sketchybar',
-#     'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=4.0',
-# ]
+after-startup-command = [
+    # 'exec-and-forget sketchybar',
+    'exec-and-forget borders active_color=0xffc8d3f5 inactive_color=0xff494d64 width=4.0',
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -60,12 +60,12 @@ preset = 'qwerty'
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = [{ monitor.built-in = 0 }, 10]
-inner.vertical = [{ monitor.built-in = 0 }, 10]
-outer.left = [{ monitor.built-in = 0 }, 10]
-outer.bottom = [{ monitor.built-in = 0 }, 10]
-outer.top = [{ monitor.built-in = 0 }, 10]
-outer.right = [{ monitor.built-in = 0 }, 10]
+inner.horizontal = [{ monitor.built-in = 4 }, 10]
+inner.vertical = [{ monitor.built-in = 4 }, 10]
+outer.left = [{ monitor.built-in = 4 }, 10]
+outer.bottom = [{ monitor.built-in = 4 }, 10]
+outer.top = [{ monitor.built-in = 4 }, 10]
+outer.right = [{ monitor.built-in = 4 }, 10]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -145,7 +145,7 @@ alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
 alt-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
 
 alt-enter = 'exec-and-forget open -a Alacritty'
-alt-b = 'exec-and-forget open -a "Zen Browser"'
+alt-b = 'exec-and-forget open -a "Safari"'
 alt-m = 'exec-and-forget open -a "Spotube"'
 alt-e = 'exec-and-forget open -a "Mail"'
 
@@ -155,18 +155,13 @@ alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-alt-shift-semicolon = 'mode service'
+alt-shift-s = 'mode service'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = [
-    'layout floating tiling',
-    'mode main',
-] # Toggle between floating and tiling layout
-backspace = ['close-all-windows-but-current', 'mode main']
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 #s = ['layout sticky tiling', 'mode main']
@@ -176,19 +171,32 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-down = 'volume down'
-up = 'volume up'
-shift-down = ['volume set 0', 'mode main']
-
+# 1:browsers 
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace 1'
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
 run = 'move-node-to-workspace 1'
 [[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace 1'
+# 2:terminal
+[[on-window-detected]]
 if.app-id = 'org.alacritty'
 run = 'move-node-to-workspace 2'
+# 3:music
 [[on-window-detected]]
 if.app-id = 'oss.krtirtho.spotube'
 run = 'move-node-to-workspace 3'
+# 4:communication
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = 'move-node-to-workspace 4'
+# 5:gaming
+[[on-window-detected]]
+if.app-id = 'com.valvesoftware.steam'
+run = 'move-node-to-workspace 5'
 
 [workspace-to-monitor-force-assignment]
 1 = 'main'
