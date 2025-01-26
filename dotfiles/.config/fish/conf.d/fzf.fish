@@ -4,7 +4,7 @@
 export FZF_DEFAULT_OPTS="
 --bind 'ctrl-y:accept'
 --highlight-line
---height 80% --tmux 80%
+--height 80% --tmux 80%,border-native
 --info=inline-right
 --layout=reverse-list
 --color=bg+:#2d3f76
@@ -28,14 +28,18 @@ export FZF_DEFAULT_OPTS="
 export FZF_ALT_C_OPTS="
 --walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash
 --border-label='FZF Change Directory'
+--preview-window 'border-left'
+--preview 'eza --tree --color=always --icons=always {} | head -200'
+--header 'Change directory'
 "
 
 # Fzf files widget, exclude folders and preview with bat
 export FZF_CTRL_T_OPTS="
 --walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash
 --preview 'bat -n --color=always {}'
---preview-window 'border-none'
+--preview-window 'border-left'
 --border-label='FZF Files'
+--header 'Search files'
 "
 
 # Fzf command history, bind ctrl-y to copy
