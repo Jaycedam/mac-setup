@@ -2,7 +2,7 @@
 
 # Checks if Homebrew is installed
 if command -v brew &>/dev/null; then
-    echo "${YELLOW} Homebrew is already installed. Skipping..."
+    echo -e "${YELLOW} Homebrew is already installed. Skipping..."
 else
     # Brew install and setup
     echo -e "${ARROW} Installing Homebrew..."
