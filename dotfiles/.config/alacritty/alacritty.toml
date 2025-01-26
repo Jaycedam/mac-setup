@@ -1,13 +1,15 @@
 [general]
-import = ["./theme.toml"]
+import = [
+    # "./themes/catppuccin-mocha.toml",
+    "./themes/tokyo-night-moon.toml",
+    # "./themes/dracula.toml",
+]
 
 [window]
 decorations = "buttonless"
-padding.x = 2
 dynamic_padding = true
 # opacity = 0.9
 # blur = true
-startup_mode = "Fullscreen"
 
 [font]
 normal.family = "JetBrainsMonoNL Nerd Font"
@@ -18,3 +20,6 @@ TERM = "xterm-256color"
 
 [mouse]
 hide_when_typing = true
+
+[colors]
+primary.background = "#0f0f0f"
