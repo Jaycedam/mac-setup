@@ -32,8 +32,10 @@ Start:
 
 ```sh
 git clone https://github.com/Jaycedam/mac-setup.git ~/Developer/mac-setup
-cd ~/Developer/mac-setup && bash main.sh
+bash ~/Developer/mac-setup/main.sh
 ```
+
+Then select the option for the automatic setup.
 
 ## Manual settings
 
@@ -43,10 +45,11 @@ Some settings must be changed manually due to API limitation or lack of document
 
 # How to use with your dotfiles
 
-Start by forking the project and replacing every instance of USERNAME to yours, including from the main script. Make a manual backup of your dotfiles just in case.
+**It's always recommended to make a manual backup of your dotfiles.**
+Start by forking the project and replacing USERNAME to yours. If you have questions you can open an issue.
 
 > [!IMPORTANT]
-> The path **~/Developer/mac-setup** is expected by the script; it's used to generate symlinks and relative path operations. I'm working on a better way to work with relative paths.
+> The path **~/Developer/mac-setup** is expected by the script; it's used to generate symlinks and relative path operations. If you want to use a different directory, you need to change the variable ROOT_DIR inside main.sh as well to reflect the change.
 
 1. Clone and delete my dotfiles (replace USERNAME)
 
@@ -58,13 +61,13 @@ rm -rf ~/Developer/mac-setup/dotfiles/*
 2. Back up your dotfiles and Brew packages. This moves your dotfiles to the project directory, then creates symlinks to $HOME. It will also back up your Brew packages into a Brewfile (you need to have Brew installed):
 
 ```sh
-cd ~/Developer/mac-setup && bash backup.sh
+bash ~/Developer/mac-setup/main.sh
 ```
+
+Then select the option to update the backup.
 
 > [!TIP]
 > If you install new Brew packages, just repeat the step 2 above to update your backup.
-
-3. Make sure to change the USERNAME from the url in the [automated setup](#automated-setup) section to yours. Then push the changes to your repo.
 
 ---
 
