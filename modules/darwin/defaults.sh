@@ -23,7 +23,7 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"         # Co
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"         # Search scope current folder
 defaults write com.apple.finder CreateDesktop -bool true                    # Disable desktop icons
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false # Disable drive icon on desktop
-defaults read com.apple.finder NewWindowTarget -string "PfHm"               # Finder starts on home directory
+defaults write com.apple.finder NewWindowTarget -string "PfHm"              # Finder starts on home directory
 defaults write com.apple.finder FXRemoveOldTrashItems -bool true            # Clean trash after 30 days
 defaults write com.apple.finder _FXSortFoldersFirst -bool true              # sort folder first
 defaults write com.apple.finder _FXSortFoldersFirstOnDesktop -bool true     # sort folder first on desktop
