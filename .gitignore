@@ -5,3 +5,5 @@ btop.log
 dotfiles/.config/StardewValley
 dotfiles/.config/github-copilot
 dotfiles/.config/spicetify
+dotfiles/.config/karabiner/*
+!dotfiles/.config/karabiner/karabiner.json
