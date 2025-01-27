@@ -1,26 +1,55 @@
 #!/bin/bash
 
-# Variables and directory check
-source root.sh
+# Path Variables
+ROOT_DIR="$HOME/Developer/mac-setup" # Project path (IMPORTANT for creating symlings and load modules, don't change this unless you know what you're doing)
+BACKUP_DIR="$ROOT_DIR/dotfiles"      # Path for all backups
+OS="$(uname -s)"                     # Saves current OS (eg: Darwin, Linux)
 
-# Installs brew and packages from Brewfile
-# You can update the Brewfile by creating your own backup (bash backup.sh) or manually
-source modules/brew.sh
+# Color variables
+RED='\033[31m'
+GREEN='\033[32m'
+YELLOW='\033[33m'
+BLUE='\033[34m'
+MAGENTA='\033[35m'
+CYAN='\033[36m'
+WHITE='\033[37m'
+RESET='\033[0m'
 
-# Restores config files backed up
-source modules/restore.sh
+# Indicator for new sections
+ARROW="${MAGENTA}==>${RESET}"
 
-# LSP
-source modules/lsp.sh
+# Prompt user for input
+echo -e "Script Options:\n1.Automated Setup\n2.Update Backup"
+read -p "Enter number: " choice
 
-# Change default shell to Fish (fish needs to be in Brewfile)
-source modules/fish.sh
+if [ "$choice" -eq 1 ]; then
+    echo -e "${ARROW} ${GREEN}Starting automatic setup..."
+    # Installs brew and packages from Brewfile
+    # You can update the Brewfile by creating your own backup (bash backup.sh) or manually
+    source $ROOT_DIR/modules/brew.sh
 
-# Only run this on macOS
-if [ $OS = "Darwin" ]; then
-    # Changes macOS defaults
-    source modules/darwin/defaults.sh
-    source modules/darwin/enviroment.sh
+    # Restores config files backed up
+    source $ROOT_DIR/modules/restore.sh
+
+    # LSP
+    source $ROOT_DIR/modules/lsp.sh
+
+    # Change default shell to Fish (fish needs to be in Brewfile)
+    source $ROOT_DIR/modules/fish.sh
+
+    # Only run this on macOS
+    if [ $OS = "Darwin" ]; then
+        echo -e "${ARROW} macOS detected, running modifications."
+        # Changes macOS defaults
+        source $ROOT_DIR/modules/darwin/defaults.sh
+        source $ROOT_DIR/modules/darwin/enviroment.sh
+    fi
+
+    echo -e "${ARROW} Next steps: Log out for all changes to apply."
+
+elif [ "$choice" -eq 2 ]; then
+    echo -e "${ARROW} ${GREEN}Updating backup..."
+    source $ROOT_DIR/modules/backup.sh
+else
+    echo "Invalid input, please enter a valid option."
 fi
-
-echo -e "${ARROW} Next steps: Log out for all changes to apply."

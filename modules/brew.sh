@@ -17,5 +17,6 @@ echo -e "${ARROW} Disabling Homebrew telemetry..."
 brew analytics off
 
 # Brew Apps installed from Brewfile
+# TODO: separate darwin and linux brewfiles
 echo -e "${ARROW} Installing apps..."
-brew bundle install --file Brewfile
+brew bundle install --file $ROOT_DIR/Brewfile
