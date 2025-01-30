@@ -2,8 +2,6 @@ vim.opt.number = true -- Show current line
 vim.opt.relativenumber = true -- Show relative number
 vim.opt.smartindent = true
 
-vim.opt.mouse = "a" -- Enables mouse support
-
 vim.opt.termguicolors = true -- Enables 24-bit RGB color in the TUI.
 
 -- Search
