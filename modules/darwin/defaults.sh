@@ -55,6 +55,5 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true    # Show file e
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false # disables "corrects spelling automatically"
 defaults write -g KeyRepeat -int 2                                 # key repeat rate: fast
 defaults write -g InitialKeyRepeat -int 15                         # delay until repeat: short
-defaults write -g AppleWindowTabbingMode -string "always"          # always prefer tabs
 
 killall Dock && killall Finder && killall SystemUIServer # Restart dock and finder to apply changes
