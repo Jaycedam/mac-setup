@@ -2,7 +2,6 @@
 import = [
     # "./themes/catppuccin-mocha.toml",
     "./themes/tokyo-night-moon.toml",
-    # "./themes/dracula.toml",
 ]
 
 [window]

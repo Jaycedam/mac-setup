@@ -10,8 +10,7 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-    # 'exec-and-forget sketchybar',
-    'exec-and-forget borders active_color=0xffc8d3f5 inactive_color=0xff494d64 width=4.0',
+    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=4.0',
 ]
 
 # Start AeroSpace at login
@@ -60,12 +59,12 @@ preset = 'qwerty'
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = [{ monitor.built-in = 4 }, 10]
-inner.vertical = [{ monitor.built-in = 4 }, 10]
-outer.left = [{ monitor.built-in = 4 }, 10]
-outer.bottom = [{ monitor.built-in = 4 }, 10]
-outer.top = [{ monitor.built-in = 4 }, 10]
-outer.right = [{ monitor.built-in = 4 }, 10]
+inner.horizontal = 8
+inner.vertical = 8
+outer.left = 8
+outer.bottom = 8
+outer.top = 8
+outer.right = 8
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -123,15 +122,11 @@ alt-minus = 'resize smart -50'
 alt-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
-alt-7 = 'workspace 7'
-alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
+alt-1 = 'workspace 1' # browsers
+alt-2 = 'workspace 2' # dev (terminal)
+alt-3 = 'workspace 3' # media
+alt-4 = 'workspace 4' # communication
+alt-5 = 'workspace 5' # rest
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
@@ -139,13 +134,9 @@ alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
 alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
 alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
 alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
-alt-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
-alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
-alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
-alt-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
 
 alt-enter = 'exec-and-forget open -a Alacritty'
-alt-b = 'exec-and-forget open -a "Safari"'
+alt-b = 'exec-and-forget open -a "Zen Browser"'
 alt-m = 'exec-and-forget open -a "Spotube"'
 alt-e = 'exec-and-forget open -a "Mail"'
 
@@ -197,14 +188,3 @@ run = 'move-node-to-workspace 4'
 [[on-window-detected]]
 if.app-id = 'com.valvesoftware.steam'
 run = 'move-node-to-workspace 5'
-
-[workspace-to-monitor-force-assignment]
-1 = 'main'
-2 = 'main'
-3 = 'main'
-4 = 'main'
-5 = 'main'
-6 = 'secondary'
-7 = 'secondary'
-8 = 'secondary'
-9 = 'secondary'
