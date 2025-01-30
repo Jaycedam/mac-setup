@@ -25,7 +25,6 @@ read -p "Enter number: " choice
 if [ "$choice" -eq 1 ]; then
     echo -e "${ARROW} ${GREEN}Starting automatic setup..."
     # Installs brew and packages from Brewfile
-    # You can update the Brewfile by creating your own backup (bash backup.sh) or manually
     source $ROOT_DIR/modules/brew.sh
 
     # Restores config files backed up
