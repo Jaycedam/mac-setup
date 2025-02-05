@@ -13,7 +13,9 @@ When running the main script, you can select the automated setup or to update th
         - Installs packages from a [Brewfile](Brewfile) using [brew](https://brew.sh), [mas](https://github.com/mas-cli/mas) and some [Language Servers](./modules/lsp.sh) missing from Brew, using npm.
     - Changes macOS [default preferences](modules/darwin/defaults.sh) and specific [Darwin tweaks](./modules/darwin/enviroment.sh) (eg: TouchID for sudo).
     - Changes default user shell to [Fish](https://fishshell.com).
-    - Remaps Caps Lock to ESC on tap and CTRL when combined whith another key (like CTRL-a for tmux). Using [Karabiner Elements](https://github.com/pqrs-org/Karabiner-Elements).
+    - Keyboard Remaps using [Karabiner Elements](https://github.com/pqrs-org/Karabiner-Elements).:
+        - Caps Lock to ESC on tap and to CTRL when combined whith another key.
+        - CTRL + hjkl as arrow keys.
 - **Update Backup**
     - Moves dotfiles (.config/ and .zshrc) to the project directory.
     - Creates symlinks back to $HOME.
