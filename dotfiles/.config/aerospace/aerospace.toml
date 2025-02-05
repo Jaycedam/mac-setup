@@ -4,13 +4,13 @@
 # You can use it to add commands that run after login to macOS user session.
 # 'start-at-login' needs to be 'true' for 'after-login-command' to work
 # Available commands: https://nikitabobko.github.io/AeroSpace/commands
-after-login-command = []
+# after-login-command = []
 
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=4.0',
+    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=2.0',
 ]
 
 # Start AeroSpace at login
@@ -59,12 +59,12 @@ preset = 'qwerty'
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 8
-inner.vertical = 8
-outer.left = 8
-outer.bottom = 8
-outer.top = 8
-outer.right = 8
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -136,7 +136,7 @@ alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
 alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
 
 alt-enter = 'exec-and-forget open -a Alacritty'
-alt-b = 'exec-and-forget open -a "Zen Browser"'
+alt-b = 'exec-and-forget open -a "Safari"'
 alt-m = 'exec-and-forget open -a "Spotube"'
 alt-e = 'exec-and-forget open -a "Mail"'
 
@@ -172,18 +172,31 @@ run = 'move-node-to-workspace 1'
 [[on-window-detected]]
 if.app-id = 'com.brave.Browser'
 run = 'move-node-to-workspace 1'
+
 # 2:terminal
 [[on-window-detected]]
 if.app-id = 'org.alacritty'
 run = 'move-node-to-workspace 2'
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace 2'
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
+run = 'move-node-to-workspace 2'
+[[on-window-detected]]
+if.app-id = 'org.gnu.Emac'
+run = 'move-node-to-workspace 2'
+
 # 3:music
 [[on-window-detected]]
 if.app-id = 'oss.krtirtho.spotube'
 run = 'move-node-to-workspace 3'
+
 # 4:communication
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
 run = 'move-node-to-workspace 4'
+
 # 5:gaming
 [[on-window-detected]]
 if.app-id = 'com.valvesoftware.steam'
