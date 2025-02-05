@@ -20,7 +20,14 @@ return {
 		config = function()
 			require("mini.pairs").setup()
 			require("mini.icons").setup()
-			require("mini.files").setup()
+			require("mini.surround").setup()
+			require("mini.statusline").setup()
+		end,
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
 		end,
 	},
 }

@@ -15,17 +15,17 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true -- In Insert mode: Use the appropriate number of spaces to insert a <Tab>.
 
+-- folds with treesitter
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false -- Start with folds open
+
 --vim.opt.showmode = false -- disable mode on the command section
 vim.opt.title = true -- show title on window
 vim.opt.titlestring = "%f (nvim)"
 
--- Netwr file manager
--- vim.g.netrw_banner = 0 -- gets rid of the banner for netrw
--- vim.g.netrw_liststyle = 3 -- tree style view in netrw
--- vim.g.netrw_winsize = 25 -- width of netrw window
-
 vim.o.splitright = true
 vim.o.splitbelow = true
 
---vim.opt.laststatus = 3    -- Global statusline
--- vim.o.cmdheight = 0 -- Hides command section unless used, disabled until stable
+vim.opt.laststatus = 3 -- Global statusline
+vim.o.cmdheight = 0 -- Hides command section unless used, disabled until stable
