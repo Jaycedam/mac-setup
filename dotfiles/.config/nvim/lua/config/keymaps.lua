@@ -7,8 +7,10 @@ local map = vim.keymap.set
 map("n", "[q", ":cprev<CR>", { desc = "Quickfix previous" })
 map("n", "]q", ":cnext<CR>", { desc = "Quickfix next" })
 
+-- map("n", "<leader>e", ":Ex<CR>", { desc = "File Explorer" }) -- vim file explorer
+
 -- buffer navigation
-map("n", "<leader>b", ":buffer #<CR>", { desc = "Go to last buffer" })
+map("n", "<leader>bb", ":buffer #<CR>", { desc = "Go to last buffer" })
 map("n", "[b", ":bprev<CR>", { desc = "Buffer previous" })
 map("n", "]b", ":bnext<CR>", { desc = "Buffer next" })
 

@@ -5,4 +5,4 @@ abbr --add search brew search
 abbr --add outdated brew outdated
 abbr --add autoremove brew autoremove
 abbr --add v nvim
-abbr --add ls eza -Al --icons auto --group-directories-first --tree --level=2
+abbr --add ls eza -Al --icons auto --group-directories-first

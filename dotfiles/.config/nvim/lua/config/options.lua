@@ -27,5 +27,4 @@ vim.opt.titlestring = "%f (nvim)"
 vim.o.splitright = true
 vim.o.splitbelow = true
 
-vim.opt.laststatus = 3 -- Global statusline
 vim.o.cmdheight = 0 -- Hides command section unless used, disabled until stable
