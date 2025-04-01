@@ -2,7 +2,9 @@ vim.opt.number = true -- Show current line
 vim.opt.relativenumber = true -- Show relative number
 vim.opt.smartindent = true
 
+-- UI
 vim.opt.termguicolors = true -- Enables 24-bit RGB color in the TUI.
+vim.opt.winborder = "rounded"
 
 -- Search
 vim.opt.ignorecase = true -- Ignore case in search patterns.
@@ -27,4 +29,21 @@ vim.opt.titlestring = "%f (nvim)"
 vim.o.splitright = true
 vim.o.splitbelow = true
 
-vim.o.cmdheight = 0 -- Hides command section unless used, disabled until stable
+-- vim.o.cmdheight = 0 -- Hides command section unless used, disabled until there's a way to show macros
+
+vim.diagnostic.config({
+	virtual_lines = true,
+})
+
+-- Set completeopt to have a better completion experience
+vim.opt.completeopt = "menu,menuone,noselect"
+
+-- native LSP completion
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(ev)
+		local client = vim.lsp.get_client_by_id(ev.data.client_id)
+		if client:supports_method("textDocument/completion") then
+			vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+		end
+	end,
+})

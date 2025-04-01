@@ -1,9 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
 	config = function()
-		-- comp config
-		local capabilities = require("blink.cmp").get_lsp_capabilities()
-
 		-- lsp configuration
 		local lspconfig = require("lspconfig")
 
@@ -14,25 +11,23 @@ return {
 			},
 		})
 
-		lspconfig.ts_ls.setup({ capabilities = capabilities })
-		lspconfig.astro.setup({ capabilities = capabilities })
-		lspconfig.html.setup({ capabilities = capabilities })
-		lspconfig.eslint.setup({ capabilities = capabilities })
-		lspconfig.tailwindcss.setup({ capabilities = capabilities })
-		lspconfig.cssls.setup({ capabilities = capabilities })
+		lspconfig.ts_ls.setup({})
+		lspconfig.astro.setup({})
+		lspconfig.html.setup({})
+		lspconfig.eslint.setup({})
+		lspconfig.tailwindcss.setup({})
+		lspconfig.cssls.setup({})
 		lspconfig.marksman.setup({
 			filetypes = { "markdown" },
-			capabilities = capabilities,
 		})
 		lspconfig.mdx_analyzer.setup({
 			filetypes = { "markdown.mdx", "mdx" },
-			capabilities = capabilities,
 		})
-		lspconfig.lua_ls.setup({ capabilities = capabilities })
-		lspconfig.gopls.setup({ capabilities = capabilities }) -- go
-		lspconfig.bashls.setup({ capabilities = capabilities })
-		lspconfig.taplo.setup({ capabilities = capabilities }) -- toml
-		lspconfig.pyright.setup({ capabilities = capabilities }) -- python
+		lspconfig.lua_ls.setup({})
+		lspconfig.gopls.setup({}) -- go
+		lspconfig.bashls.setup({})
+		lspconfig.taplo.setup({}) -- toml
+		lspconfig.pyright.setup({}) -- python
 		lspconfig.fish_lsp.setup({})
 
 		-- keymaps (the rest are in fzf.lua)
