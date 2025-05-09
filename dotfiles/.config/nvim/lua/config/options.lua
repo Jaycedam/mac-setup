@@ -35,8 +35,12 @@ vim.diagnostic.config({
 	virtual_lines = true,
 })
 
--- Set completeopt to have a better completion experience
-vim.opt.completeopt = "menu,menuone,noselect"
+-- see `:h completeopt`
+vim.opt.completeopt = "menuone,noinsert,popup"
+-- map <c-space> to activate completion
+vim.keymap.set("i", "<c-space>", function()
+	vim.lsp.completion.get()
+end)
 
 -- native LSP completion
 vim.api.nvim_create_autocmd("LspAttach", {

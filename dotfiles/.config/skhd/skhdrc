@@ -1,5 +1,0 @@
-alt - return : open -a "Alacritty"
-alt - b : open -a "Zen Browser"
-alt - m : open -a "Spotube"
-alt - n : open -a "Notes"
-alt - e : open -a "Mail"

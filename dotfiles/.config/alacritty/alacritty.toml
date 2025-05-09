@@ -7,7 +7,7 @@ import = [
 [window]
 decorations = "buttonless"
 dynamic_padding = true
-# opacity = 0.9
+opacity = 0.9
 # blur = true
 
 [font]
@@ -21,4 +21,4 @@ TERM = "xterm-256color"
 hide_when_typing = true
 
 [colors]
-# primary.background = "#111111"
+primary.background = "#000000"
