@@ -1,10 +1,11 @@
 theme = tokyonight_moon
-#background = #111111
+# background = #0A0A0A
 
 font-size = 15
 mouse-hide-while-typing = true
 macos-titlebar-style = tabs
 window-save-state = always
+macos-titlebar-style = hidden
 
 # change to "center" when this issue about the quick terminal size is closed https://github.com/ghostty-org/ghostty/issues/2384
 # quick-terminal-position = center
