@@ -3,7 +3,7 @@
   process-unmapped-keys yes
   ;; ignore my mouse on macOS due to issues
    macos-dev-names-exclude (
-    "macos-dev-names-exclude"
+    "Modern Mobile Mouse"
   )
 )
 
