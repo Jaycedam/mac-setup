@@ -42,6 +42,7 @@ if [ "$choice" -eq 1 ]; then
         # Changes macOS defaults
         source $ROOT_DIR/modules/darwin/defaults.sh
         source $ROOT_DIR/modules/darwin/enviroment.sh
+        source $ROOT_DIR/modules/darwin/keyboard.sh
     fi
 
     echo -e "${ARROW} Next steps: Log out for all changes to apply."
