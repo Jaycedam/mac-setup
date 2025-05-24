@@ -18,7 +18,7 @@ tmux has-session -t "$name" 2>/dev/null
 
 # If there's no session by the selected name, create it
 if [ $? != 0 ]; then
-    tmux new-session -d -s "$name" -c "$selection" "nvim" # cd to selected dir and open nvim
+    tmux new-session -d -s "$name" -c "$selection" "hx" # cd to selected dir and open nvim
     tmux new-window -t "$name" -d -c "$selection"         # open new window detached and cd to selected dir
 fi
 

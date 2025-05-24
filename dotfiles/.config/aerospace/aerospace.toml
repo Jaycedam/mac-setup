@@ -10,7 +10,7 @@
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=3.0',
+  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=4.0'
 ]
 
 # Start AeroSpace at login
@@ -46,7 +46,7 @@ on-focus-changed = [
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
-automatically-unhide-macos-hidden-apps = false
+automatically-unhide-macos-hidden-apps = true
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -62,12 +62,12 @@ preset = 'colemak'
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 8
-inner.vertical = 8
-outer.left = 8
-outer.bottom = 8
-outer.top = 8
-outer.right = 8
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -138,8 +138,8 @@ alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
 alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
 alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
 
-alt-t = 'exec-and-forget open -a Ghostty'
-alt-b = 'exec-and-forget open -a "Brave Browser"'
+alt-t = 'exec-and-forget open -a Alacritty'
+alt-g = 'exec-and-forget open -a "Brave Browser"' # G -> B on colemak dh
 alt-s = 'exec-and-forget open -a Safari'
 alt-m = 'exec-and-forget open -a Spotube'
 alt-e = 'exec-and-forget open -a Mail'
