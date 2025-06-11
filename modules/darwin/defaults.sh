@@ -8,7 +8,6 @@ defaults write com.apple.dock autohide-delay -float 0      # Disable delay on mo
 defaults write com.apple.dock expose-group-apps -bool true # Groups windows by application on mission control
 defaults write com.apple.dock mru-spaces -bool false       # Disable rearrange Spaces automatically
 defaults write com.apple.dock show-recents -bool false     # Disable recents
-defaults write com.apple.dock static-only -bool true       # Only show open apps
 
 # Menubar
 defaults write com.apple.controlcenter BatteryShowPercentage -bool true # Show battery percentage on menubar
@@ -31,9 +30,6 @@ defaults write com.apple.finder _FXSortFoldersFirstOnDesktop -bool true     # so
 defaults write com.apple.finder CreateDesktop -bool false
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
-
-# WindowManager
-defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
 
 # Screencapture
 defaults write com.apple.screencapture location -string "~/Pictures/Screenshots"
