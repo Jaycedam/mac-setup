@@ -7,6 +7,5 @@
 echo -e "${ARROW} Installing extra language servers..."
 
 # NPM
-bun i -g @astrojs/language-server # astro
-bun i -g @mdx-js/language-server  # mdx_analyzer
-bun i -g typescript
+npm i -g @astrojs/language-server # astro
+npm i -g @mdx-js/language-server  # mdx_analyzer
