@@ -1,18 +1,18 @@
 ;; main config
 (defcfg
   process-unmapped-keys yes
-  ;; ignore my mouse on macOS due to issues
-   macos-dev-names-exclude (
-    "Modern Mobile Mouse"
+  ;; ignore mouse
+  macos-dev-names-exclude (
+  "Modern Mobile Mouse"
   )
 )
 
 ;; source keys to modify, keys not mentioned will work normally
 (defsrc
   f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
-  i ;; "u" for undo on colemak
-  caps a s d f h j k l ; 
-  fn spc
+  i 
+  caps a s d f g h j k l ; 
+  spc
 )
 
 ;; variables
@@ -20,10 +20,11 @@
   tap-time 150
   hold-time 200
 )
- 
+
 (defalias
   ;; caps lock as esc 
-  escctrl (tap-hold $tap-time $hold-time esc lctl)
+  escnomods (tap-hold $tap-time 1000 esc (layer-switch nomods))
+  escbase (tap-hold $tap-time 1000 esc (layer-switch base))
 
   ;; home row mods
   a (tap-hold $tap-time $hold-time a lmet)
@@ -35,31 +36,32 @@
   l (tap-hold $tap-time $hold-time l ralt)
   ; (tap-hold $tap-time $hold-time ; rmet) 
 
-  ;; function layer
-  fnl (tap-hold 200 200 fn (layer-toggle fn))
-
-  ;; vim navigation layer: hjkl as arrow keys when holding space
+  ;; layer 2
   spc (tap-hold $tap-time $hold-time spc (layer-toggle vimnav))
+
+  ;; delete word on macos
+  dw A-bspc
 )
 
 ;; base layer
 (deflayer base
-  brdn  brup  _    _    _    _   prev  pp  next  mute  vold  volu
+  brdn brup _ _ _ _ prev pp next mute vold volu
   _
-  @escctrl @a @s @d @f _ @j @k @l @; 
-  @fnl @spc
+  @escnomods @a @s @d @f _ _ @j @k @l @; 
+  @spc
 )
-;; function keys layer
-(deflayer fn
-  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
-  _
-  @escctrl _ _ _ _ _ _ _ _ _ 
-  fn _
-)
-;; vim-style nav layer
+
+;; layer 2
 (deflayer vimnav
-  _ _ _ _ _ _ _ _ _ _ _ _
-  bspc
-  _ _ _ _ _ left down up right ret
-  _ _
+  f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+  up
+  _ lmet lalt lsft lctl _ @dw left down right ret
+  _
+)
+
+(deflayer nomods
+    _ _ _ _ _ _ _ _ _ _ _ _
+    i
+    @escbase a s d f g h j k l ;
+    spc
 )
