@@ -9,9 +9,9 @@
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-# after-startup-command = [
-#   'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=4.0'
-# ]
+after-startup-command = [
+    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=4.0',
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -118,19 +118,19 @@ alt-period = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+alt-left = 'focus left'
+alt-down = 'focus down'
+alt-up = 'focus up'
+alt-right = 'focus right'
 
 alt-f = 'fullscreen'
 alt-shift-f = 'layout floating tiling'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
-alt-shift-l = 'move right'
+alt-shift-left = 'move left'
+alt-shift-down = 'move down'
+alt-shift-up = 'move up'
+alt-shift-right = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 alt-minus = 'resize smart -50'
@@ -155,29 +155,11 @@ alt-b = 'exec-and-forget open -a "Brave Browser"'
 alt-s = 'exec-and-forget open -a Safari'
 alt-n = 'exec-and-forget open -a Notes'
 alt-e = 'exec-and-forget open -a Mail'
-alt-m = 'exec-and-forget open -a Spotube'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
-
-# See: https://nikitabobko.github.io/AeroSpace/commands#mode
-alt-shift-s = 'mode service'
-
-# 'service' binding mode declaration.
-# See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
-[mode.service.binding]
-esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main'] # reset layout
-
-# sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
-#s = ['layout sticky tiling', 'mode main']
-
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
 
 # 1:browsers 
 [[on-window-detected]]
@@ -202,9 +184,8 @@ if.app-id = 'net.kovidgoyal.kitty'
 run = 'move-node-to-workspace 2'
 
 # 3:music
-[[on-window-detected]]
-if.app-id = 'oss.krtirtho.spotube'
-run = 'move-node-to-workspace 3'
+# [[on-window-detected]]
+# run = 'move-node-to-workspace 3'
 
 # 4:communication
 [[on-window-detected]]
@@ -215,4 +196,3 @@ run = 'move-node-to-workspace 4'
 [[on-window-detected]]
 if.app-id = 'com.valvesoftware.steam.helper'
 run = ['layout tiling', 'move-node-to-workspace 5']
-
