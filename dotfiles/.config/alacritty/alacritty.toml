@@ -2,17 +2,18 @@
 import = [
     # "./themes/catppuccin-mocha.toml",
     "./themes/tokyo-night-moon.toml",
+    # "./themes/matte-black.toml",
 ]
 
 [window]
 decorations = "buttonless"
 dynamic_padding = true
-# opacity = 0.9
-# blur = true
+opacity = 0.9
+blur = true
 
 [font]
 normal.family = "JetBrainsMonoNL Nerd Font"
-size = 15
+size = 16
 
 [env]
 TERM = "xterm-256color"
@@ -20,5 +21,6 @@ TERM = "xterm-256color"
 [mouse]
 hide_when_typing = true
 
-# [colors]
+[colors]
 # primary.background = "#000000"
+primary.background = "#0f0f0f"
