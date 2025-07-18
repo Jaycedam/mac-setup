@@ -1,3 +1,0 @@
-return {
-	"Exafunction/windsurf.vim",
-}
