@@ -1,31 +1,22 @@
-#!/bin/bash
-
-# TODO improve initial load time
-# TODO add manual path input
+#!/usr/bin/env bash
 
 paths="$HOME/Developer"
 
-selection=$(fd . -t d "$paths" --max-depth 1 | fzf --tmux 80% --border-label '  Session Manager ' --input-label ' Search Project ')
+selection=$(fd -t d . "$paths" --max-depth 1 | fzf --tmux 80% --border-label '  Session Manager ' --input-label ' Search Project ')
 
-# If no directory is selected, exit
 if [ -z "$selection" ]; then
-    exit 1
+    exit 0
 fi
 
-name=$(basename "$selection" | tr . _) # Gets only the dir name, replace . with -
+session_name=$(basename "$selection" | tr . _)
 
-tmux has-session -t "$name" 2>/dev/null
-
-# If there's no session by the selected name, create it
-if [ $? != 0 ]; then
-    tmux new-session -d -s "$name" -c "$selection" "hx" # cd to selected dir and open nvim
-    tmux new-window -t "$name" -d -c "$selection"         # open new window detached and cd to selected dir
+if ! tmux has-session -t "$session_name" 2>/dev/null; then
+    tmux new-session -d -s "$session_name" -c "$selection" -n "" "nvim"
+    tmux new-window -d -t "$session_name" -c "$selection"
 fi
 
-# If not inside tmux, attach
-if [[ -z $TMUX ]]; then
-    tmux attach -t "$name"
-# inside tmux switch to session
+if [ -z "$TMUX" ]; then
+    tmux attach -t "$session_name"
 else
-    tmux switch-client -t "$name"
+    tmux switch-client -t "$session_name"
 fi
