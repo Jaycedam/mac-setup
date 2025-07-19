@@ -38,9 +38,6 @@
 
   ;; layer 2
   spc (tap-hold $tap-time $hold-time spc (layer-toggle vimnav))
-
-  ;; delete word on macos
-  dw A-bspc
 )
 
 ;; base layer
@@ -54,8 +51,8 @@
 ;; layer 2
 (deflayer vimnav
   f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
-  up
-  _ lmet lalt lsft lctl _ @dw left down right ret
+  bspc
+  _ lmet lalt lsft lctl _ left down up right ret
   _
 )
 
