@@ -43,6 +43,12 @@ outer.bottom = [{ monitor.built-in = 3 }, 10]
 outer.top = [{ monitor.built-in = 3 }, 10]
 outer.right = [{ monitor.built-in = 3 }, 10]
 
+
+[workspace-to-monitor-force-assignment]
+1 = 'built-in'
+2-5 = 'main'
+
+
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
@@ -86,7 +92,7 @@ alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
 alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
 alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
 
-alt-t = 'exec-and-forget open -a Alacritty'
+alt-t = 'exec-and-forget open -a Ghostty'
 alt-b = 'exec-and-forget open -a "Brave Browser"'
 alt-n = 'exec-and-forget open -a Notes'
 alt-e = 'exec-and-forget open -a Mail'
