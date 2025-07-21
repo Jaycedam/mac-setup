@@ -11,7 +11,7 @@
 (defsrc
   f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
   i 
-  caps a s d f g h j k l ; 
+  caps a s d f h j k l ; 
   spc
 )
 
@@ -37,28 +37,28 @@
   ; (tap-hold $tap-time $hold-time ; rmet) 
 
   ;; layer 2
-  spc (tap-hold $tap-time $hold-time spc (layer-toggle vimnav))
+  spc (tap-hold $tap-time $hold-time spc (layer-toggle nav))
 )
 
 ;; base layer
 (deflayer base
   brdn brup _ _ _ _ prev pp next mute vold volu
   _
-  @escnomods @a @s @d @f _ _ @j @k @l @; 
+  @escnomods @a @s @d @f _ @j @k @l @; 
   @spc
 )
 
 ;; layer 2
-(deflayer vimnav
+(deflayer nav
   f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
   bspc
-  _ lmet lalt lsft lctl _ left down up right ret
+  esc lmet lalt lsft lctl left down up right ret
   _
 )
 
 (deflayer nomods
     _ _ _ _ _ _ _ _ _ _ _ _
     i
-    @escbase a s d f g h j k l ;
+    @escbase a s d f h j k l ;
     spc
 )
