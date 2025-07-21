@@ -29,11 +29,5 @@ return {
 		lspconfig.taplo.setup({}) -- toml
 		lspconfig.pyright.setup({}) -- python
 		lspconfig.fish_lsp.setup({})
-
-		-- keymaps (the rest are in fzf.lua)
-		vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
-		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename" })
-		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition (LSP)" })
-		vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Go to references (LSP)" })
 	end,
 }
