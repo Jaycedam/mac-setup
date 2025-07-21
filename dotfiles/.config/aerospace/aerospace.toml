@@ -12,6 +12,16 @@ start-at-login = true
 # You can set 0 to disable the padding feature
 accordion-padding = 50
 
+
+# Mouse
+on-focused-monitor-changed = [
+    'move-mouse monitor-lazy-center',
+] # Mouse lazily follows focused monitor (default in i3)
+# or
+on-focus-changed = [
+    'move-mouse window-lazy-center',
+] # Mouse lazily follows any focus (window or workspace)
+
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
