@@ -12,7 +12,6 @@ start-at-login = true
 # You can set 0 to disable the padding feature
 accordion-padding = 50
 
-
 # Mouse
 on-focused-monitor-changed = [
     'move-mouse monitor-lazy-center',
@@ -53,11 +52,12 @@ outer.bottom = [{ monitor.built-in = 3 }, 10]
 outer.top = [{ monitor.built-in = 3 }, 10]
 outer.right = [{ monitor.built-in = 3 }, 10]
 
-
 [workspace-to-monitor-force-assignment]
 1 = 'built-in'
-2-5 = 'main'
-
+2 = 'main'
+3 = 'main'
+4 = 'main'
+5 = 'main'
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
