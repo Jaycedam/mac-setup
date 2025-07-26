@@ -1,0 +1,10 @@
+export FZF_DEFAULT_OPTS="
+
+--highlight-line
+--border
+--height 90% --tmux 80%
+--info=inline-right
+--layout=reverse-list
+
+--color=fg:#ffffff,bg:#161616,hl:#08bdba --color=fg+:#f2f4f8,bg+:#262626,hl+:#3ddbd9 --color=info:#78a9ff,prompt:#33b1ff,pointer:#42be65 --color=marker:#ee5396,spinner:#ff7eb6,header:#be95ff
+"

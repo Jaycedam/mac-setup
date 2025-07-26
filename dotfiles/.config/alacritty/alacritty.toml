@@ -1,9 +1,5 @@
 [general]
-import = [
-    # "./themes/catppuccin-mocha.toml",
-    "./themes/tokyo-night-moon.toml",
-    # "./themes/matte-black.toml",
-]
+import = ["./theme.toml"]
 
 [window]
 decorations = "buttonless"
@@ -20,7 +16,3 @@ TERM = "xterm-256color"
 
 [mouse]
 hide_when_typing = true
-
-[colors]
-# primary.background = "#000000"
-primary.background = "#0f0f0f"
