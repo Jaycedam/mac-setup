@@ -33,9 +33,6 @@ if [ "$choice" -eq 1 ]; then
     # LSP
     source $ROOT_DIR/modules/lsp.sh
 
-    # Change default shell to Fish (fish needs to be in Brewfile)
-    source $ROOT_DIR/modules/fish.sh
-
     # Only run this on macOS
     if [ $OS = "Darwin" ]; then
         echo -e "${ARROW} macOS detected, running modifications."
