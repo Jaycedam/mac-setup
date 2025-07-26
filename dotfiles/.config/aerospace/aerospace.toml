@@ -1,8 +1,7 @@
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = [
-    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=3.0',
-]
+# after-startup-command = [
+# ]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -17,9 +16,9 @@ on-focused-monitor-changed = [
     'move-mouse monitor-lazy-center',
 ] # Mouse lazily follows focused monitor (default in i3)
 # or
-on-focus-changed = [
-    'move-mouse window-lazy-center',
-] # Mouse lazily follows any focus (window or workspace)
+# on-focus-changed = [
+#     'move-mouse window-lazy-center',
+# ] # Mouse lazily follows any focus (window or workspace)
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -45,12 +44,12 @@ preset = 'colemak'
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = [{ monitor.built-in = 3 }, 10]
-inner.vertical = [{ monitor.built-in = 3 }, 10]
-outer.left = [{ monitor.built-in = 3 }, 10]
-outer.bottom = [{ monitor.built-in = 3 }, 10]
-outer.top = [{ monitor.built-in = 3 }, 10]
-outer.right = [{ monitor.built-in = 3 }, 10]
+inner.horizontal = [{ monitor.built-in = 10 }, 14]
+inner.vertical = [{ monitor.built-in = 10 }, 14]
+outer.left = [{ monitor.built-in = 10 }, 14]
+outer.bottom = [{ monitor.built-in = 10 }, 14]
+outer.top = [{ monitor.built-in = 10 }, 14]
+outer.right = [{ monitor.built-in = 10 }, 14]
 
 [workspace-to-monitor-force-assignment]
 1 = 'built-in'
@@ -102,7 +101,7 @@ alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
 alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
 alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
 
-alt-t = 'exec-and-forget open -a Ghostty'
+alt-t = 'exec-and-forget open -a Alacritty'
 alt-b = 'exec-and-forget open -a "Brave Browser"'
 alt-n = 'exec-and-forget open -a Notes'
 alt-e = 'exec-and-forget open -a Mail'

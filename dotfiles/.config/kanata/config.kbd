@@ -1,5 +1,9 @@
 (defcfg
   process-unmapped-keys yes
+   ;; ignore mouse
+   macos-dev-names-exclude (
+   "Modern Mobile Mouse"
+   )
 )
 
 (defsrc

@@ -3,6 +3,7 @@ vim.opt.relativenumber = true -- Show relative number
 
 -- UI
 vim.opt.winborder = "rounded"
+vim.opt.termguicolors = true -- Forces true color support in terminals
 
 -- Search
 vim.opt.ignorecase = true -- Ignore case in search patterns.
@@ -23,7 +24,7 @@ vim.opt.foldenable = false -- Start with folds
 vim.o.splitright = true
 vim.o.splitbelow = true
 
-vim.o.cmdheight = 0 -- Hides command section unless used
+-- vim.o.cmdheight = 0 -- Hides command section unless used
 
 vim.diagnostic.config({
 	virtual_lines = true,
