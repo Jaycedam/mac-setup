@@ -18,6 +18,7 @@ setopt hist_verify
 
 # Path
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Key Bindings
 bindkey -v                 # enable VIM mode
@@ -42,6 +43,7 @@ alias uninstall="brew uninstall --zap" # uninstall with zap to remove app leftov
 alias outdated="brew outdated"
 alias autoremove="brew autoremove"
 alias v="nvim"
+alias n="nvim-unstable"
 alias h="hx"
 alias so="source ~/.zshrc" # source zshrc to update changes
 alias t="tmux new-session -A -s main"
