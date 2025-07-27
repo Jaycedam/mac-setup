@@ -45,7 +45,6 @@ alias v="nvim"
 alias h="hx"
 alias so="source ~/.zshrc" # source zshrc to update changes
 alias t="tmux new-session -A -s main"
-alias restart="sudo launchctl kickstart -k system/com.example.kanata"
 
 # ==============================================================================
 # Prompt
