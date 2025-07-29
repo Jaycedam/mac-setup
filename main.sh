@@ -33,6 +33,9 @@ if [ "$choice" -eq 1 ]; then
     # LSP
     source $ROOT_DIR/modules/lsp.sh
 
+    # neovim nightly
+    source $ROOT_DIR/modules/nvim_nightly.sh
+
     # Only run this on macOS
     if [ $OS = "Darwin" ]; then
         echo -e "${ARROW} macOS detected, running modifications."
