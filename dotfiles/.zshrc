@@ -20,8 +20,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Key Bindings
-bindkey -v                 # enable VIM mode
-bindkey "^Z" fzf-cd-widget # CTRL-Z [fzf shortcut to change directory]
+bindkey -v                   # enable VIM mode
+bindkey "^Z" fzf-cd-widget   # CTRL-Z [fzf shortcut to change directory]
+bindkey "^F" fzf-file-widget # CTRL-F [fzf shortcut to search files, remapped from CTRL-T to avoid conflict with tmux]
 
 # Completion
 if type brew &>/dev/null; then
@@ -61,12 +62,12 @@ prompt pure                      # load pure
 # ==============================================================================
 # OPTION-C shortcut to change directory: exclude folders
 export FZF_ALT_C_OPTS="
---walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash
+--walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash,Games
 "
 
 # CTRL-T shortcut to search files: exclude folders, preview with bat
 export FZF_CTRL_T_OPTS="
---walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash
+--walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash,Games
 --preview 'bat -n --color=always {}'
 "
 
