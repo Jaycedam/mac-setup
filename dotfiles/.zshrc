@@ -2,7 +2,6 @@
 # General
 # ==============================================================================
 export EDITOR=nvim
-export EDITOR=nvim
 KEYTIMEOUT=1 # lower delay of ESC to enter normal mode (vim mode)
 
 # start on tmux
@@ -43,7 +42,7 @@ alias uninstall="brew uninstall --zap" # uninstall with zap to remove app leftov
 alias outdated="brew outdated"
 alias autoremove="brew autoremove"
 alias v="nvim"
-alias n="nvim-unstable"
+alias n="NVIM_APPNAME=nvim-unstable nvim-unstable"
 alias h="hx"
 alias so="source ~/.zshrc" # source zshrc to update changes
 alias t="tmux new-session -A -s main"
