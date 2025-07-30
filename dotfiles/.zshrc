@@ -48,7 +48,7 @@ alias upgrade="brew upgrade"
 alias uninstall="brew uninstall --zap" # uninstall with zap to remove app leftovers
 alias outdated="brew outdated"
 alias autoremove="brew autoremove"
-alias v="nvim"
+alias v="NVIM_APPNAME=nvim nvim"
 alias n="NVIM_APPNAME=nvim-unstable nvim-unstable"
 alias h="hx"
 alias so="source ~/.zshrc" # source zshrc to update changes
