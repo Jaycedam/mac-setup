@@ -25,11 +25,17 @@ bindkey "^Z" fzf-cd-widget   # CTRL-Z [fzf shortcut to change directory]
 bindkey "^F" fzf-file-widget # CTRL-F [fzf shortcut to search files, remapped from CTRL-T to avoid conflict with tmux]
 
 # Completion
+# case‑insensitive tab completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# add Homebrew completions (if present)
 if type brew &>/dev/null; then
-    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}" # load brew completions
-    autoload -Uz compinit
-    compinit
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
+
+# initialize completion system
+autoload -Uz compinit
+compinit
 
 # ==============================================================================
 # Aliases
