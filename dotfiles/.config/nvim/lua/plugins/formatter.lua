@@ -2,26 +2,29 @@ return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
 	cmd = { "ConformInfo" },
+	version = "*",
 
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {
+				python = { "ruff" },
+				htmldjango = { "djlint" },
 				javascript = { "prettier" },
 				astro = { "prettier" },
 				typescript = { "prettier" },
-				typescriptreact = { "prettier" }, -- TSX
-				javascriptreact = { "prettier" }, -- JSX
+				typescriptreact = { "prettier" },
+				javascriptreact = { "prettier" },
 				css = { "prettier" },
 				scss = { "prettier" },
 				html = { "prettier" },
+				sh = { "shfmt" },
+				zsh = { "shfmt" },
+
+				-- to be reviewed
 				markdown = { "prettier" },
 				json = { "prettier" },
 				jsonc = { "prettier" },
-				sh = { "shfmt" },
-				zsh = { "shfmt" },
 				lua = { "stylua" },
-				python = { "black" },
-				htmldjango = { "djlint" },
 				-- TODO: add the rest of ft
 			},
 			format_after_save = {

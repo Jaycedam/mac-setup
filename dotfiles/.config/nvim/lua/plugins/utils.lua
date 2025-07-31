@@ -1,6 +1,7 @@
 return {
 	{
 		"folke/which-key.nvim",
+		version = "*",
 		event = "VeryLazy",
 		opts = {
 			preset = "modern",
@@ -17,6 +18,7 @@ return {
 	},
 	{
 		"echasnovski/mini.nvim",
+		version = "*",
 		config = function()
 			require("mini.pairs").setup()
 			require("mini.icons").setup()
@@ -25,6 +27,7 @@ return {
 	},
 	{
 		"lewis6991/gitsigns.nvim",
+		version = "*",
 		config = function()
 			require("gitsigns").setup()
 		end,
