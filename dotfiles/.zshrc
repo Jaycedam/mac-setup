@@ -2,7 +2,8 @@
 # General
 # ==============================================================================
 export EDITOR=nvim
-KEYTIMEOUT=1 # lower delay of ESC to enter normal mode (vim mode)
+export HOMEBREW_NO_AUTO_UPDATE=1 # disable auto-update of Homebrew
+KEYTIMEOUT=1                     # lower delay of ESC to enter normal mode (vim mode)
 
 # start on tmux
 if [[ -z "$TMUX" ]]; then
@@ -48,8 +49,8 @@ alias upgrade="brew upgrade"
 alias uninstall="brew uninstall --zap" # uninstall with zap to remove app leftovers
 alias outdated="brew outdated"
 alias autoremove="brew autoremove"
-alias v="NVIM_APPNAME=nvim nvim"
-alias n="NVIM_APPNAME=nvim-unstable nvim-unstable"
+alias v="nvim"
+alias n="nvim"
 alias h="hx"
 alias so="source ~/.zshrc" # source zshrc to update changes
 alias t="tmux new-session -A -s main"
