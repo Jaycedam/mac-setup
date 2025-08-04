@@ -10,4 +10,3 @@ else
     echo -e "${RED}File /etc/pam.d/sudo_local already exists.${RESET} File not modified."
 fi
 
-gh auth login
