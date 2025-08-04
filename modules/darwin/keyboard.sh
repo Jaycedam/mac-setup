@@ -91,9 +91,9 @@ sudo launchctl enable system/com.example.karabiner-vhidmanager.plist
 
 # 5. Prompt for permissions
 # Opens System Preferences to see karabiner extension
-echo -e "Opening System Preferences, Karabiner will prompt you for permission."
-open -b com.apple.systempreferences
-read -rp "Allow the extension, then press Enter to continue... "
+echo -e "Opening System Preferences, Karabiner will prompt you for permission. If you don't get prompted, press on Driver Extensions..."
+open "x-apple.systempreferences:com.apple.LoginItems-Settings.extension"
+read -rp "Allow the Karabiner extension, then press Enter to continue... "
 
 echo -e "Copy /opt/homebrew/bin"
 echo -e "Opening Accesibility permissions, press Shift+Command+G then paste the path..."
