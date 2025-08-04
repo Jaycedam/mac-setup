@@ -12,8 +12,9 @@ When running the main script, you can select the automated setup or to update th
         - Symlinks [dotfiles](./dotfiles/) from the repo to the home folder.
         - Installs packages from a [Brewfile](Brewfile) using [brew](https://brew.sh), [mas](https://github.com/mas-cli/mas) and some [Language Servers](./modules/lsp.sh) missing from Brew, using npm.
     - Changes macOS [default preferences](modules/darwin/defaults.sh) and specific [Darwin tweaks](./modules/darwin/enviroment.sh) (eg: TouchID for sudo).
+    - Changes user shell to [fish](https://fishshell.com).
     - Installs Colemak-dh layout.
-    - [Advanced keyboard remaps](dotfiles/.config/kanata/config.kbd) with home row mods and layers, using Kanata.
+    - Installs Kanata and Karabiner Driver as services automatically. With Kanata I have [Advanced keyboard remaps](dotfiles/.config/kanata/config.kbd) with home row mods and layers.
 - **Update Backup**
     - Moves dotfiles (.config/ and .zshrc) to the project directory then creates symlinks back to $HOME.
     - Updates Brewfile from brew packages installed.
