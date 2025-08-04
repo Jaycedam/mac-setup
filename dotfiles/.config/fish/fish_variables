@@ -1,0 +1,33 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dhighlight\x2dline\x20\x2d\x2dborder\x20\x2d\x2dheight\x2090\x25\x20\x2d\x2dtmux\x2080\x25\x20\x2d\x2dinfo\x3dinline\x2dright\x20\x2d\x2dlayout\x3dreverse\x2dlist\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x232d3f76\x20\x2d\x2dcolor\x3dborder\x3a\x23589ed7\x20\x2d\x2dcolor\x3dfg\x3a\x23c8d3f5\x20\x2d\x2dcolor\x3dgutter\x3a\x231e2030\x20\x2d\x2dcolor\x3dheader\x3a\x23ff966c\x20\x2d\x2dcolor\x3dhl\x2b\x3a\x2365bcff\x20\x2d\x2dcolor\x3dhl\x3a\x2365bcff\x20\x2d\x2dcolor\x3dinfo\x3a\x23545c7e\x20\x2d\x2dcolor\x3dmarker\x3a\x23ff007c\x20\x2d\x2dcolor\x3dpointer\x3a\x23ff007c\x20\x2d\x2dcolor\x3dprompt\x3a\x2365bcff\x20\x2d\x2dcolor\x3dquery\x3a\x23c8d3f5\x3aregular\x20\x2d\x2dcolor\x3dscrollbar\x3a\x23589ed7\x20\x2d\x2dcolor\x3dseparator\x3a\x23ff966c\x20\x2d\x2dcolor\x3dspinner\x3a\x23ff007c
+SETUVAR __fish_initialized:3800
+SETUVAR fish_color_autosuggestion:brblack
+SETUVAR fish_color_cancel:\x2dr
+SETUVAR fish_color_command:normal
+SETUVAR fish_color_comment:red
+SETUVAR fish_color_cwd:green
+SETUVAR fish_color_cwd_root:red
+SETUVAR fish_color_end:green
+SETUVAR fish_color_error:brred
+SETUVAR fish_color_escape:brcyan
+SETUVAR fish_color_history_current:\x2d\x2dbold
+SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
+SETUVAR fish_color_normal:normal
+SETUVAR fish_color_operator:brcyan
+SETUVAR fish_color_param:cyan
+SETUVAR fish_color_quote:yellow
+SETUVAR fish_color_redirection:cyan\x1e\x2d\x2dbold
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_status:red
+SETUVAR fish_color_user:brgreen
+SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_pager_color_completion:normal
+SETUVAR fish_pager_color_description:yellow\x1e\x2di
+SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
+SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/opt/homebrew/bin

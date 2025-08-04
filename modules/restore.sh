@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # RESTORE DOTFILES
 echo -e "${ARROW} Creating symlinks to home..."

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo -e "${ARROW} Changing macOS defaults..."
 
@@ -32,7 +32,7 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 # Screencapture
-defaults write com.apple.screencapture location -string "~/Pictures/Screenshots"
+defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
 
 # Screensaver
 defaults write com.apple.screensaver askForPassword -bool true  # Ask for password on screensaver

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # LSP installation for Neovim
 # Most of the LSPs should be included in the Brewfile, this file is for packages that are not in brew

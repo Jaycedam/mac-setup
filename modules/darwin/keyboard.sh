@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # setup-kanata-service.sh
 # Installs Karabiner DriverKit, Kanata, and sets up LaunchDaemons (no disk logging)
 

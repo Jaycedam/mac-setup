@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo -e "${ARROW} Setting up Touch ID for sudo using sudo_local (macOS 14+)"
 # Check if /etc/pam.d/sudo_local exists
@@ -10,4 +10,4 @@ else
     echo -e "${RED}File /etc/pam.d/sudo_local already exists.${RESET} File not modified."
 fi
 
-gh auth login 
+gh auth login
