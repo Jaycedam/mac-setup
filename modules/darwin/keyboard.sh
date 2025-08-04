@@ -90,18 +90,31 @@ sudo launchctl bootstrap system "${PLIST_DIR}/com.example.karabiner-vhidmanager.
 sudo launchctl enable system/com.example.karabiner-vhidmanager.plist
 
 # 5. Prompt for permissions
-# Opens System Preferences to see karabiner extension
-echo -e "Opening System Preferences, Karabiner will prompt you for permission. If you don't get prompted, press on Driver Extensions..."
+echo -e "${ARROW} You'll now allow Karabiner to use a system extension."
+echo -e "On the next screen, approve the extension when prompted."
+read -rp "Press Enter to open System Extensions..."
 open "x-apple.systempreferences:com.apple.LoginItems-Settings.extension"
-read -rp "Allow the Karabiner extension, then press Enter to continue... "
+echo
+read -rp "Press Enter once you're done..."
+echo
 
-echo -e "Copy /opt/homebrew/bin"
-echo -e "Opening Accesibility permissions, press Shift+Command+G then paste the path..."
+echo -e "${ARROW} You'll now add Kanata to Accessibility settings."
+echo -e "On the next screen:"
+echo -e "- Click '+' to add a new item"
+echo -e "- Press Shift+Command+G and enter ${MAGENTA}/opt/homebrew/bin${RESET}"
+echo -e "- Select the Kanata binary"
+read -rp "Press Enter to open Accessibility settings..."
 open "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"
-read -rp "Add the Kanata binary, then press Enter to continue... "
+echo
+read -rp "Press Enter once you're done..."
+echo
 
-echo -e "Opening Input Monitoring permissions, press Shift+Command+G then paste the path..."
+echo -e "${ARROW} Now add Kanata to Input Monitoring as well."
+echo -e "Follow the same steps as before."
+read -rp "Press Enter to open Input Monitoring settings..."
 open "x-apple.systempreferences:com.apple.preference.security?Privacy_ListenEvent"
-read -rp "Add the Kanata binary, then press Enter to continue... "
+echo
+read -rp "Press Enter once you're done..."
+echo
 
 echo "Kanata and Karabiner services are now installed and enabled."
