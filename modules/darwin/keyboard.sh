@@ -90,10 +90,18 @@ sudo launchctl bootstrap system "${PLIST_DIR}/com.example.karabiner-vhidmanager.
 sudo launchctl enable system/com.example.karabiner-vhidmanager.plist
 
 # 5. Prompt for permissions
-open "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"
-read -rp "Add ${KANATA_BIN} to Accessibility, then press Enter to continue... "
+# Opens System Preferences to see karabiner extension
+echo -e "Opening System Preferences, Karabiner will prompt you for permission."
+open -b com.apple.systempreferences
+read -rp "Allow the extension, then press Enter to continue... "
 
+echo -e "Copy /opt/homebrew/bin"
+echo -e "Opening Accesibility permissions, press Shift+Command+G then paste the path..."
+open "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"
+read -rp "Add the Kanata binary, then press Enter to continue... "
+
+echo -e "Opening Input Monitoring permissions, press Shift+Command+G then paste the path..."
 open "x-apple.systempreferences:com.apple.preference.security?Privacy_ListenEvent"
-read -rp "Add Kanata to Input Monitoring, then press Enter to continue... "
+read -rp "Add the Kanata binary, then press Enter to continue... "
 
 echo "Kanata and Karabiner services are now installed and enabled."
