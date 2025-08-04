@@ -1,7 +1,7 @@
+background-opacity = 0.9
+background-blur = true
 theme = tokyonight_moon
-#background = #0A0A0A
 
 font-size = 16
 mouse-hide-while-typing = true
-window-save-state = always
 macos-titlebar-style = hidden

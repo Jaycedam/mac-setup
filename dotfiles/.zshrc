@@ -5,20 +5,15 @@ export EDITOR=nvim
 export HOMEBREW_NO_AUTO_UPDATE=1 # disable auto-update of Homebrew
 KEYTIMEOUT=1                     # lower delay of ESC to enter normal mode (vim mode)
 
-# start on tmux
-if [[ -z "$TMUX" ]]; then
-    tmux new-session -A -s main
-fi
+# Path
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # History
 setopt hist_ignore_all_dups # ignore duplicate entries
 setopt hist_save_no_dups    # don't save duplicates
 setopt share_history        # share command history data between parallel sessions
 setopt hist_verify
-
-# Path
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
 
 # Key Bindings
 bindkey -v                   # enable VIM mode
@@ -37,6 +32,11 @@ fi
 # initialize completion system
 autoload -Uz compinit
 compinit
+
+# # start on tmux
+# if [[ -z "$TMUX" ]]; then
+#     tmux new-session -A -s main
+# fi
 
 # ==============================================================================
 # Aliases
@@ -86,13 +86,13 @@ export FZF_CTRL_R_OPTS="
 "
 
 # FZF theme
-source "$HOME/.config/fzf/theme"
+source "$HOME/.local/share/colorshift/current/fzf.sh"
 
 # load key bindings
 source <(fzf --zsh)
 
-# ==============================================================================
-# ZSH Plugins
-# ==============================================================================
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# # ==============================================================================
+# # ZSH Plugins
+# # ==============================================================================
+# source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

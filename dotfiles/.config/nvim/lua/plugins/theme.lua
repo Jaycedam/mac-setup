@@ -14,7 +14,6 @@ return {
 			},
 		})
 		vim.cmd([[colorscheme tokyonight]])
-
 		-- transparent background, remove this if you don't want it
 		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

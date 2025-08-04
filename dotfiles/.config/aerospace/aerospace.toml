@@ -101,7 +101,7 @@ alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
 alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
 alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
 
-alt-t = 'exec-and-forget open -a Alacritty'
+alt-t = 'exec-and-forget open -a Ghostty'
 alt-b = 'exec-and-forget open -a "Brave Browser"'
 alt-n = 'exec-and-forget open -a Notes'
 alt-e = 'exec-and-forget open -a Mail'
@@ -129,5 +129,5 @@ if.app-name-regex-substring = 'Mail'
 run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Steam Helper'
+if.app-name-regex-substring = 'Steam Helper|Heroic'
 run = ['layout tiling', 'move-node-to-workspace 5']

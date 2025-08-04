@@ -1,5 +1,5 @@
 [general]
-import = ["./theme.toml"]
+import = ["~/.local/share/colorshift/current/alacritty.toml"]
 
 [window]
 decorations = "buttonless"

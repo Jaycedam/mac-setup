@@ -40,7 +40,7 @@
 ;; layer 2
 (deflayer nav
   f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
-  XX XX XX XX XX XX XX bspc XX XX
+  esc XX XX XX XX XX XX bspc XX XX
   esc lmet lalt lsft lctl XX left down up right ret
   XX XX XX XX XX XX XX XX XX XX
   spc

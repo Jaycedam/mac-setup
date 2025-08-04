@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # load fzf theme
-source "$HOME/.config/fzf/theme"
+source "$HOME/.local/share/colorshift/current/fzf.sh"
 
 paths="$HOME/Developer"
 
@@ -14,9 +14,8 @@ fi
 session_name=$(basename "$selection" | tr . _)
 
 if ! tmux has-session -t "$session_name" 2>/dev/null; then
-    # tmux new-session -d -s "$session_name" -c "$selection" -n "" "nvim"
-    tmux new-session -d -s "$session_name" -c "$selection"
-    # tmux new-window -d -t "$session_name" -c "$selection"
+    tmux new-session -d -s "$session_name" -c "$selection" -n "" "nvim"
+    tmux new-window -d -t "$session_name" -c "$selection"
 fi
 
 if [ -z "$TMUX" ]; then

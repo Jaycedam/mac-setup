@@ -3,6 +3,9 @@ return {
 	config = function()
 		local actions = require("fzf-lua.actions")
 		require("fzf-lua").setup({
+			fzf_colors = {
+				true, -- inherit from nvim theme
+			},
 			actions = {
 				files = {
 					true, -- inherit from defaults

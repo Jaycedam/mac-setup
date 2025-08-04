@@ -5,7 +5,7 @@ o.relativenumber = true -- Show relative number
 
 -- UI
 o.winborder = "rounded"
--- o.termguicolors = true -- Forces true color support in terminals
+o.termguicolors = true -- Forces true color support in terminals
 
 -- Minimal number of screen lines to keep above and below the cursor.
 o.scrolloff = 10
