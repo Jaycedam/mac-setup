@@ -90,9 +90,3 @@ source "$HOME/.local/share/colorshift/current/fzf.sh"
 
 # load key bindings
 source <(fzf --zsh)
-
-# # ==============================================================================
-# # ZSH Plugins
-# # ==============================================================================
-# source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
