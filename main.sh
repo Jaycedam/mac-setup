@@ -30,11 +30,11 @@ if [ "$choice" -eq 1 ]; then
     # Restores config files backed up
     source $ROOT_DIR/modules/restore.sh
 
+    # Fish shell
+    source $ROOT_DIR/modules/fish.sh
+
     # LSP
     source $ROOT_DIR/modules/lsp.sh
-
-    # neovim nightly
-    source $ROOT_DIR/modules/nvim_nightly.sh
 
     # Only run this on macOS
     if [ $OS = "Darwin" ]; then
