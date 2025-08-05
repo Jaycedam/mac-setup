@@ -19,4 +19,4 @@ brew analytics off
 # Brew Apps installed from Brewfile
 # TODO: separate darwin and linux brewfiles
 echo -e "${ARROW} Installing apps..."
-brew bundle install --file $ROOT_DIR/Brewfile
+brew bundle install --file "$ROOT_DIR/Brewfile"

@@ -20,37 +20,37 @@ ARROW="${MAGENTA}==>${RESET}"
 
 # Prompt user for input
 echo -e "Script Options:\n1.Automated Setup\n2.Update Backup"
-read -p "Enter number: " choice
+read -rp "Enter number: " choice
 
 if [ "$choice" -eq 1 ]; then
     echo -e "${ARROW} ${GREEN}Starting automatic setup..."
     # Installs brew and packages from Brewfile
-    source $ROOT_DIR/modules/brew.sh
+    source "$ROOT_DIR/modules/brew.sh"
 
     # Restores config files backed up
-    source $ROOT_DIR/modules/restore.sh
+    source "$ROOT_DIR/modules/restore.sh"
 
     # Fish shell
-    source $ROOT_DIR/modules/fish.sh
+    source "$ROOT_DIR/modules/fish.sh"
 
     # LSP
-    source $ROOT_DIR/modules/lsp.sh
+    source "$ROOT_DIR/modules/lsp.sh"
 
     # Only run this on macOS
-    if [ $OS = "Darwin" ]; then
+    if [ "$OS" = "Darwin" ]; then
         echo -e "${ARROW} macOS detected, running modifications."
         # Changes macOS defaults
-        source $ROOT_DIR/modules/darwin/defaults.sh
-        source $ROOT_DIR/modules/darwin/dock_apps.sh
-        source $ROOT_DIR/modules/darwin/enviroment.sh
-        source $ROOT_DIR/modules/darwin/keyboard.sh
+        source "$ROOT_DIR/modules/darwin/defaults.sh"
+        source "$ROOT_DIR/modules/darwin/dock_apps.sh"
+        source "$ROOT_DIR/modules/darwin/enviroment.sh"
+        source "$ROOT_DIR/modules/darwin/keyboard.sh"
     fi
 
     echo -e "${ARROW} Next steps: Log out for all changes to apply."
 
 elif [ "$choice" -eq 2 ]; then
     echo -e "${ARROW} ${GREEN}Updating backup..."
-    source $ROOT_DIR/modules/backup.sh
+    source "$ROOT_DIR/modules/backup.sh"
 else
     echo "Invalid input, please enter a valid option."
 fi
