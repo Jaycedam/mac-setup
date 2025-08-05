@@ -41,6 +41,7 @@ if [ "$choice" -eq 1 ]; then
         echo -e "${ARROW} macOS detected, running modifications."
         # Changes macOS defaults
         source $ROOT_DIR/modules/darwin/defaults.sh
+        source $ROOT_DIR/modules/darwin/dock_apps.sh
         source $ROOT_DIR/modules/darwin/enviroment.sh
         source $ROOT_DIR/modules/darwin/keyboard.sh
     fi
