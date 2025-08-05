@@ -44,3 +44,13 @@ vim.diagnostic.config({
 
 -- see `:h completeopt`
 o.completeopt = "menuone,noinsert,popup"
+
+-- manually set filetypes not detected by vim
+vim.filetype.add({
+	filename = {
+		[".env"] = "dotenv",
+	},
+	pattern = {
+		[".env.*"] = "dotenv",
+	},
+})

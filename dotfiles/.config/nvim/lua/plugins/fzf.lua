@@ -15,32 +15,42 @@ return {
 		})
 
 		-- Keymaps
-		vim.keymap.set("n", "<leader>ff", require("fzf-lua").files, { desc = "Find files" })
-		vim.keymap.set("n", "<leader>fg", require("fzf-lua").live_grep_native, { desc = "Find in project (grep)" })
-		vim.keymap.set("n", "<leader>fb", require("fzf-lua").buffers, { desc = "Find buffers)" })
-		vim.keymap.set("n", "<leader>fk", require("fzf-lua").keymaps, { desc = "Find keymaps" })
-		vim.keymap.set("n", "<leader>fh", require("fzf-lua").helptags, { desc = "Find help" })
+		vim.keymap.set("n", "<leader>f", require("fzf-lua").files, { desc = "Find files" })
+		vim.keymap.set("n", "<leader>/", require("fzf-lua").live_grep_native, { desc = "Grep project" })
+		vim.keymap.set("v", "<leader>/", require("fzf-lua").grep_visual, { desc = "Grep visual selection" })
+		vim.keymap.set("n", "<leader>b", require("fzf-lua").buffers, { desc = "Find buffers" })
+		vim.keymap.set("n", "<leader>k", require("fzf-lua").keymaps, { desc = "Find keymaps" })
+		vim.keymap.set("n", "<leader>h", require("fzf-lua").helptags, { desc = "Find help" })
 
 		-- LSP keymaps
-		vim.keymap.set("n", "<leader>fr", require("fzf-lua").lsp_references, { desc = "Find references (LSP)" })
+		vim.keymap.set("n", "r", require("fzf-lua").lsp_references, { desc = "Find references (LSP)" })
 		vim.keymap.set(
 			"n",
-			"<leader>fi",
+			"<leader>i",
 			require("fzf-lua").lsp_implementations,
 			{ desc = "Find implementations (LSP)" }
 		)
 		vim.keymap.set(
 			"n",
-			"<leader>fe",
+			"<leader>d",
 			require("fzf-lua").diagnostics_workspace,
-			{ desc = "Find errors on workspace (LSP)" }
+			{ desc = "Find diagnostics on workspace (LSP)" }
 		)
 		vim.keymap.set(
 			"n",
-			"<leader>fs",
+			"<leader>s",
 			require("fzf-lua").lsp_document_symbols,
 			{ desc = "Find document symbols (LSP)" }
 		)
-		vim.keymap.set("n", "<leader>ca", require("fzf-lua").lsp_code_actions, { desc = "Code actions" })
+		vim.keymap.set(
+			"n",
+			"<leader>S",
+			require("fzf-lua").lsp_workspace_symbols,
+			{ desc = "Find workspace symbols (LSP)" }
+		)
+		vim.keymap.set("n", "<leader>a", require("fzf-lua").lsp_code_actions, { desc = "Code actions" })
+
+		-- Neovim
+		vim.keymap.set("n", "<leader>m", require("fzf-lua").marks, { desc = "Find marks" })
 	end,
 }

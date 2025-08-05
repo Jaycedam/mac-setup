@@ -8,7 +8,6 @@
   "nvim-lspconfig": { "branch": "master", "commit": "3db16ceeea947517f0dc1404c24dcb5ab0c91d26" },
   "nvim-treesitter": { "branch": "main", "commit": "b26b4258294c742c2613a7d98fe53014d1c8fe49" },
   "render-markdown.nvim": { "branch": "main", "commit": "d77ded40d5a8978ba90621396304a776b2a0504e" },
-  "snacks.nvim": { "branch": "main", "commit": "5eac729fa290248acfe10916d92a5ed5e5c0f9ed" },
   "supermaven-nvim": { "branch": "main", "commit": "07d20fce48a5629686aefb0a7cd4b25e33947d50" },
   "tokyonight.nvim": { "branch": "main", "commit": "b262293ef481b0d1f7a14c708ea7ca649672e200" },
   "which-key.nvim": { "branch": "main", "commit": "fcbf4eea17cb299c02557d576f0d568878e354a4" }

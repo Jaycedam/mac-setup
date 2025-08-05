@@ -4,7 +4,7 @@ return {
 		version = "*",
 		event = "VeryLazy",
 		opts = {
-			preset = "modern",
+			preset = "helix",
 		},
 		keys = {
 			{
