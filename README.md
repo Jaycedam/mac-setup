@@ -12,6 +12,7 @@ When running the main script, you can select the automated setup or to update th
     - Installs packages from a [Brewfile](Brewfile) using [brew](https://brew.sh), [mas](https://github.com/mas-cli/mas) and some [Language Servers](./modules/lsp.sh) missing from Brew, using npm.
     - Changes macOS [default preferences](modules/darwin/defaults.sh) and specific [Darwin tweaks](./modules/darwin/enviroment.sh) (eg: TouchID for sudo).
     - Changes user shell to [fish](https://fishshell.com).
+    - Automatically changes persistent dock apps. To add apps, edit the app list on [this file](./modules/darwin/dock_apps.sh).
     - Installs Colemak-dh layout.
     - Installs Kanata and Karabiner Driver as services automatically. With Kanata I have [Advanced keyboard remaps](dotfiles/.config/kanata/config.kbd) with home row mods and layers.
 2. **Update Backup**
