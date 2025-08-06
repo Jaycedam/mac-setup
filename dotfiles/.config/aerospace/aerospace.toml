@@ -13,7 +13,7 @@ accordion-padding = 50
 
 # Mouse
 on-focused-monitor-changed = [
-    'move-mouse monitor-lazy-center',
+  'move-mouse monitor-lazy-center',
 ] # Mouse lazily follows focused monitor (default in i3)
 # or
 # on-focus-changed = [
@@ -101,7 +101,7 @@ alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
 alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
 alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
 
-alt-t = 'exec-and-forget open -a Ghostty'
+alt-t = 'exec-and-forget open -a Kitty'
 alt-b = 'exec-and-forget open -a "Brave Browser"'
 alt-n = 'exec-and-forget open -a Notes'
 alt-e = 'exec-and-forget open -a Mail'
