@@ -80,14 +80,20 @@ sudo chown root:wheel "${PLIST_DIR}/com.example.karabiner-vhidmanager.plist"
 sudo chmod 644 "${PLIST_DIR}/com.example.karabiner-vhidmanager.plist"
 
 # 4. Bootstrap and enable services
+# Kanata
+sudo launchctl bootout system "${PLIST_DIR}/com.example.kanata.plist" 2>/dev/null || true
 sudo launchctl bootstrap system "${PLIST_DIR}/com.example.kanata.plist"
-sudo launchctl enable system/com.example.kanata.plist
+sudo launchctl enable system/com.example.kanata
 
+# Karabiner-VHIDDaemon
+sudo launchctl bootout system "${PLIST_DIR}/com.example.karabiner-vhiddaemon.plist" 2>/dev/null || true
 sudo launchctl bootstrap system "${PLIST_DIR}/com.example.karabiner-vhiddaemon.plist"
-sudo launchctl enable system/com.example.karabiner-vhiddaemon.plist
+sudo launchctl enable system/com.example.karabiner-vhiddaemon
 
+# Karabiner-VHIDManager
+sudo launchctl bootout system "${PLIST_DIR}/com.example.karabiner-vhidmanager.plist" 2>/dev/null || true
 sudo launchctl bootstrap system "${PLIST_DIR}/com.example.karabiner-vhidmanager.plist"
-sudo launchctl enable system/com.example.karabiner-vhidmanager.plist
+sudo launchctl enable system/com.example.karabiner-vhidmanager
 
 # 5. Prompt for permissions
 echo -e "${ARROW} You'll now allow Karabiner to use a system extension."
