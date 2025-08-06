@@ -1,9 +1,12 @@
 theme = "tokyonight_moon"
 
 [editor]
-line-number = "relative"
 end-of-line-diagnostics = "hint"
 color-modes = true
+popup-border = "all"
+
+[editor.lsp]
+display-inlay-hints = true # may be buggy
 
 [editor.inline-diagnostics]
 cursor-line = "warning" # show warnings and errors on the cursorline inline
@@ -13,3 +16,11 @@ enable = true
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.statusline]
+left = ["mode", "spacer", "version-control", "spinner"]
+center = ["file-name", "file-modification-indicator"]
+right = ["diagnostics", "position", "file-type"]
+
+[editor.file-picker]
+hidden = false

@@ -1,13 +1,14 @@
-[language-server.astro-ls]
-command = "astro-ls"
-args = ["--stdio"]
-config = { typescript = { tsdk = "./node_modules/typescript/lib/" }}
-
 [[language]]
 name = "astro"
-scope = "source.astro"
-injection-regex = "astro"
-file-types = ["astro"]
-language-servers = ["astro-ls"]
-formatter = { command = "prettier", args = ["--plugin", "prettier-plugin-astro", "--parser", "astro"] }
+formatter = { command = "prettier", args = [
+  "--plugin",
+  "prettier-plugin-astro",
+  "--parser",
+  "astro",
+] }
 auto-format = true
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true                                     # Optional: enables formatting on save
