@@ -44,6 +44,7 @@ if [ "$choice" -eq 1 ]; then
         source "$ROOT_DIR/modules/darwin/dock_apps.sh"
         source "$ROOT_DIR/modules/darwin/enviroment.sh"
         source "$ROOT_DIR/modules/darwin/keyboard.sh"
+        source "$ROOT_DIR/modules/darwin/dns.sh"
     fi
 
     echo -e "${ARROW} Next steps: Log out for all changes to apply."
