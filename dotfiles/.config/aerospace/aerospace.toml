@@ -9,11 +9,11 @@ start-at-login = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 50
+accordion-padding = 100
 
 # Mouse
 on-focused-monitor-changed = [
-  'move-mouse monitor-lazy-center',
+    'move-mouse monitor-lazy-center',
 ] # Mouse lazily follows focused monitor (default in i3)
 # or
 # on-focus-changed = [
@@ -51,12 +51,12 @@ outer.bottom = [{ monitor.built-in = 10 }, 14]
 outer.top = [{ monitor.built-in = 10 }, 14]
 outer.right = [{ monitor.built-in = 10 }, 14]
 
-[workspace-to-monitor-force-assignment]
-1 = 'built-in'
-2 = 'main'
-3 = 'main'
-4 = 'main'
-5 = 'main'
+# [workspace-to-monitor-force-assignment]
+# 1 = 'secondary'
+# 2 = 'main'
+# 3 = 'main'
+# 4 = 'main'
+# 5 = 'main'
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -81,6 +81,7 @@ alt-l = 'focus right'
 
 alt-f = 'fullscreen'
 alt-shift-f = 'layout floating tiling'
+alt-shift-r = 'reload-config'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-left = 'move left'
@@ -98,10 +99,12 @@ alt-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1' # browsers
-alt-2 = 'workspace 2' # dev (terminal)
-alt-3 = 'workspace 3' # media
-alt-4 = 'workspace 4' # communication
-alt-5 = 'workspace 5' # rest
+alt-2 = 'workspace 2' # dev tools
+alt-3 = 'workspace 3' # organization (email, calendar, etc.)
+alt-4 = 'workspace 4' # communication (chat apps, etc.)
+alt-5 = 'workspace 5' # media (music, videos, etc.)
+alt-6 = 'workspace 6' # gaming
+alt-7 = 'workspace 7' # rest
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
@@ -109,12 +112,15 @@ alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
 alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
 alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
 alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
+alt-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
+alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
 
 alt-t = 'exec-and-forget open -a Kitty'
 alt-b = 'exec-and-forget open -a "Brave Browser"'
-alt-n = 'exec-and-forget open -a Notes'
-alt-e = 'exec-and-forget open -a Mail'
+alt-e = 'exec-and-forget open -a "Proton Mail"'
+alt-c = 'exec-and-forget open -a "Proton Calendar"'
 alt-m = 'exec-and-forget open -a Spotify'
+alt-w = 'exec-and-forget open -a "WhatsApp Web"'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -130,13 +136,17 @@ if.app-name-regex-substring = 'Ghostty|Kitty|Alacritty'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Spotify'
+if.app-name-regex-substring = 'Mail|Calendar'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Mail'
+if.app-name-regex-substring = 'WhatsApp|Signal'
 run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'Spotify|Apple Music'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'Steam Helper|Heroic'
-run = ['layout tiling', 'move-node-to-workspace 5']
+run = ['layout tiling', 'move-node-to-workspace 6']
