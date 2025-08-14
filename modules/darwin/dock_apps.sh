@@ -7,9 +7,6 @@ set -euo pipefail
 # System Apps are on /System/Applications
 apps=(
     "/Applications/Brave Browser.app"
-    "/System/Applications/Calendar.app"
-    "/System/Applications/Notes.app"
-    "/System/Applications/Mail.app"
     "/Applications/Ghostty.app"
     "/Applications/Steam.app"
 )
