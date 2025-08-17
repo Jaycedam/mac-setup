@@ -3,7 +3,7 @@
 # load fzf theme
 source "$HOME/.local/share/colorshift/current/fzf.sh"
 
-paths="$HOME/Developer"
+paths="$HOME/dev"
 
 selection=$(fd -t d . "$paths" --max-depth 1 | fzf --border-label '  Session Manager ' --input-label ' Search Project ')
 

@@ -115,7 +115,7 @@ alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
 alt-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
 alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
 
-alt-t = 'exec-and-forget open -a Kitty'
+alt-t = 'exec-and-forget open -a Alacritty'
 alt-b = 'exec-and-forget open -a "Brave Browser"'
 alt-e = 'exec-and-forget open -a "Proton Mail"'
 alt-c = 'exec-and-forget open -a "Proton Calendar"'
