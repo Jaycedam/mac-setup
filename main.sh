@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path Variables
-ROOT_DIR="$HOME/Developer/mac-setup" # Project path (IMPORTANT for creating symlings and load modules, don't change this unless you know what you're doing)
+ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 BACKUP_DIR="$ROOT_DIR/dotfiles"      # Path for all backups
 OS="$(uname -s)"                     # Saves current OS (eg: Darwin, Linux)
 

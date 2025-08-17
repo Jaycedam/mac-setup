@@ -25,14 +25,14 @@ When running the main script, you can select the automated setup or to update th
 Check dependencies:
 
 ```sh
-git -v
+xcode-select --install
 ```
 
 Start:
 
 ```sh
-git clone https://github.com/Jaycedam/mac-setup.git ~/Developer/mac-setup
-bash ~/Developer/mac-setup/main.sh
+git clone https://github.com/Jaycedam/mac-setup.git ~/dev/mac-setup
+bash ~/dev/mac-setup/main.sh
 ```
 
 Then select the option for the automatic setup.
