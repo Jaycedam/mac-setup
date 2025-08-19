@@ -2,8 +2,8 @@
 
 # Path Variables
 ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
-BACKUP_DIR="$ROOT_DIR/dotfiles"      # Path for all backups
-OS="$(uname -s)"                     # Saves current OS (eg: Darwin, Linux)
+BACKUP_DIR="$ROOT_DIR/dotfiles" # Path for all backups
+OS="$(uname -s)"                # Saves current OS (eg: Darwin, Linux)
 
 # Color variables
 RED='\033[31m'
@@ -31,7 +31,7 @@ if [ "$choice" -eq 1 ]; then
     source "$ROOT_DIR/modules/restore.sh"
 
     # Fish shell
-    source "$ROOT_DIR/modules/fish.sh"
+    # source "$ROOT_DIR/modules/fish.sh"
 
     # LSP
     source "$ROOT_DIR/modules/lsp.sh"

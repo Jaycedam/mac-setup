@@ -41,8 +41,8 @@ compinit
 # ==============================================================================
 # Aliases
 # ==============================================================================
-alias ls="ls -lhF --color"
-alias lsa="ls -lhAF --color"
+alias ls="eza -l --icons=auto"
+alias lsa="eza -lA --icons=auto"
 alias search="brew search"
 alias install="brew install"
 alias upgrade="brew upgrade"
@@ -58,35 +58,35 @@ alias t="tmux new-session -A -s main"
 # ==============================================================================
 # Prompt
 # ==============================================================================
-fpath+=("$(brew --prefix)/share/zsh/site-functions") # use system zsh
-autoload -U promptinit
-promptinit                       # Initialize the prompt system
-zstyle :prompt:pure:path color 6 # changes path color to cyan
-prompt pure                      # load pure
+eval "$(starship init zsh)"
 
 # ==============================================================================
 # FZF
 # ==============================================================================
 # OPTION-C shortcut to change directory: exclude folders
-export FZF_ALT_C_OPTS="
---walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash,Games
+export FZF_ALT_C_OPTS="\
+--walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash,Games \
 "
 
 # CTRL-T shortcut to search files: exclude folders, preview with bat
-export FZF_CTRL_T_OPTS="
---walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash,Games
---preview 'bat -n --color=always {}'
+export FZF_CTRL_T_OPTS=" \
+--walker-skip .git,node_modules,target,Library,Applications,Pictures,Music,.local,.cache,.Trash,Games \
+--preview 'bat -n --color=always {}' \
 "
 
 # CTRL-R shortcut to search command history: CTRL-Y to copy the command into clipboard using pbcopy
-export FZF_CTRL_R_OPTS="
---bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
---color header:bold
---header 'Press CTRL-Y to copy command into clipboard'
+export FZF_CTRL_R_OPTS=" \
+--bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort' \
+--color header:bold \
+--header 'Press CTRL-Y to copy command into clipboard' \
 "
 
 # FZF theme
 source "$HOME/.local/share/colorshift/current/fzf.sh"
 
-# load key bindings
 source <(fzf --zsh)
+
+# ==============================================================================
+# Plugins
+# ==============================================================================
+eval "$(zoxide init zsh)"
