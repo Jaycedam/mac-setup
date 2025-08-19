@@ -23,7 +23,7 @@ return {
 		vim.keymap.set("n", "<leader>h", require("fzf-lua").helptags, { desc = "Find help" })
 
 		-- LSP keymaps
-		vim.keymap.set("n", "r", require("fzf-lua").lsp_references, { desc = "Find references (LSP)" })
+		vim.keymap.set("n", "<leader>r", require("fzf-lua").lsp_references, { desc = "Find references (LSP)" })
 		vim.keymap.set(
 			"n",
 			"<leader>i",

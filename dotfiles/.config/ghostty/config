@@ -5,3 +5,5 @@ theme = oxocarbon
 font-size = 16
 mouse-hide-while-typing = true
 macos-titlebar-style = hidden
+
+keybind = global:alt+enter=toggle_quick_terminal
