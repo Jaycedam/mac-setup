@@ -26,6 +26,7 @@ defaults write com.apple.finder NewWindowTarget -string "PfHm"              # Fi
 defaults write com.apple.finder FXRemoveOldTrashItems -bool true            # Clean trash after 30 days
 defaults write com.apple.finder _FXSortFoldersFirst -bool true              # sort folder first
 defaults write com.apple.finder _FXSortFoldersFirstOnDesktop -bool true     # sort folder first on desktop
+defaults write com.apple.finder SidebarShowingiCloudDesktop -bool false     # Hide iCloud desktop
 
 # Hide items from Desktop
 defaults write com.apple.finder CreateDesktop -bool false
