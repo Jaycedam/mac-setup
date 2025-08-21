@@ -13,12 +13,6 @@ set_fish_as_default_shell() {
     chsh -s "$fish_path"
 }
 
-# Check if fish is installed
-if command -v fish >/dev/null 2>&1; then
-    set_fish_as_default_shell
-else
-    echo -e "${RED}Fish shell is not installed."
-    echo -e "${ARROW} Installing fish..."
-    brew install fish
-    set_fish_as_default_shell
-fi
+# Installs fish if not installed, then sets it as the default shell
+brew list fish >/dev/null 2>&1 || brew install fish
+set_fish_as_default_shell
