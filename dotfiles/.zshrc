@@ -2,8 +2,7 @@
 # General
 # ==============================================================================
 export EDITOR=nvim
-export HOMEBREW_NO_AUTO_UPDATE=1 # disable auto-update of Homebrew
-KEYTIMEOUT=1                     # lower delay of ESC to enter normal mode (vim mode)
+KEYTIMEOUT=1 # lower delay of ESC to enter normal mode (vim mode)
 
 # Path
 export PATH="/opt/homebrew/bin:$PATH"
@@ -33,11 +32,6 @@ fi
 autoload -Uz compinit
 compinit
 
-# # start on tmux
-# if [[ -z "$TMUX" ]]; then
-#     tmux new-session -A -s main
-# fi
-
 # ==============================================================================
 # Aliases
 # ==============================================================================
@@ -54,11 +48,6 @@ alias n="nvim"
 alias h="hx"
 alias so="source ~/.zshrc" # source zshrc to update changes
 alias t="tmux new-session -A -s main"
-
-# ==============================================================================
-# Prompt
-# ==============================================================================
-eval "$(starship init zsh)"
 
 # ==============================================================================
 # FZF

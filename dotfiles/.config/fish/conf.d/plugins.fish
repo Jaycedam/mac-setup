@@ -26,7 +26,11 @@ export FZF_CTRL_R_OPTS="
 bind \cZ fzf-cd-widget
 bind --mode insert \cZ fzf-cd-widget
 
+# load colorshift theme
 source $HOME/.local/share/colorshift/current/fzf.fish
 
-# Set up fzf key bindings
+# load fzf keybinds
 fzf --fish | source
+# load zoxide
+zoxide init fish | source
+
