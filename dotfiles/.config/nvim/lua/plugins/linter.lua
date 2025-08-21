@@ -2,6 +2,11 @@ return {
 	"mfussenegger/nvim-lint",
 	config = function()
 		local lint = require("lint")
+
+		lint.linters.shellcheck.args = {
+			"-x", -- follow sourced files
+		}
+
 		lint.linters_by_ft = {
 			python = {
 				"ruff",
