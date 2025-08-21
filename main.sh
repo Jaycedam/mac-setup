@@ -3,7 +3,6 @@
 # Path Variables
 ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 BACKUP_DIR="$ROOT_DIR/dotfiles" # Path for all backups
-OS="$(uname -s)"                # Saves current OS (eg: Darwin, Linux)
 
 # Color variables
 RED='\033[31m'
@@ -31,21 +30,17 @@ if [ "$choice" -eq 1 ]; then
     source "$ROOT_DIR/modules/restore.sh"
 
     # Fish shell
-    # source "$ROOT_DIR/modules/fish.sh"
+    source "$ROOT_DIR/modules/fish.sh"
 
     # LSP
     source "$ROOT_DIR/modules/lsp.sh"
 
-    # Only run this on macOS
-    if [ "$OS" = "Darwin" ]; then
-        echo -e "${ARROW} macOS detected, running modifications."
-        # Changes macOS defaults
-        source "$ROOT_DIR/modules/darwin/defaults.sh"
-        source "$ROOT_DIR/modules/darwin/dock_apps.sh"
-        source "$ROOT_DIR/modules/darwin/enviroment.sh"
-        source "$ROOT_DIR/modules/darwin/keyboard.sh"
-        source "$ROOT_DIR/modules/darwin/dns.sh"
-    fi
+    # Changes macOS defaults
+    source "$ROOT_DIR/modules/defaults.sh"
+    source "$ROOT_DIR/modules/dock_apps.sh"
+    source "$ROOT_DIR/modules/enviroment.sh"
+    source "$ROOT_DIR/modules/keyboard.sh"
+    source "$ROOT_DIR/modules/dns.sh"
 
     echo -e "${ARROW} Next steps: Log out for all changes to apply."
 
