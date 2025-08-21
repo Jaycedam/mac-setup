@@ -2,19 +2,22 @@
 
 Automation scripts to set up macOS for software development, privacy and general use.
 
-## The main script:
+## Features
 
-When running the main script, you can select the automated setup or to update the backup. Here's a description for each option:
+When running the main script, you can select between **automated setup** or **update backup**.
+Here's what each option does:
 
 1. **Automated Setup**
-    - Installs [Homebrew](https://brew.sh).
-    - Restores backup: - Symlinks [dotfiles](./dotfiles/) from the repo to the home folder.
-    - Installs packages from a [Brewfile](Brewfile) using [brew](https://brew.sh), [mas](https://github.com/mas-cli/mas) and some [Language Servers](./modules/lsp.sh) missing from Brew, using npm.
-    - Changes macOS [default preferences](modules/darwin/defaults.sh) and specific [Darwin tweaks](./modules/darwin/enviroment.sh) (eg: TouchID for sudo).
-    - Changes user shell to [fish](https://fishshell.com).
-    - Automatically changes persistent dock apps. To add apps, edit the app list on [this file](./modules/darwin/dock_apps.sh).
-    - Installs Colemak-dh layout.
-    - Installs Kanata and Karabiner Driver as services automatically. With Kanata I have [Advanced keyboard remaps](dotfiles/.config/kanata/config.kbd) with home row mods and layers.
+    - Install [homebrew](https://brew.sh) and packages listed in [Brewfile](Brewfile).
+    - Symlink [dotfiles](dotfiles) to the home directory.
+    - Install [fish shell](https://fishshell.com) and use it as the default shell.
+    - Install [additional LSP servers](modules/lsp.sh) missing from brew packages using npm.
+    - Change [macOS defaults](modules/defaults.sh) for finder, dock, etc.
+    - Modify [persistent dock apps](modules/dock_apps.sh).
+    - [Misc macOS settings](modules/enviroment.sh) like touchid for sudo, etc.
+    - Set up [Kanata](https://github.com/jtroo/kanata) and Karabiner driver as launchd services for keyboard customization and layers.
+    - Set up DNS over HTTPS with blocking ads and trackers using [Mullvad dns](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls).
+
 2. **Update Backup**
     - Moves dotfiles (.config/ and .zshrc) to the project directory then creates symlinks back to $HOME.
     - Updates Brewfile from brew packages installed.
@@ -22,7 +25,7 @@ When running the main script, you can select the automated setup or to update th
 > [!CAUTION]
 > Choosing Automated Setup will overwrite your dotfiles. If you want to use this project with your own backup [read the wiki.](https://github.com/Jaycedam/mac-setup/wiki).
 
-Check dependencies:
+Install dependencies:
 
 ```sh
 xcode-select --install
@@ -35,7 +38,7 @@ git clone https://github.com/Jaycedam/mac-setup.git ~/dev/mac-setup
 bash ~/dev/mac-setup/main.sh
 ```
 
-Then select the option for the automatic setup.
+Then select the option you want to run.
 
 ## Manual settings
 
