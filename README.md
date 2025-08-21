@@ -14,7 +14,7 @@ Here's what each option does:
     - Install [additional LSP servers](modules/lsp.sh) missing from brew packages using npm.
     - Change [macOS defaults](modules/defaults.sh) for finder, dock, etc.
     - Modify [persistent dock apps](modules/dock_apps.sh).
-    - [Misc macOS settings](modules/enviroment.sh) like touchid for sudo, etc.
+    - [Misc macOS settings](modules/misc.sh) like touchid for sudo, etc.
     - Set up [Kanata](https://github.com/jtroo/kanata) and Karabiner driver as launchd services for keyboard customization and layers.
     - Set up DNS over HTTPS with blocking ads and trackers using [Mullvad dns](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls).
 
