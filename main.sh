@@ -37,7 +37,8 @@ if [ "$choice" -eq 1 ]; then
     # Adds persistent dock apps
     source "$MODULES_DIR/dock_apps.sh"
     # Misc macOS settings like touchid for sudo, etc.
-    source "$MODULES_DIR/enviroment.sh"
+    # shellcheck source=modules/misc.sh
+    source "$MODULES_DIR/misc.sh"
     # Sets up Kanata and Karabiner driver as services for keyboard cusomization and layers
     source "$MODULES_DIR/keyboard.sh"
     # Sets up DNS over HTTPS with Adblock (Mullvad)

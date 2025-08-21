@@ -9,8 +9,3 @@ if [ ! -f "/etc/pam.d/sudo_local" ]; then
 else
     echo -e "${RED}File /etc/pam.d/sudo_local already exists.${RESET} File not modified."
 fi
-
-# Start services
-echo -e "${ARROW} Starting services"
-brew services start borders
-open -a "Aerospace"
