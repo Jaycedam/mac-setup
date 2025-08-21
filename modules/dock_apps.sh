@@ -2,8 +2,6 @@
 
 # Script to add persistent apps to the dock
 
-set -euo pipefail
-
 # System Apps are on /System/Applications
 apps=(
     "/Applications/Brave Browser.app"

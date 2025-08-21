@@ -3,6 +3,7 @@
 # Path Variables
 ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 BACKUP_DIR="$ROOT_DIR/dotfiles" # Path for all backups
+MODULES_DIR="$ROOT_DIR/modules" # Path for all backups
 
 # Color variables
 RED='\033[31m'
@@ -24,23 +25,23 @@ read -rp "Enter number: " choice
 if [ "$choice" -eq 1 ]; then
     echo -e "${ARROW} ${GREEN}Starting automatic setup..."
     # Installs brew and packages from Brewfile
-    source "$ROOT_DIR/modules/brew.sh"
+    source "$MODULES_DIR/brew.sh"
 
     # Restores config files backed up
-    source "$ROOT_DIR/modules/restore.sh"
+    source "$MODULES_DIR/restore.sh"
 
     # Fish shell
-    source "$ROOT_DIR/modules/fish.sh"
+    source "$MODULES_DIR/fish.sh"
 
     # LSP
-    source "$ROOT_DIR/modules/lsp.sh"
+    source "$MODULES_DIR/lsp.sh"
 
     # Changes macOS defaults
-    source "$ROOT_DIR/modules/defaults.sh"
-    source "$ROOT_DIR/modules/dock_apps.sh"
-    source "$ROOT_DIR/modules/enviroment.sh"
-    source "$ROOT_DIR/modules/keyboard.sh"
-    source "$ROOT_DIR/modules/dns.sh"
+    source "$MODULES_DIR/defaults.sh"
+    source "$MODULES_DIR/dock_apps.sh"
+    source "$MODULES_DIR/enviroment.sh"
+    source "$MODULES_DIR/keyboard.sh"
+    source "$MODULES_DIR/dns.sh"
 
     echo -e "${ARROW} Next steps: Log out for all changes to apply."
 

@@ -3,8 +3,6 @@
 # setup-kanata-service.sh
 # Installs Karabiner DriverKit, Kanata, and sets up LaunchDaemons (no disk logging)
 
-set -euo pipefail
-
 #### CONFIGURATION ####
 KANATA_CONFIG="${HOME}/.config/kanata/config.kbd"
 KANATA_PORT=10000
