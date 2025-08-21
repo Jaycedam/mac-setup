@@ -26,21 +26,21 @@ if [ "$choice" -eq 1 ]; then
     echo -e "${ARROW} ${GREEN}Starting automatic setup..."
     # Installs brew and packages from Brewfile
     source "$MODULES_DIR/brew.sh"
-
-    # Restores config files backed up
+    # Symlink dotfiles to home directory
     source "$MODULES_DIR/restore.sh"
-
-    # Fish shell
+    # Installs fish shell and configures it as the default shell
     source "$MODULES_DIR/fish.sh"
-
-    # LSP
+    # Installs LSP servers missing from brew packages
     source "$MODULES_DIR/lsp.sh"
-
     # Changes macOS defaults
     source "$MODULES_DIR/defaults.sh"
+    # Adds persistent dock apps
     source "$MODULES_DIR/dock_apps.sh"
+    # Misc macOS settings like touchid for sudo, etc.
     source "$MODULES_DIR/enviroment.sh"
+    # Sets up Kanata and Karabiner driver as services for keyboard cusomization and layers
     source "$MODULES_DIR/keyboard.sh"
+    # Sets up DNS over HTTPS with Adblock (Mullvad)
     source "$MODULES_DIR/dns.sh"
 
     echo -e "${ARROW} Next steps: Log out for all changes to apply."
